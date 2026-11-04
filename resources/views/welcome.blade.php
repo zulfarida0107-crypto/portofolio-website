@@ -189,22 +189,34 @@
 </a>
 <!-- Desktop Nav Links -->
 <div class="hidden lg:flex items-center space-x-6">
-<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-colors pb-1 text-label-lg font-label-lg" href="#about">About</a>
-<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-colors pb-1 text-label-lg font-label-lg" href="#what-i-do">Vibes</a>
-<a class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary dark:border-inverse-primary pb-1 text-label-lg font-label-lg" href="#projects">Projects</a>
-<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-colors pb-1 text-label-lg font-label-lg" href="#tech-stack">Stack</a>
-<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-colors pb-1 text-label-lg font-label-lg" href="#experience">Experience</a>
-<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-colors pb-1 text-label-lg font-label-lg" href="#why-me">Why Me</a>
-<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-colors pb-1 text-label-lg font-label-lg" href="#contact">Contact</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-colors pb-1 text-label-lg font-label-lg" href="#about" data-i18n="nav_about">About</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-colors pb-1 text-label-lg font-label-lg" href="#what-i-do" data-i18n="nav_vibes">Vibes</a>
+<a class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary dark:border-inverse-primary pb-1 text-label-lg font-label-lg" href="#projects" data-i18n="nav_projects">Projects</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-colors pb-1 text-label-lg font-label-lg" href="#tech-stack" data-i18n="nav_stack">Stack</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-colors pb-1 text-label-lg font-label-lg" href="#experience" data-i18n="nav_experience">Experience</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-colors pb-1 text-label-lg font-label-lg" href="#why-me" data-i18n="nav_whyme">Why Me</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-colors pb-1 text-label-lg font-label-lg" href="#contact" data-i18n="nav_contact">Contact</a>
 </div>
 <!-- Trailing Action Buttons -->
 <div class="flex items-center space-x-3">
+<!-- Language Switcher Pill (ID | EN) -->
+<div class="inline-flex items-center bg-surface-container rounded-full p-1 border border-primary/20 shadow-xs text-xs font-bold" id="lang-switcher">
+<button type="button" onclick="changeLanguage('id')" id="lang-btn-id" class="px-2.5 py-1 rounded-full transition-all flex items-center gap-1.5 cursor-pointer text-primary hover:bg-surface-container-high" title="Ubah ke Bahasa Indonesia">
+<span class="text-xs">🇮🇩</span>
+<span class="font-mono text-[11px] font-bold">ID</span>
+</button>
+<button type="button" onclick="changeLanguage('en')" id="lang-btn-en" class="px-2.5 py-1 rounded-full transition-all flex items-center gap-1.5 cursor-pointer bg-primary text-on-primary shadow-xs" title="Switch to English">
+<span class="text-xs">🇬🇧</span>
+<span class="font-mono text-[11px] font-bold">EN</span>
+</button>
+</div>
+
 <a class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-primary text-primary hover:bg-surface-variant text-label-lg font-label-lg hover:scale-[1.02] active:scale-[0.98] transition-all" href="#projects">
-<span>Let's Talk</span>
+<span data-i18n="nav_talk">Let's Talk</span>
 </a>
 <a class="inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-primary shadow-sm hover:scale-[1.02] active:scale-[0.98] transition-all" href="mailto:afafaridaz91@gmail.com?subject=CV%20Request%20-%20Zulfarida">
 <span class="material-symbols-outlined text-[16px]">download</span>
-<span>Download CV</span>
+<span data-i18n="nav_cv">Download CV</span>
 </a>
 </div>
 </div>
@@ -224,42 +236,42 @@
 <!-- Venture Studio Winner Badge -->
 <div class="inline-flex items-center gap-2 bg-surface-container-lowest/95 text-primary px-4 py-1.5 rounded-full shadow-sm border border-primary/10 rotate-[-1.5deg] hover:rotate-0 transition-transform">
 <span class="text-base">🏆</span>
-<span class="font-label-badge text-label-badge font-bold tracking-wide uppercase">1st Winner, CCIT Venture Studio Batch #1 'Manggala'</span>
+<span class="font-label-badge text-label-badge font-bold tracking-wide uppercase" data-i18n="hero_winner_badge">1st Winner, CCIT Venture Studio Batch #1 'Manggala'</span>
 </div>
 <!-- Giant Aesthetic Title -->
 <div class="space-y-2">
 <div class="flex items-center gap-3">
 <span class="text-secondary-fixed text-2xl font-serif">✦</span>
-<span class="font-label-lg text-label-lg tracking-widest text-on-primary-container uppercase font-bold">Portfolio &amp; Systems Showcase</span>
+<span class="font-label-lg text-label-lg tracking-widest text-on-primary-container uppercase font-bold" data-i18n="hero_showcase">Portfolio &amp; Systems Showcase</span>
 </div>
 <h1 class="font-display-xl text-display-xl-mobile md:text-display-xl font-extrabold tracking-tight text-surface-container-lowest leading-none">
               ZULFARIDA
             </h1>
 <!-- Tape Label Sticker -->
 <div class="inline-block mt-2 bg-surface-container-lowest text-primary px-4 py-1 rounded-sm shadow-md rotate-[1.5deg] border border-primary/10">
-<span class="font-headline-md text-base sm:text-lg font-bold flex items-center gap-2">
+<span class="font-headline-md text-base sm:text-lg font-bold flex items-center gap-2" data-i18n="hero_role">
                 Full Stack Developer <span class="text-secondary">✦</span> Co-Founder of CuitBox
               </span>
 </div>
 </div>
 <!-- Taglines with tactile aesthetic badge styling -->
 <div class="space-y-2 bg-primary/40 p-4 rounded-2xl border border-surface-container/20 w-full max-w-xl">
-<p class="font-title-editorial text-title-editorial italic text-surface-bright text-lg sm:text-xl font-medium">
+<p class="font-title-editorial text-title-editorial italic text-surface-bright text-lg sm:text-xl font-medium" data-i18n="hero_quote">
               "From database to dashboard, from idea to launch."
             </p>
-<p class="font-body-md text-body-md text-surface-variant font-normal">
+<p class="font-body-md text-body-md text-surface-variant font-normal" data-i18n="hero_desc">
               I build systems that work, and teams that ship. Focused on resilient backends, tactile dashboards, and real-world execution.
             </p>
 </div>
 <!-- CTAs -->
 <div class="flex flex-wrap items-center gap-4 pt-2">
 <a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-surface-container-lowest text-primary font-label-lg text-label-lg font-bold shadow-md hover:bg-surface-variant hover:scale-[1.02] active:scale-[0.98] transition-all" href="#projects">
-<span>View Projects</span>
+<span data-i18n="hero_btn_projects">View Projects</span>
 <span class="material-symbols-outlined text-[18px]">arrow_downward</span>
 </a>
 <a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-secondary-container text-on-secondary-fixed font-label-lg text-label-lg font-bold shadow-md hover:bg-secondary-fixed hover:scale-[1.02] active:scale-[0.98] transition-all" href="mailto:afafaridaz91@gmail.com?subject=CV%20Request%20-%20Zulfarida">
 <span class="material-symbols-outlined text-[18px]">article</span>
-<span>Download CV (PDF)</span>
+<span data-i18n="hero_btn_cv">Download CV (PDF)</span>
 </a>
 </div>
 <!-- Mini Pills Row -->
@@ -283,7 +295,7 @@
 <!-- Verified Badge Sticker Overlay -->
 <div class="absolute bottom-3 left-3 bg-primary-container text-on-primary text-body-sm font-label-badge font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 border border-surface-container/30">
 <span class="material-symbols-outlined text-[16px] text-surface-container-high" style="font-variation-settings: 'FILL' 1;">verified</span>
-<span>Verified Full-Stack</span>
+<span data-i18n="hero_verified">Verified Full-Stack</span>
 </div>
 </div>
 <!-- Polaroid Caption Bottom -->
@@ -293,17 +305,17 @@
 <p class="text-body-sm font-body-sm text-outline">CCIT FTUI x Politeknik Negeri Jakarta</p>
 </div>
 <div class="flex items-center gap-1 bg-secondary-container/60 text-secondary px-2.5 py-1 rounded-full text-xs font-bold">
-<span>✦ 2026 Batch</span>
+<span data-i18n="hero_batch">✦ 2026 Batch</span>
 </div>
 </div>
 </div>
 <!-- Sticker Pin Badges Overlapping Photo Frame -->
 <div class="absolute -bottom-4 -left-4 bg-secondary text-on-secondary px-3.5 py-2 rounded-xl text-xs font-bold shadow-lg rotate-[-6deg] flex items-center gap-1.5 border border-secondary-container">
 <span class="text-sm">⚡</span>
-<span>1st Winner CCIT VS #1</span>
+<span data-i18n="hero_vs1_pin">1st Winner CCIT VS #1</span>
 </div>
 <div class="absolute -bottom-3 right-6 bg-surface-container-lowest text-primary px-3 py-1 rounded-full text-xs font-bold shadow-md rotate-[4deg] border border-outline-variant/40 flex items-center gap-1">
-<span>Code + Strategy</span>
+<span data-i18n="hero_strategy_pin">Code + Strategy</span>
 <span class="text-secondary">✦</span>
 </div>
 </div>
@@ -317,25 +329,19 @@
 <!-- Bio Card (Editorial Scrapbook style) -->
 <div class="lg:col-span-7 bg-surface-container-lowest rounded-3xl p-6 sm:p-10 border border-primary/10 shadow-sm relative overflow-hidden">
 <!-- Tape Header -->
-<div class="inline-block bg-secondary-container/70 text-on-secondary-fixed px-3 py-1 rounded-sm text-xs font-bold tracking-wider uppercase mb-4 rotate-[-1deg]">
+<div class="inline-block bg-secondary-container/70 text-on-secondary-fixed px-3 py-1 rounded-sm text-xs font-bold tracking-wider uppercase mb-4 rotate-[-1deg]" data-i18n="about_tape">
           Personal Story ✦ Engineering Ethos
         </div>
 <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary mb-6 flex items-center gap-2">
-<span>About Me</span>
+<span data-i18n="about_title">About Me</span>
 <span class="text-secondary text-2xl font-normal">✦</span>
 </h2>
 <!-- Verbatim Bio Copy Provided in Specification -->
 <div class="space-y-4 font-body-lg text-body-md sm:text-body-lg text-on-surface leading-relaxed">
-<p>
-            Hi, I'm Zulfarida, an Informatics Engineering student (Full Stack Developer track) at State Polytechnic of Jakarta, in collaboration with CCIT FTUI, Universitas Indonesia. I enjoy turning real problems into working products, from designing the database and APIs to building the dashboard users actually touch.
-          </p>
-<p>
-            I co-founded CuitBox, a self-service photo booth platform, and won 1st place in CCIT Venture Studio Batch #1. Beyond code, I've led communications, hosted events as an MC, and mentored new students, so I'm comfortable working across technical and non-technical teams.
-          </p>
+<p data-i18n="about_p1">Hi, I'm Zulfarida, an Informatics Engineering student (Full Stack Developer track) at State Polytechnic of Jakarta, in collaboration with CCIT FTUI, Universitas Indonesia. I enjoy turning real problems into working products, from designing the database and APIs to building the dashboard users actually touch.</p>
+<p data-i18n="about_p2">I co-founded CuitBox, a self-service photo booth platform, and won 1st place in CCIT Venture Studio Batch #1. Beyond code, I've led communications, hosted events as an MC, and mentored new students, so I'm comfortable working across technical and non-technical teams.</p>
 <div class="p-4 bg-surface-container-low rounded-2xl border-l-4 border-primary mt-4">
-<p class="font-semibold text-primary">
-              I'm looking for opportunities in Full Stack Development, Quality Assurance (QA), IT Project/Product Management, or Business/Systems Analysis.
-            </p>
+<p class="font-semibold text-primary" data-i18n="about_highlight">I'm looking for opportunities in Full Stack Development, Quality Assurance (QA), IT Project/Product Management, or Business/Systems Analysis.</p>
 </div>
 </div>
 <!-- Scrapbook Footnote -->
@@ -354,10 +360,10 @@
 <div class="lg:col-span-5 flex flex-col space-y-4">
 <div class="bg-primary-container text-on-primary rounded-3xl p-6 sm:p-8 shadow-sm relative overflow-hidden border border-primary/20">
 <div class="flex items-center justify-between mb-4">
-<h3 class="font-headline-md text-xl font-bold">Metrics &amp; Traction</h3>
+<h3 class="font-headline-md text-xl font-bold" data-i18n="metrics_title">Metrics &amp; Traction</h3>
 <span class="text-secondary-fixed text-lg">✦</span>
 </div>
-<p class="text-surface-container text-body-sm mb-6">Proven execution metrics across software development, product ownership, and code commits.</p>
+<p class="text-surface-container text-body-sm mb-6" data-i18n="metrics_desc">Proven execution metrics across software development, product ownership, and code commits.</p>
 <!-- 4 Dual-tone Metric Tiles (2x2 Grid) -->
 <div class="grid grid-cols-2 gap-3.5">
 <!-- Metric 1 -->
@@ -367,8 +373,8 @@
 <span class="text-[10px] font-bold bg-secondary-container text-secondary px-2 py-0.5 rounded-full">VS #1</span>
 </div>
 <div class="mt-2">
-<div class="font-metric-num text-xl sm:text-2xl font-extrabold text-primary leading-tight">1st Winner</div>
-<div class="text-body-sm font-body-sm text-on-surface-variant mt-1 leading-snug">CCIT Venture Studio Batch #1</div>
+<div class="font-metric-num text-xl sm:text-2xl font-extrabold text-primary leading-tight" data-i18n="metric_1_val">1st Winner</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant mt-1 leading-snug" data-i18n="metric_1_lbl">CCIT Venture Studio Batch #1</div>
 </div>
 </div>
 <!-- Metric 2 -->
@@ -379,7 +385,7 @@
 </div>
 <div class="mt-2">
 <div class="font-metric-num text-2xl sm:text-3xl font-extrabold text-primary leading-tight">21</div>
-<div class="text-body-sm font-body-sm text-on-surface-variant mt-1 leading-snug">Public GitHub Repositories</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant mt-1 leading-snug" data-i18n="metric_2_lbl">Public GitHub Repositories</div>
 </div>
 </div>
 <!-- Metric 3 -->
@@ -390,7 +396,7 @@
 </div>
 <div class="mt-2">
 <div class="font-metric-num text-2xl sm:text-3xl font-extrabold text-secondary leading-tight">200+</div>
-<div class="text-body-sm font-body-sm text-on-surface-variant mt-1 leading-snug">GitHub Contributions (Year)</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant mt-1 leading-snug" data-i18n="metric_3_lbl">GitHub Contributions (Year)</div>
 </div>
 </div>
 <!-- Metric 4 -->
@@ -400,8 +406,8 @@
 <span class="text-[10px] font-bold bg-surface-container text-primary px-2 py-0.5 rounded-full">Multi-tier</span>
 </div>
 <div class="mt-2">
-<div class="font-metric-num text-2xl sm:text-3xl font-extrabold text-primary leading-tight">3 Platforms</div>
-<div class="text-body-sm font-body-sm text-on-surface-variant mt-1 leading-snug">One System (Web, Mobile, API)</div>
+<div class="font-metric-num text-2xl sm:text-3xl font-extrabold text-primary leading-tight" data-i18n="metric_4_val">3 Platforms</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant mt-1 leading-snug" data-i18n="metric_4_lbl">One System (Web, Mobile, API)</div>
 </div>
 </div>
 </div>
@@ -420,13 +426,13 @@
 <section class="max-w-7xl mx-auto px-4 sm:px-6 py-12" id="what-i-do">
 <!-- Header banner in Zoe Laurent editorial style -->
 <div class="text-center max-w-2xl mx-auto mb-12">
-<div class="inline-block bg-surface-container-highest px-4 py-1 rounded-full text-xs font-bold text-primary mb-2">
+<div class="inline-block bg-surface-container-highest px-4 py-1 rounded-full text-xs font-bold text-primary mb-2" data-i18n="vibes_badge">
         Services &amp; Capabilities ✦ How I Create Value
       </div>
-<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary italic font-serif">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary italic font-serif" data-i18n="vibes_title">
         pick your vibe
       </h2>
-<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+<p class="font-body-md text-body-md text-on-surface-variant mt-1" data-i18n="vibes_desc">
         Let's turn your team's product vision into the next production-ready release.
       </p>
 </div>
@@ -550,10 +556,10 @@
 <section class="max-w-7xl mx-auto px-4 sm:px-6 py-12" id="projects">
 <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
 <div>
-<div class="inline-block bg-surface-container-high px-3 py-1 rounded-full text-xs font-bold text-primary mb-2">
+<div class="inline-block bg-surface-container-high px-3 py-1 rounded-full text-xs font-bold text-primary mb-2" data-i18n="cert_badge">
           Featured Engineering Works ✦ 2025 - 2026
         </div>
-<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary" data-i18n="proj_title">
           Production Projects
         </h2>
 </div>
@@ -825,13 +831,13 @@
 <!-- ==================== SECTION 5: TECH STACK SECTION ==================== -->
 <section class="max-w-7xl mx-auto px-4 sm:px-6 py-12" id="tech-stack">
 <div class="text-center max-w-2xl mx-auto mb-10">
-<div class="inline-block bg-surface-container-high px-4 py-1 rounded-full text-xs font-bold text-primary mb-2">
+<div class="inline-block bg-surface-container-high px-4 py-1 rounded-full text-xs font-bold text-primary mb-2" data-i18n="stack_badge">
         Tactile Toolbox ✦ Verified Competencies
       </div>
-<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary" data-i18n="proj_title">
         Technical Stack &amp; Practices
       </h2>
-<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+<p class="font-body-md text-body-md text-on-surface-variant mt-1" data-i18n="vibes_desc">
         Categorized technologies practiced through production code, enterprise coursework, and hardware implementations.
       </p>
 </div>
@@ -956,7 +962,7 @@
 <div class="absolute -top-3 left-12 w-28 h-7 washi-tape rotate-[-2deg] rounded-sm pointer-events-none opacity-70"></div>
 <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
 <div>
-<span class="text-xs font-bold tracking-widest uppercase text-on-primary-container">Leadership &amp; Team Impact</span>
+<span class="text-xs font-bold tracking-widest uppercase text-on-primary-container" data-i18n="exp_tag">Leadership &amp; Team Impact</span>
 <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-surface-container-lowest">
             Organizations &amp; Teams
           </h2>
@@ -1026,7 +1032,7 @@
 <div class="flex justify-center mb-8">
 <div class="bg-surface-container-lowest text-primary px-6 py-2 rounded-sm shadow-md rotate-[-1.5deg] border border-primary/10">
 <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-extrabold tracking-wider uppercase flex items-center gap-2">
-<span>WHY ME?</span>
+<span data-i18n="whyme_title">WHY ME?</span>
 <span class="text-secondary">✦</span>
 </h2>
 </div>
@@ -1040,7 +1046,7 @@
 <div class="bg-primary/50 p-6 rounded-2xl border border-surface-container/20 relative">
 <div class="flex items-center gap-3 mb-2">
 <span class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center font-bold text-sm">1</span>
-<h3 class="font-headline-md text-xl font-bold text-surface-container-lowest">Founder Mindset</h3>
+<h3 class="font-headline-md text-xl font-bold text-surface-container-lowest" data-i18n="whyme_p1_title">Founder Mindset</h3>
 </div>
 <p class="text-surface-container text-body-md">
             I've built a product from concept to launch and won, so I think about users, conversions, and business sustainability, not just pure code.
@@ -1050,7 +1056,7 @@
 <div class="bg-primary/50 p-6 rounded-2xl border border-surface-container/20 relative">
 <div class="flex items-center gap-3 mb-2">
 <span class="w-8 h-8 rounded-full bg-surface-container text-primary flex items-center justify-center font-bold text-sm">2</span>
-<h3 class="font-headline-md text-xl font-bold text-surface-container-lowest">End-to-End Builder</h3>
+<h3 class="font-headline-md text-xl font-bold text-surface-container-lowest" data-i18n="whyme_p2_title">End-to-End Builder</h3>
 </div>
 <p class="text-surface-container text-body-md">
             Database, REST APIs, responsive dashboard, physical kiosk hardware, and QRIS payments. I understand how every layer connects and breaks.
@@ -1060,7 +1066,7 @@
 <div class="bg-primary/50 p-6 rounded-2xl border border-surface-container/20 relative">
 <div class="flex items-center gap-3 mb-2">
 <span class="w-8 h-8 rounded-full bg-surface-container text-primary flex items-center justify-center font-bold text-sm">3</span>
-<h3 class="font-headline-md text-xl font-bold text-surface-container-lowest">Team Player &amp; Communicator</h3>
+<h3 class="font-headline-md text-xl font-bold text-surface-container-lowest" data-i18n="whyme_p3_title">Team Player &amp; Communicator</h3>
 </div>
 <p class="text-surface-container text-body-md">
             Cross-functional experience across robotics, developer communities, and formal MC roles. I bridge communication gaps with zero friction.
@@ -1070,7 +1076,7 @@
 <div class="bg-primary/50 p-6 rounded-2xl border border-surface-container/20 relative">
 <div class="flex items-center gap-3 mb-2">
 <span class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center font-bold text-sm">4</span>
-<h3 class="font-headline-md text-xl font-bold text-surface-container-lowest">Fast, Honest Learner</h3>
+<h3 class="font-headline-md text-xl font-bold text-surface-container-lowest" data-i18n="whyme_p4_title">Fast, Honest Learner</h3>
 </div>
 <p class="text-surface-container text-body-md">
             I tackle complex multithreaded camera buffers, computer vision landmarks, and obscure server bugs—and I rigorously document what I learn.
@@ -1089,10 +1095,10 @@
 <section class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
 <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
 <div>
-<div class="inline-block bg-surface-container-high px-3 py-1 rounded-full text-xs font-bold text-primary mb-2">
+<div class="inline-block bg-surface-container-high px-3 py-1 rounded-full text-xs font-bold text-primary mb-2" data-i18n="cert_badge">
           Academic Foundations &amp; Industry Badges
         </div>
-<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary" data-i18n="proj_title">
           Certifications &amp; Education
         </h2>
 </div>
@@ -1164,10 +1170,10 @@
 <!-- Aesthetic Washi Tape -->
 <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-40 h-8 washi-tape rotate-[1deg] rounded-sm pointer-events-none"></div>
 <div class="max-w-3xl mx-auto text-center space-y-6">
-<div class="inline-block bg-secondary-container px-4 py-1 rounded-full text-xs font-bold text-on-secondary-fixed">
+<div class="inline-block bg-secondary-container px-4 py-1 rounded-full text-xs font-bold text-on-secondary-fixed" data-i18n="contact_badge">
           Open For Opportunities ✦ Full Stack • IT PM • Systems Analysis
         </div>
-<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary" data-i18n="proj_title">
           Let's build something together.
         </h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant">
@@ -1178,7 +1184,7 @@
 <!-- Email Link -->
 <a class="p-4 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-colors border border-primary/10 flex flex-col items-center group" href="mailto:afafaridaz91@gmail.com">
 <span class="material-symbols-outlined text-primary text-[26px] mb-2 group-hover:scale-110 transition-transform">mail</span>
-<span class="text-xs text-outline font-medium">Email Direct</span>
+<span class="text-xs text-outline font-medium" data-i18n="contact_email_lbl">Email Direct</span>
 <span class="text-body-sm font-bold text-primary mt-0.5">afafaridaz91@gmail.com</span>
 </a>
 <!-- LinkedIn Link -->
@@ -1198,7 +1204,7 @@
 <div class="pt-6">
 <a class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-primary text-on-primary font-label-lg text-label-lg font-bold shadow-md hover:bg-primary-container hover:scale-[1.02] active:scale-[0.98] transition-all" href="mailto:afafaridaz91@gmail.com?subject=CV%20Request%20-%20Zulfarida">
 <span class="material-symbols-outlined text-[20px]">download</span>
-<span>Download CV (PDF)</span>
+<span data-i18n="hero_btn_cv">Download CV (PDF)</span>
 </a>
 </div>
 </div>
@@ -1233,5 +1239,187 @@
 </div>
 </div>
 </footer>
+<!-- Multi-Language Switcher (Bahasa Indonesia & English) -->
+<script>
+const translations = {
+  id: {
+    nav_about: "Tentang",
+    nav_vibes: "Layanan",
+    nav_projects: "Proyek",
+    nav_stack: "Keahlian",
+    nav_experience: "Pengalaman",
+    nav_whyme: "Kenapa Saya",
+    nav_contact: "Kontak",
+    nav_talk: "Mari Bicara",
+    nav_cv: "Unduh CV",
+
+    hero_winner_badge: "Juara 1, CCIT Venture Studio Batch #1 'Manggala'",
+    hero_showcase: "Portofolio & Showcase Sistem",
+    hero_role: 'Full Stack Developer <span class="text-secondary">✦</span> Co-Founder CuitBox',
+    hero_quote: '"Dari database ke dashboard, dari ide hingga peluncuran."',
+    hero_desc: "Saya membangun sistem yang andal dan tim yang solid. Berfokus pada backend yang tangguh, dashboard taktil, dan eksekusi dunia nyata.",
+    hero_btn_projects: "Lihat Proyek",
+    hero_btn_cv: "Unduh CV (PDF)",
+    hero_verified: "Terverifikasi Full-Stack",
+    hero_batch: "✦ Angkatan 2026",
+    hero_vs1_pin: "Juara 1 CCIT VS #1",
+    hero_strategy_pin: "Kode + Strategi",
+
+    about_tape: "Kisah Pribadi ✦ Etos Rekayasa",
+    about_title: "Tentang Saya",
+    about_p1: "Halo, saya Zulfarida, mahasiswi Teknik Informatika (konsentrasi Full Stack Developer) di Politeknik Negeri Jakarta yang berkolaborasi dengan CCIT FTUI, Universitas Indonesia. Saya gemar mengubah tantangan nyata menjadi produk fungsional siap pakai, mulai dari merancang database dan API hingga membangun dashboard yang nyaman digunakan pengguna.",
+    about_p2: "Saya adalah Co-Founder CuitBox, platform photobox mandiri (self-service), dan meraih Juara 1 pada ajang CCIT Venture Studio Batch #1. Selain rekayasa kode, saya aktif memimpin komunikasi publik, membawakan acara formal sebagai MC, serta mendampingi mahasiswa baru, sehingga sangat terbiasa berkolaborasi lintas tim teknis maupun bisnis.",
+    about_highlight: "Saya sangat terbuka untuk peluang karier di bidang Full Stack Development, Quality Assurance (QA), IT Project/Product Management, atau Business/Systems Analysis.",
+
+    metrics_title: "Metrik & Pencapaian",
+    metrics_desc: "Metrik rekam jejak terbukti dalam pengembangan perangkat lunak, kepemilikan produk, dan kontribusi kode.",
+    metric_1_val: "Juara 1",
+    metric_1_lbl: "CCIT Venture Studio Batch #1",
+    metric_2_lbl: "Repositori Publik GitHub",
+    metric_3_lbl: "Kontribusi GitHub (Tahun)",
+    metric_4_val: "3 Platform",
+    metric_4_lbl: "Satu Ekosistem (Web, Mobile, API)",
+
+    vibes_badge: "Layanan & Kemampuan ✦ Solusi Bernilai Nyata",
+    vibes_title: "pilih vibe anda",
+    vibes_desc: "Mari wujudkan visi produk tim Anda menjadi rilis sistem siap produksi.",
+    vibe1_badge: "BANGUN & KODE",
+    vibe1_title: "Full Stack Development",
+    vibe1_sub: "Arsitektur web, mobile, & REST API",
+    vibe1_btn: "Siap Membangun",
+    vibe2_badge: "ANALISIS & RANCANG",
+    vibe2_pill: "Keahlian Utama ✦",
+    vibe2_title: "Systems Analysis & Design",
+    vibe2_sub: "Menjembatani kebutuhan bisnis ke kode terukur",
+    vibe2_btn: "Rancang & Rilis",
+    vibe3_badge: "PIMPIN & KOMUNIKASIKAN",
+    vibe3_title: "Koordinasi Proyek & QA",
+    vibe3_sub: "Kepemimpinan, relasi publik, & rilis lintas fungsi",
+    vibe3_btn: "Koordinasi & Skala",
+
+    proj_badge: "Karya Rekayasa Unggulan ✦ 2025 - 2026",
+    proj_title: "Proyek Produksi",
+    stack_badge: "Kotak Alat Taktil ✦ Kompetensi Teruji",
+    exp_tag: "Kepemimpinan & Dampak Organisasi",
+
+    whyme_title: "MENGAPA SAYA?",
+    whyme_p1_title: "Pola Pikir Founder",
+    whyme_p2_title: "Pembangun End-to-End",
+    whyme_p3_title: "Komunikator & Kolaborator Tim",
+    whyme_p4_title: "Cepat & Jujur dalam Belajar",
+
+    cert_badge: "Landasan Akademik & Lisensi Industri",
+    contact_badge: "Terbuka Untuk Peluang ✦ Full Stack • IT PM • Systems Analysis",
+    contact_email_lbl: "Email Langsung",
+    contact_btn_cv: "Unduh CV (PDF)"
+  },
+  en: {
+    nav_about: "About",
+    nav_vibes: "Vibes",
+    nav_projects: "Projects",
+    nav_stack: "Stack",
+    nav_experience: "Experience",
+    nav_whyme: "Why Me",
+    nav_contact: "Contact",
+    nav_talk: "Let's Talk",
+    nav_cv: "Download CV",
+
+    hero_winner_badge: "1st Winner, CCIT Venture Studio Batch #1 'Manggala'",
+    hero_showcase: "Portfolio & Systems Showcase",
+    hero_role: 'Full Stack Developer <span class="text-secondary">✦</span> Co-Founder of CuitBox',
+    hero_quote: '"From database to dashboard, from idea to launch."',
+    hero_desc: "I build systems that work, and teams that ship. Focused on resilient backends, tactile dashboards, and real-world execution.",
+    hero_btn_projects: "View Projects",
+    hero_btn_cv: "Download CV (PDF)",
+    hero_verified: "Verified Full-Stack",
+    hero_batch: "✦ 2026 Batch",
+    hero_vs1_pin: "1st Winner CCIT VS #1",
+    hero_strategy_pin: "Code + Strategy",
+
+    about_tape: "Personal Story ✦ Engineering Ethos",
+    about_title: "About Me",
+    about_p1: "Hi, I'm Zulfarida, an Informatics Engineering student (Full Stack Developer track) at State Polytechnic of Jakarta, in collaboration with CCIT FTUI, Universitas Indonesia. I enjoy turning real problems into working products, from designing the database and APIs to building the dashboard users actually touch.",
+    about_p2: "I co-founded CuitBox, a self-service photo booth platform, and won 1st place in CCIT Venture Studio Batch #1. Beyond code, I've led communications, hosted events as an MC, and mentored new students, so I'm comfortable working across technical and non-technical teams.",
+    about_highlight: "I'm looking for opportunities in Full Stack Development, Quality Assurance (QA), IT Project/Product Management, or Business/Systems Analysis.",
+
+    metrics_title: "Metrics & Traction",
+    metrics_desc: "Proven execution metrics across software development, product ownership, and code commits.",
+    metric_1_val: "1st Winner",
+    metric_1_lbl: "CCIT Venture Studio Batch #1",
+    metric_2_lbl: "Public GitHub Repositories",
+    metric_3_lbl: "GitHub Contributions (Year)",
+    metric_4_val: "3 Platforms",
+    metric_4_lbl: "One System (Web, Mobile, API)",
+
+    vibes_badge: "Services & Capabilities ✦ How I Create Value",
+    vibes_title: "pick your vibe",
+    vibes_desc: "Let's turn your team's product vision into the next production-ready release.",
+    vibe1_badge: "BUILD & CODE",
+    vibe1_title: "Full Stack Development",
+    vibe1_sub: "Web, mobile, & REST API architecture",
+    vibe1_btn: "Ready to Build",
+    vibe2_badge: "ANALYZE & BLUEPRINT",
+    vibe2_pill: "Core Strength ✦",
+    vibe2_title: "Systems Analysis & Design",
+    vibe2_sub: "Bridging business needs to scalable code",
+    vibe2_btn: "Architect & Ship",
+    vibe3_badge: "LEAD & COMMUNICATE",
+    vibe3_title: "Project Coordination",
+    vibe3_sub: "Leadership, PR, & cross-functional delivery",
+    vibe3_btn: "Coordinate & Scale",
+
+    proj_badge: "Featured Engineering Works ✦ 2025 - 2026",
+    proj_title: "Production Projects",
+    stack_badge: "Tactile Toolbox ✦ Verified Competencies",
+    exp_tag: "Leadership & Team Impact",
+
+    whyme_title: "WHY ME?",
+    whyme_p1_title: "Founder Mindset",
+    whyme_p2_title: "End-to-End Builder",
+    whyme_p3_title: "Team Player & Communicator",
+    whyme_p4_title: "Fast, Honest Learner",
+
+    cert_badge: "Academic Foundations & Industry Badges",
+    contact_badge: "Open For Opportunities ✦ Full Stack • IT PM • Systems Analysis",
+    contact_email_lbl: "Email Direct",
+    contact_btn_cv: "Download CV (PDF)"
+  }
+};
+
+function changeLanguage(lang) {
+  if (!translations[lang]) return;
+
+  // 1. Update elements with data-i18n
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (translations[lang][key]) {
+      el.innerHTML = translations[lang][key];
+    }
+  });
+
+  // 2. Update active pill button styling
+  const btnId = document.getElementById('lang-btn-id');
+  const btnEn = document.getElementById('lang-btn-en');
+  if (btnId && btnEn) {
+    if (lang === 'id') {
+      btnId.className = 'px-2.5 py-1 rounded-full transition-all flex items-center gap-1.5 cursor-pointer bg-primary text-on-primary shadow-xs';
+      btnEn.className = 'px-2.5 py-1 rounded-full transition-all flex items-center gap-1.5 cursor-pointer text-primary hover:bg-surface-container-high';
+    } else {
+      btnEn.className = 'px-2.5 py-1 rounded-full transition-all flex items-center gap-1.5 cursor-pointer bg-primary text-on-primary shadow-xs';
+      btnId.className = 'px-2.5 py-1 rounded-full transition-all flex items-center gap-1.5 cursor-pointer text-primary hover:bg-surface-container-high';
+    }
+  }
+
+  // 3. Save preference
+  localStorage.setItem('portfolio_lang', lang);
+  document.documentElement.lang = lang;
+}
+
+// Initialize on page load with stored or default language
+document.addEventListener('DOMContentLoaded', () => {
+  const savedLang = localStorage.getItem('portfolio_lang') || 'id';
+  changeLanguage(savedLang);
+});
+</script>
 </body>
 </html>
