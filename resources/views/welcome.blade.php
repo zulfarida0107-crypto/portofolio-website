@@ -663,34 +663,10 @@ Architect &amp; Ship
 <strong>Solution:</strong> Implemented hardware driver abstraction layers and dedicated multithreaded capture pipelines using Python OpenCV and native device bindings, guaranteeing zero UI freeze during disk I/O.
               </p>
 </div>
-<!-- Real Event Deployment Banner -->
-<div class="bg-surface-container rounded-2xl p-5 border border-primary/20 space-y-3">
-<div class="flex items-center gap-2 text-primary font-bold text-sm sm:text-base">
-<span class="text-lg">🎪</span>
-<span>Real Event Deployment: CCIT CREATION (2-Day Live Booth Exhibition)</span>
-</div>
-<div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
-<div class="bg-surface-container-lowest p-4 rounded-xl text-center shadow-xs border border-primary/10">
-<div class="font-extrabold text-2xl sm:text-3xl text-primary font-metric-num">2 Days</div>
-<div class="text-xs text-on-surface-variant font-medium mt-1">Live Exhibition</div>
-</div>
-<div class="bg-surface-container-lowest p-4 rounded-xl text-center shadow-xs border border-primary/10">
-<div class="font-extrabold text-2xl sm:text-3xl text-primary font-metric-num">40+</div>
-<div class="text-xs text-on-surface-variant font-medium mt-1">Real Users (Lecturers &amp; Students)</div>
-</div>
-<div class="bg-surface-container-lowest p-4 rounded-xl text-center shadow-xs border border-primary/10">
-<div class="font-extrabold text-2xl sm:text-3xl text-primary font-metric-num">23</div>
-<div class="text-xs text-on-surface-variant font-medium mt-1">UAT Survey Respondents</div>
-</div>
-<div class="bg-surface-container-lowest p-4 rounded-xl text-center shadow-xs border border-primary/10">
-<div class="font-extrabold text-2xl sm:text-3xl text-primary font-metric-num">100%</div>
-<div class="text-xs text-on-surface-variant font-medium mt-1">Session Completion Rate</div>
-</div>
-</div>
-</div>
 </div>
 <!-- Project Specs Sidebar -->
-<div class="lg:col-span-4 bg-surface-container rounded-2xl p-6 border border-primary/10 flex flex-col justify-between space-y-6">
+<div class="lg:col-span-4 space-y-6">
+<div class="bg-surface-container rounded-2xl p-6 border border-primary/10 flex flex-col justify-between space-y-6">
 <div class="space-y-4">
 <h4 class="font-label-badge text-label-badge font-bold uppercase tracking-wider text-primary">
                 Tech Stack &amp; Libraries
@@ -741,6 +717,32 @@ Architect &amp; Ship
 </a>
 <div class="text-center pt-1">
 <span class="text-[11px] font-bold text-secondary uppercase tracking-wider">✦ Live Demo Available on Request</span>
+</div>
+</div>
+</div>
+
+<!-- Real Event Deployment Card (Matched Layout) -->
+<div class="bg-surface-container rounded-2xl p-6 border border-primary/10 space-y-4">
+<h4 class="font-label-badge text-label-badge font-bold uppercase tracking-wider text-primary">
+Real Event Deployment: CCIT CREATION (2-Day Live Booth Exhibition)
+</h4>
+<div class="grid grid-cols-2 gap-2.5">
+<div class="bg-surface-container-lowest p-3.5 rounded-xl text-center shadow-xs border border-primary/10">
+<div class="font-extrabold text-xl text-primary font-metric-num">2 Days</div>
+<div class="text-xs text-on-surface-variant font-medium mt-1 leading-snug">Live Exhibition</div>
+</div>
+<div class="bg-surface-container-lowest p-3.5 rounded-xl text-center shadow-xs border border-primary/10">
+<div class="font-extrabold text-xl text-primary font-metric-num">40+</div>
+<div class="text-xs text-on-surface-variant font-medium mt-1 leading-snug">Real Users (Lecturers &amp; Students)</div>
+</div>
+<div class="bg-surface-container-lowest p-3.5 rounded-xl text-center shadow-xs border border-primary/10">
+<div class="font-extrabold text-xl text-primary font-metric-num">23</div>
+<div class="text-xs text-on-surface-variant font-medium mt-1 leading-snug">UAT Survey Respondents</div>
+</div>
+<div class="bg-surface-container-lowest p-3.5 rounded-xl text-center shadow-xs border border-primary/10">
+<div class="font-extrabold text-xl text-primary font-metric-num">100%</div>
+<div class="text-xs text-on-surface-variant font-medium mt-1 leading-snug">Session Completion Rate</div>
+</div>
 </div>
 </div>
 </div>
