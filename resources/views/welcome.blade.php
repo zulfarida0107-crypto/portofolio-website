@@ -188,14 +188,14 @@
 <span>Zulfarida ✦</span>
 </a>
 <!-- Desktop Nav Links -->
-<div class="hidden lg:flex items-center space-x-6">
-<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-colors pb-1 text-label-lg font-label-lg" href="#about" data-i18n="nav_about">About</a>
-<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-colors pb-1 text-label-lg font-label-lg" href="#what-i-do" data-i18n="nav_vibes">Vibes</a>
-<a class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary dark:border-inverse-primary pb-1 text-label-lg font-label-lg" href="#projects" data-i18n="nav_projects">Projects</a>
-<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-colors pb-1 text-label-lg font-label-lg" href="#tech-stack" data-i18n="nav_stack">Stack</a>
-<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-colors pb-1 text-label-lg font-label-lg" href="#experience" data-i18n="nav_experience">Experience</a>
-<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-colors pb-1 text-label-lg font-label-lg" href="#why-me" data-i18n="nav_whyme">Why Me</a>
-<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-colors pb-1 text-label-lg font-label-lg" href="#contact" data-i18n="nav_contact">Contact</a>
+<div class="hidden lg:flex items-center space-x-6" id="nav-links">
+<a class="nav-link text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-all pb-1 text-label-lg font-label-lg border-b-2 border-transparent hover:border-primary/30" href="#about" data-i18n="nav_about">About</a>
+<a class="nav-link text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-all pb-1 text-label-lg font-label-lg border-b-2 border-transparent hover:border-primary/30" href="#what-i-do" data-i18n="nav_vibes">Vibes</a>
+<a class="nav-link text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-all pb-1 text-label-lg font-label-lg border-b-2 border-transparent hover:border-primary/30" href="#projects" data-i18n="nav_projects">Projects</a>
+<a class="nav-link text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-all pb-1 text-label-lg font-label-lg border-b-2 border-transparent hover:border-primary/30" href="#tech-stack" data-i18n="nav_stack">Stack</a>
+<a class="nav-link text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-all pb-1 text-label-lg font-label-lg border-b-2 border-transparent hover:border-primary/30" href="#experience" data-i18n="nav_experience">Experience</a>
+<a class="nav-link text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-all pb-1 text-label-lg font-label-lg border-b-2 border-transparent hover:border-primary/30" href="#why-me" data-i18n="nav_whyme">Why Me</a>
+<a class="nav-link text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-all pb-1 text-label-lg font-label-lg border-b-2 border-transparent hover:border-primary/30" href="#contact" data-i18n="nav_contact">Contact</a>
 </div>
 <!-- Trailing Action Buttons -->
 <div class="flex items-center space-x-3">
@@ -1404,10 +1404,64 @@ function changeLanguage(lang) {
   document.documentElement.lang = lang;
 }
 
-// Initialize on page load with stored or default language
+// Active Nav Link Underline on Click & Scroll Spy
+function setupNavActiveState() {
+  const navLinks = document.querySelectorAll('.nav-link');
+  if (!navLinks.length) return;
+
+  function setActiveLink(activeHref) {
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === activeHref) {
+        link.classList.remove('text-on-surface-variant', 'border-transparent');
+        link.classList.add('text-primary', 'font-bold', 'border-primary', 'dark:text-inverse-primary', 'dark:border-inverse-primary');
+      } else {
+        link.classList.remove('text-primary', 'font-bold', 'border-primary', 'dark:text-inverse-primary', 'dark:border-inverse-primary');
+        link.classList.add('text-on-surface-variant', 'border-transparent');
+      }
+    });
+  }
+
+  // Click handler: immediately underlines the clicked item
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      setActiveLink(this.getAttribute('href'));
+    });
+  });
+
+  // Scroll spy with IntersectionObserver
+  const sectionIds = ['about', 'what-i-do', 'projects', 'tech-stack', 'experience', 'why-me', 'contact'];
+  const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setActiveLink('#' + entry.target.id);
+        }
+      });
+    }, {
+      rootMargin: '-20% 0px -60% 0px'
+    });
+
+    sections.forEach(section => observer.observe(section));
+  }
+
+  // If user scrolls back to the hero section at the top, clear underline so it is clean
+  window.addEventListener('scroll', () => {
+    if (window.scrollY < 200) {
+      navLinks.forEach(link => {
+        link.classList.remove('text-primary', 'font-bold', 'border-primary', 'dark:text-inverse-primary', 'dark:border-inverse-primary');
+        link.classList.add('text-on-surface-variant', 'border-transparent');
+      });
+    }
+  });
+}
+
+// Initialize on page load with stored or default language and nav state
 document.addEventListener('DOMContentLoaded', () => {
   const savedLang = localStorage.getItem('portfolio_lang') || 'id';
   changeLanguage(savedLang);
+  setupNavActiveState();
 });
 </script>
 </body>
