@@ -25,3 +25,12 @@ _ide_helper.php
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+# Documentation & AI assistant files
+01-PRD.md
+02-BLUEPRINT.md
+03-WORKFLOW.md
+04-DATABASE.md
+AGENTS.md
+CLAUDE.md
+
