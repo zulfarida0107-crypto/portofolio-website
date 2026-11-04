@@ -251,10 +251,10 @@
                     @foreach($metricList as $metric)
                         <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800/80 hover:border-brand-500/50 transition-all group">
                             <p class="text-3xl sm:text-4xl font-extrabold text-brand-400 font-mono group-hover:scale-105 transition-transform inline-block">
-                                {{ $metric['value'] }}
+                                {{ $metric['value'] ?? '' }}
                             </p>
-                            <p class="font-bold text-sm text-slate-200 mt-1">{{ $metric['label'] }}</p>
-                            <p class="text-xs text-slate-400 mt-0.5">{{ $metric['desc'] }}</p>
+                            <p class="font-bold text-sm text-slate-200 mt-1">{{ $metric['label'] ?? '' }}</p>
+                            <p class="text-xs text-slate-400 mt-0.5">{{ $metric['subtext'] ?? $metric['desc'] ?? '' }}</p>
                         </div>
                     @endforeach
                 </div>
@@ -377,11 +377,15 @@
                             </div>
 
                             <!-- Interactive Buttons Footer (Video Demo, GitHub, Attachment Preview) -->
+                            @php
+                                $demoVideo = $proj['demo_video_url'] ?? $proj['demo_video'] ?? '';
+                                $githubLink = $proj['github_web_url'] ?? $proj['github'] ?? '';
+                            @endphp
                             <div class="mt-8 pt-5 border-t border-slate-800 flex flex-wrap items-center justify-between gap-3">
                                 <div class="flex flex-wrap items-center gap-2">
                                     <!-- Video Demo Button (Triggers Modal) -->
-                                    @if(!empty($proj['demo_video']))
-                                        <button onclick="openVideoModal('{{ $proj['demo_video'] }}', '{{ addslashes($proj['title']) }}')" class="px-3.5 py-2 rounded-xl bg-brand-600/20 hover:bg-brand-600 text-brand-300 hover:text-white border border-brand-500/40 text-xs font-semibold flex items-center gap-2 transition-all">
+                                    @if(!empty($demoVideo))
+                                        <button onclick="openVideoModal('{{ $demoVideo }}', '{{ addslashes($proj['title']) }}')" class="px-3.5 py-2 rounded-xl bg-brand-600/20 hover:bg-brand-600 text-brand-300 hover:text-white border border-brand-500/40 text-xs font-semibold flex items-center gap-2 transition-all">
                                             <svg class="w-4 h-4 text-accent-sky" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11v11.78a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
                                             Tonton Demo Video
                                         </button>
@@ -397,8 +401,8 @@
                                 </div>
 
                                 <!-- GitHub Code Link -->
-                                @if(!empty($proj['github']))
-                                    <a href="{{ $proj['github'] }}" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-400 hover:text-brand-300 font-semibold flex items-center gap-1 group/link">
+                                @if(!empty($githubLink))
+                                    <a href="{{ $githubLink }}" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-400 hover:text-brand-300 font-semibold flex items-center gap-1 group/link">
                                         Lihat Kode di GitHub
                                         <span class="group-hover/link:translate-x-1 transition-transform">→</span>
                                     </a>
