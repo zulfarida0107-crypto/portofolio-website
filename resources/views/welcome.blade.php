@@ -1,775 +1,1237 @@
 <!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<html class="scroll-smooth" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $profName ?? 'Zulfarida' }} | {{ $profHeadline ?? 'QA & Systems Analyst' }}</title>
-    <meta name="description" content="{{ $profSummary ?? '' }}">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Zulfarida ✦ Full Stack Developer &amp; Co-Founder of CuitBox</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with custom theme config -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-high": "#d4f0d1",
+            "on-surface": "#0a200d",
+            "inverse-primary": "#aecfac",
+            "on-primary-container": "#afd0ad",
+            "on-tertiary-fixed": "#1e1b14",
+            "surface-container": "#daf5d6",
+            "on-tertiary": "#ffffff",
+            "outline": "#737970",
+            "on-tertiary-container": "#cdc7bc",
+            "on-secondary-fixed": "#301216",
+            "secondary": "#7c5357",
+            "on-error": "#ffffff",
+            "surface-container-low": "#dffbdc",
+            "tertiary-container": "#57534a",
+            "on-tertiary-fixed-variant": "#4a463e",
+            "on-primary-fixed-variant": "#314d32",
+            "on-secondary-container": "#795154",
+            "outline-variant": "#c3c8bf",
+            "on-primary": "#ffffff",
+            "surface-tint": "#486549",
+            "primary-fixed": "#caebc7",
+            "on-secondary-fixed-variant": "#623c40",
+            "tertiary-fixed-dim": "#ccc6ba",
+            "tertiary": "#3f3c34",
+            "secondary-fixed-dim": "#eeb9bd",
+            "on-surface-variant": "#434841",
+            "surface-variant": "#ceeacb",
+            "secondary-fixed": "#ffdadc",
+            "primary-container": "#3d5a3e",
+            "secondary-container": "#fdc7cb",
+            "tertiary-fixed": "#e8e2d6",
+            "surface-container-lowest": "#ffffff",
+            "surface": "#ebffe7",
+            "background": "#ebffe7",
+            "error-container": "#ffdad6",
+            "error": "#ba1a1a",
+            "inverse-surface": "#1f3521",
+            "primary-fixed-dim": "#aecfac",
+            "on-primary-fixed": "#05210a",
+            "surface-bright": "#ebffe7",
+            "inverse-on-surface": "#dcf8d9",
+            "on-background": "#0a200d",
+            "primary": "#264228",
+            "on-error-container": "#93000a",
+            "on-secondary": "#ffffff",
+            "surface-dim": "#c6e1c3",
+            "surface-container-highest": "#ceeacb"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "2rem",
+            "margin-mobile": "1rem",
+            "space-xl": "2.5rem",
+            "space-md": "1rem",
+            "gutter-mobile": "0.75rem",
+            "space-sm": "0.5rem",
+            "space-lg": "1.5rem",
+            "gutter": "1.25rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "headline-md": ["Epilogue", "sans-serif"],
+            "headline-lg": ["Epilogue", "sans-serif"],
+            "display-xl": ["Epilogue", "sans-serif"],
+            "metric-num": ["Epilogue", "sans-serif"],
+            "headline-lg-mobile": ["Epilogue", "sans-serif"],
+            "body-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "label-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "body-md": ["Plus Jakarta Sans", "sans-serif"],
+            "display-xl-mobile": ["Epilogue", "sans-serif"],
+            "title-editorial": ["Playfair Display", "serif"],
+            "label-badge": ["Epilogue", "sans-serif"],
+            "body-lg": ["Plus Jakarta Sans", "sans-serif"]
+          },
+          "fontSize": {
+            "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+            "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "display-xl": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "metric-num": ["32px", { "lineHeight": "36px", "fontWeight": "800" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "0em", "fontWeight": "700" }],
+            "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }],
+            "label-lg": ["13px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }],
+            "display-xl-mobile": ["38px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "800" }],
+            "title-editorial": ["22px", { "lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "label-badge": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "500" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 20px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased;
+    }
     
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS CDN with Custom Plugins -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                        mono: ['"JetBrains Mono"', 'monospace'],
-                    },
-                    colors: {
-                        brand: {
-                            50: '#eff6ff',
-                            100: '#dbeafe',
-                            200: '#bfdbfe',
-                            300: '#93c5fd',
-                            400: '#60a5fa',
-                            500: '#3b82f6',
-                            600: '#2563eb', // Primary Royal Blue
-                            700: '#1d4ed8',
-                            800: '#1e40af', // Deep Navy Tech Blue
-                            900: '#1e3a8a',
-                            950: '#0f172a',
-                        },
-                        accent: {
-                            cyan: '#0ea5e9',
-                            sky: '#38bdf8',
-                            emerald: '#10b981',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        /* Custom Glowing & Background Grid */
-        .bg-grid-pattern {
-            background-size: 40px 40px;
-            background-image: 
-                linear-gradient(to right, rgba(37, 99, 235, 0.05) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(37, 99, 235, 0.05) 1px, transparent 1px);
-        }
-        .glow-effect {
-            box-shadow: 0 0 50px -10px rgba(37, 99, 235, 0.25);
-        }
-        .glow-cyan {
-            box-shadow: 0 0 35px -5px rgba(14, 165, 233, 0.3);
-        }
-    </style>
+    /* Tactile Paper Texture & Stickers */
+    .washi-tape {
+      background: rgba(255, 255, 255, 0.7);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      backdrop-filter: blur(2px);
+      border-left: 2px dashed rgba(61, 90, 62, 0.3);
+      border-right: 2px dashed rgba(61, 90, 62, 0.3);
+    }
+    .paper-clip {
+      position: absolute;
+      width: 14px;
+      height: 38px;
+      border: 3px solid #7c5357;
+      border-radius: 12px;
+      top: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: transparent;
+      z-index: 20;
+    }
+    .paper-clip-gold {
+      position: absolute;
+      width: 16px;
+      height: 42px;
+      border: 3.5px solid #d4a373;
+      border-radius: 12px;
+      top: -20px;
+      left: 28px;
+      transform: rotate(-6deg);
+      z-index: 30;
+      box-shadow: 1px 2px 4px rgba(0,0,0,0.15);
+    }
+    .torn-edge {
+      filter: drop-shadow(0 4px 12px rgba(38, 66, 40, 0.08));
+    }
+    .soft-card-shadow {
+      box-shadow: 0 8px 24px -4px rgba(45, 68, 46, 0.08);
+    }
+    .lift-hover {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .lift-hover:hover {
+      transform: translateY(-3px) scale(1.01);
+      box-shadow: 0 14px 28px -6px rgba(45, 68, 46, 0.12);
+    }
+  </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-600 selection:text-white">
-
-    @php
-        $profName = $profile->name ?? config('portfolio.profile.name');
-        $profStatus = $profile->badge_status ?? config('portfolio.profile.badge_status');
-        $profHeadline = $profile->headline ?? config('portfolio.profile.headline');
-        $profSubheadline = $profile->subheadline ?? config('portfolio.profile.subheadline');
-        $profLocation = $profile->location ?? config('portfolio.profile.location');
-        $profSummary = $profile->bio_summary ?? config('portfolio.profile.summary');
-        $profExtSummary = $profile->extended_summary ?? config('portfolio.profile.extended_summary');
-        $profEmail = $profile->email ?? config('portfolio.profile.email');
-        $profWhatsapp = $profile->whatsapp_url ?? config('portfolio.profile.whatsapp');
-        $profLinkedin = $profile->linkedin_url ?? config('portfolio.profile.linkedin');
-        $profGithub = $profile->github_url ?? config('portfolio.profile.github');
-        $profPhoto = $profile->photo_path ?? config('portfolio.profile.photo');
-        $profCv = $profile->cv_path ?? config('portfolio.profile.cv_file');
-
-        $metricList = isset($metrics) && $metrics->count() > 0 ? $metrics->toArray() : config('portfolio.metrics');
-        $compList = isset($competencies) && $competencies->count() > 0 ? $competencies->toArray() : config('portfolio.competencies');
-        $projList = isset($projects) && $projects->count() > 0 ? $projects->toArray() : config('portfolio.projects');
-        $expList = isset($experiences) && $experiences->count() > 0 ? $experiences->toArray() : config('portfolio.experience');
-        $certList = isset($certifications) && $certifications->count() > 0 ? $certifications->toArray() : config('portfolio.certifications');
-    @endphp
-
-    <!-- Subtle Background Glow Elements -->
-    <div class="fixed inset-0 bg-grid-pattern pointer-events-none z-0"></div>
-    <div class="fixed top-0 left-1/4 w-96 h-96 bg-brand-600/15 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="fixed top-1/3 right-10 w-96 h-96 bg-accent-cyan/10 rounded-full blur-3xl pointer-events-none"></div>
-
-    <!-- 1. NAVIGATION BAR -->
-    <header class="sticky top-0 z-40 backdrop-blur-md bg-slate-950/80 border-b border-slate-800/80 transition-all">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Brand / Logo -->
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-700 to-accent-cyan flex items-center justify-center font-bold text-white text-lg shadow-lg shadow-brand-600/30 group-hover:scale-105 transition-transform">
-                    ZR
-                </div>
-                <div>
-                    <span class="font-bold text-lg text-white tracking-tight flex items-center gap-2">
-                        {{ config('portfolio.profile.name') }}
-                        <span class="text-xs px-2 py-0.5 rounded-full bg-brand-900/60 text-brand-300 border border-brand-700/50 font-mono">QA</span>
-                    </span>
-                    <span class="block text-xs text-slate-400">Systems Analyst & QA Engineer</span>
-                </div>
-            </a>
-
-            <!-- Desktop Nav Links -->
-            <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
-                <a href="#about" class="hover:text-brand-400 transition-colors">Tentang</a>
-                <a href="#competencies" class="hover:text-brand-400 transition-colors">Kompetensi QA</a>
-                <a href="#projects" class="hover:text-brand-400 transition-colors">Proyek & Skenario Uji</a>
-                <a href="#experience" class="hover:text-brand-400 transition-colors">Pengalaman</a>
-                <a href="#certifications" class="hover:text-brand-400 transition-colors">Sertifikasi</a>
-                <a href="#contact" class="hover:text-brand-400 transition-colors">Kontak</a>
-            </nav>
-
-            <!-- Quick Action Links & CV Download -->
-            <div class="hidden sm:flex items-center gap-3">
-                <!-- GitHub Icon -->
-                <a href="{{ config('portfolio.profile.github') }}" target="_blank" rel="noopener noreferrer" title="Kunjungi Profil GitHub" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-brand-500 hover:bg-brand-950 transition-all">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                </a>
-                <!-- LinkedIn Icon -->
-                <a href="{{ config('portfolio.profile.linkedin') }}" target="_blank" rel="noopener noreferrer" title="Kunjungi Profil LinkedIn" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-brand-500 hover:bg-brand-950 transition-all">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                </a>
-                <!-- Download CV Button -->
-                <a href="{{ config('portfolio.profile.cv_file') }}" download class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-brand-600 to-accent-cyan text-white text-xs font-semibold shadow-md shadow-brand-600/20 hover:opacity-95 hover:scale-[1.02] transition-all">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                    Download CV (PDF)
-                </a>
-            </div>
+<body class="bg-background text-on-surface font-body-md text-body-md antialiased selection:bg-secondary-container selection:text-on-secondary-fixed">
+<!-- ==================== SHARED COMPONENT 1: TopNavBar ==================== -->
+<nav class="sticky top-0 z-50 w-full bg-surface/90 dark:bg-inverse-surface/90 backdrop-blur-md shadow-sm border-b border-primary/10 dark:border-inverse-primary/10">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 py-4">
+<!-- Brand Logo -->
+<a class="font-headline-md text-headline-md font-bold tracking-tight text-primary dark:text-inverse-primary flex items-center gap-1.5 hover:scale-[1.02] transition-transform duration-200" href="#hero">
+<span>Zulfarida ✦</span>
+</a>
+<!-- Desktop Nav Links -->
+<div class="hidden lg:flex items-center space-x-6">
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-colors pb-1 text-label-lg font-label-lg" href="#about">About</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-colors pb-1 text-label-lg font-label-lg" href="#what-i-do">Vibes</a>
+<a class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary dark:border-inverse-primary pb-1 text-label-lg font-label-lg" href="#projects">Projects</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-colors pb-1 text-label-lg font-label-lg" href="#tech-stack">Stack</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-colors pb-1 text-label-lg font-label-lg" href="#experience">Experience</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-colors pb-1 text-label-lg font-label-lg" href="#why-me">Why Me</a>
+<a class="text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-colors pb-1 text-label-lg font-label-lg" href="#contact">Contact</a>
+</div>
+<!-- Trailing Action Buttons -->
+<div class="flex items-center space-x-3">
+<a class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-primary text-primary hover:bg-surface-variant text-label-lg font-label-lg hover:scale-[1.02] active:scale-[0.98] transition-all" href="#projects">
+<span>Let's Talk</span>
+</a>
+<a class="inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg hover:bg-primary shadow-sm hover:scale-[1.02] active:scale-[0.98] transition-all" href="mailto:afafaridaz91@gmail.com?subject=CV%20Request%20-%20Zulfarida">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Download CV</span>
+</a>
+</div>
+</div>
+</nav>
+<!-- ==================== SECTION 1: COVER / HERO SECTION ==================== -->
+<header class="relative max-w-7xl mx-auto px-4 sm:px-6 pt-6 pb-12" id="hero">
+<!-- Main Green Editorial Poster Card -->
+<div class="relative bg-primary-container rounded-[2rem] p-6 sm:p-10 md:p-14 overflow-hidden text-on-primary shadow-xl border border-primary/20">
+<!-- Decorative Collage Stickers & Starbursts -->
+<div class="absolute -top-3 left-10 w-24 h-7 washi-tape rotate-[-3deg] rounded-sm pointer-events-none opacity-80"></div>
+<div class="absolute top-6 right-8 text-secondary-fixed text-3xl select-none animate-pulse">✦</div>
+<div class="absolute top-1/2 left-4 text-surface-container-high/40 text-4xl select-none rotate-12">★</div>
+<div class="absolute bottom-6 right-1/3 text-secondary-container/40 text-3xl select-none rotate-[-8deg]">✧</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+<!-- Left Column: Content & Badges -->
+<div class="lg:col-span-7 flex flex-col items-start space-y-6">
+<!-- Venture Studio Winner Badge -->
+<div class="inline-flex items-center gap-2 bg-surface-container-lowest/95 text-primary px-4 py-1.5 rounded-full shadow-sm border border-primary/10 rotate-[-1.5deg] hover:rotate-0 transition-transform">
+<span class="text-base">🏆</span>
+<span class="font-label-badge text-label-badge font-bold tracking-wide uppercase">1st Winner, CCIT Venture Studio Batch #1 'Manggala'</span>
+</div>
+<!-- Giant Aesthetic Title -->
+<div class="space-y-2">
+<div class="flex items-center gap-3">
+<span class="text-secondary-fixed text-2xl font-serif">✦</span>
+<span class="font-label-lg text-label-lg tracking-widest text-on-primary-container uppercase font-bold">Portfolio &amp; Systems Showcase</span>
+</div>
+<h1 class="font-display-xl text-display-xl-mobile md:text-display-xl font-extrabold tracking-tight text-surface-container-lowest leading-none">
+              ZULFARIDA
+            </h1>
+<!-- Tape Label Sticker -->
+<div class="inline-block mt-2 bg-surface-container-lowest text-primary px-4 py-1 rounded-sm shadow-md rotate-[1.5deg] border border-primary/10">
+<span class="font-headline-md text-base sm:text-lg font-bold flex items-center gap-2">
+                Full Stack Developer <span class="text-secondary">✦</span> Co-Founder of CuitBox
+              </span>
+</div>
+</div>
+<!-- Taglines with tactile aesthetic badge styling -->
+<div class="space-y-2 bg-primary/40 p-4 rounded-2xl border border-surface-container/20 w-full max-w-xl">
+<p class="font-title-editorial text-title-editorial italic text-surface-bright text-lg sm:text-xl font-medium">
+              "From database to dashboard, from idea to launch."
+            </p>
+<p class="font-body-md text-body-md text-surface-variant font-normal">
+              I build systems that work, and teams that ship. Focused on resilient backends, tactile dashboards, and real-world execution.
+            </p>
+</div>
+<!-- CTAs -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-surface-container-lowest text-primary font-label-lg text-label-lg font-bold shadow-md hover:bg-surface-variant hover:scale-[1.02] active:scale-[0.98] transition-all" href="#projects">
+<span>View Projects</span>
+<span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-secondary-container text-on-secondary-fixed font-label-lg text-label-lg font-bold shadow-md hover:bg-secondary-fixed hover:scale-[1.02] active:scale-[0.98] transition-all" href="mailto:afafaridaz91@gmail.com?subject=CV%20Request%20-%20Zulfarida">
+<span class="material-symbols-outlined text-[18px]">article</span>
+<span>Download CV (PDF)</span>
+</a>
+</div>
+<!-- Mini Pills Row -->
+<div class="flex flex-wrap items-center gap-2 pt-2 text-surface-container text-body-sm font-body-sm">
+<span class="px-3 py-1 bg-surface-container-high/20 rounded-full border border-surface-container/20">📍 Depok &amp; Jakarta, ID</span>
+<span class="px-3 py-1 bg-surface-container-high/20 rounded-full border border-surface-container/20">⚡ Spring Boot &amp; CI4</span>
+<span class="px-3 py-1 bg-surface-container-high/20 rounded-full border border-surface-container/20">📱 Flutter &amp; Kiosk</span>
+</div>
+</div>
+<!-- Right Column: Tactile Photo Card with Paperclip & Stickers -->
+<div class="lg:col-span-5 flex justify-center lg:justify-end">
+<div class="relative w-full max-w-sm">
+<!-- Golden Paperclip Hanging Anchor -->
+<div class="paper-clip-gold"></div>
+<!-- Ripped Tape Top Right -->
+<div class="absolute -top-3 -right-4 w-28 h-7 washi-tape rotate-[6deg] rounded-sm pointer-events-none z-20"></div>
+<!-- Frame Card (Scrapbook Polaroid Style) -->
+<div class="bg-surface-container-lowest p-3 sm:p-4 rounded-3xl shadow-2xl border border-primary/20 transform rotate-[1.5deg] hover:rotate-0 transition-transform duration-300">
+<div class="relative overflow-hidden rounded-2xl aspect-square bg-surface-container-low border border-outline-variant/30">
+<img alt="Zulfarida - Full Stack Developer &amp; Systems Analyst" class="w-full h-full object-cover object-top" src="https://lh3.googleusercontent.com/aida/AEtjO1Xmp8SclrbmQ3xFZwR0SFtt5dgR_mpAZtY7ThK4W6H91_jrwjosGO6C1kr9BG93YxL62bDB9tpXIfakuYBnwQAOO5LyegZoDAa822aazJCHmMpWIeSg_oRIXtj1wK1iQwr3yqGYQoGBsKWu4Dp8_NiZSogShohawdvOlkCzkdpNZilMM15ot1hQGdIhQaFmRI9YOEPihCY7yz2GmUXWDsnyJJfbPNLemY4bsMPmKYMA"/>
+<!-- Verified Badge Sticker Overlay -->
+<div class="absolute bottom-3 left-3 bg-primary-container text-on-primary text-body-sm font-label-badge font-bold px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1.5 border border-surface-container/30">
+<span class="material-symbols-outlined text-[16px] text-surface-container-high" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span>Verified Full-Stack</span>
+</div>
+</div>
+<!-- Polaroid Caption Bottom -->
+<div class="pt-3 px-1 pb-1 flex justify-between items-center text-primary">
+<div>
+<h4 class="font-headline-md text-base font-bold leading-tight">Zulfarida</h4>
+<p class="text-body-sm font-body-sm text-outline">CCIT FTUI x Politeknik Negeri Jakarta</p>
+</div>
+<div class="flex items-center gap-1 bg-secondary-container/60 text-secondary px-2.5 py-1 rounded-full text-xs font-bold">
+<span>✦ 2026 Batch</span>
+</div>
+</div>
+</div>
+<!-- Sticker Pin Badges Overlapping Photo Frame -->
+<div class="absolute -bottom-4 -left-4 bg-secondary text-on-secondary px-3.5 py-2 rounded-xl text-xs font-bold shadow-lg rotate-[-6deg] flex items-center gap-1.5 border border-secondary-container">
+<span class="text-sm">⚡</span>
+<span>1st Winner CCIT VS #1</span>
+</div>
+<div class="absolute -bottom-3 right-6 bg-surface-container-lowest text-primary px-3 py-1 rounded-full text-xs font-bold shadow-md rotate-[4deg] border border-outline-variant/40 flex items-center gap-1">
+<span>Code + Strategy</span>
+<span class="text-secondary">✦</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- ==================== SECTION 2: ABOUT ME SECTION ==================== -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 py-12" id="about">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Bio Card (Editorial Scrapbook style) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-3xl p-6 sm:p-10 border border-primary/10 shadow-sm relative overflow-hidden">
+<!-- Tape Header -->
+<div class="inline-block bg-secondary-container/70 text-on-secondary-fixed px-3 py-1 rounded-sm text-xs font-bold tracking-wider uppercase mb-4 rotate-[-1deg]">
+          Personal Story ✦ Engineering Ethos
         </div>
-    </header>
-
-    <main class="relative z-10">
-
-        <!-- 2. HERO SECTION -->
-        <section id="about" class="pt-12 pb-20 lg:pt-20 lg:pb-28">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    
-                    <!-- Left Column: Headline, Bio & Action Buttons -->
-                    <div class="lg:col-span-7 space-y-6">
-                        <!-- Status Badge Pill -->
-                        <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-900 border border-brand-500/40 text-brand-300 text-xs font-medium shadow-sm">
-                            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-                            <span class="w-2 h-2 rounded-full bg-emerald-500 -ml-4"></span>
-                            {{ config('portfolio.profile.badge_status') }}
-                        </div>
-
-                        <!-- Main Big Title -->
-                        <div class="space-y-2">
-                            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
-                                Halo, saya <span class="bg-gradient-to-r from-brand-400 via-accent-sky to-white bg-clip-text text-transparent">{{ config('portfolio.profile.name') }}</span>
-                            </h1>
-                            <p class="text-xl sm:text-2xl font-semibold text-brand-400">
-                                {{ config('portfolio.profile.headline') }}
-                            </p>
-                        </div>
-
-                        <!-- Award Announcement Banner -->
-                        <div class="p-4 rounded-2xl bg-gradient-to-r from-brand-950/90 via-slate-900 to-slate-900 border border-brand-500/30 flex items-start sm:items-center gap-3.5">
-                            <div class="p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-400 shrink-0">
-                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-                            </div>
-                            <div class="text-sm">
-                                <span class="font-bold text-white block">1st Winner — CCIT Venture Studio Batch #1</span>
-                                <span class="text-slate-400">Proyek CuitBox: Systems analysis, technical documentation & end-to-end QA.</span>
-                            </div>
-                        </div>
-
-                        <!-- Narrative Pitch -->
-                        <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
-                            {{ config('portfolio.profile.summary') }}
-                        </p>
-                        <p class="text-slate-400 text-sm sm:text-base leading-relaxed border-l-2 border-brand-500/60 pl-4 py-1">
-                            {{ config('portfolio.profile.extended_summary') }}
-                        </p>
-
-                        <!-- Action Buttons Group (Social Media & CV) -->
-                        <div class="pt-2 flex flex-wrap items-center gap-3">
-                            <a href="#projects" class="px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-sm shadow-lg shadow-brand-600/30 hover:shadow-brand-600/50 hover:scale-[1.02] transition-all flex items-center gap-2">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
-                                Eksplorasi Proyek & Skenario QA
-                            </a>
-                            <a href="{{ config('portfolio.profile.whatsapp') }}" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold text-sm hover:border-brand-500 hover:text-white transition-all flex items-center gap-2">
-                                <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-                                WhatsApp
-                            </a>
-                            <a href="{{ config('portfolio.profile.linkedin') }}" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold text-sm hover:border-brand-500 hover:text-white transition-all flex items-center gap-2">
-                                <svg class="w-4 h-4 text-brand-400" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                                LinkedIn
-                            </a>
-                            <a href="{{ config('portfolio.profile.github') }}" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold text-sm hover:border-brand-500 hover:text-white transition-all flex items-center gap-2">
-                                <svg class="w-4 h-4 text-slate-300" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                                GitHub
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Right Column: Profile Photo with Tech Glowing Frame -->
-                    <div class="lg:col-span-5 flex justify-center">
-                        <div class="relative group">
-                            <!-- Background Glowing Accent -->
-                            <div class="absolute -inset-1.5 bg-gradient-to-tr from-brand-600 via-accent-cyan to-indigo-600 rounded-3xl blur-xl opacity-60 group-hover:opacity-80 transition duration-500"></div>
-                            
-                            <!-- Card Frame -->
-                            <div class="relative w-72 sm:w-80 rounded-2xl bg-slate-900 border border-slate-700/80 p-3 shadow-2xl overflow-hidden">
-                                <!-- Photo Container with Fallback Graphic -->
-                                <div class="w-full aspect-square rounded-xl bg-gradient-to-b from-slate-800 to-slate-950 flex flex-col items-center justify-center overflow-hidden border border-slate-800 relative">
-                                    <img src="{{ config('portfolio.profile.photo') }}" 
-                                         alt="{{ config('portfolio.profile.name') }}" 
-                                         class="w-full h-full object-cover rounded-xl"
-                                         onerror="this.style.display='none'; document.getElementById('photo-fallback').style.display='flex';">
-                                    
-                                    <!-- Fallback Avatar if profile.jpg is not yet uploaded -->
-                                    <div id="photo-fallback" class="hidden flex-col items-center justify-center p-6 text-center">
-                                        <div class="w-24 h-24 rounded-full bg-brand-900/60 border-2 border-brand-500/60 flex items-center justify-center text-brand-300 font-bold text-3xl mb-3 shadow-inner">
-                                            ZR
-                                        </div>
-                                        <p class="text-xs text-slate-300 font-medium">Foto Profil Anda</p>
-                                        <p class="text-[11px] text-slate-400 mt-1">Simpan foto di: <br><code class="text-brand-400 font-mono">public/images/profile.jpg</code></p>
-                                    </div>
-                                </div>
-
-                                <!-- Card Footer Detail -->
-                                <div class="pt-3.5 pb-1 px-1">
-                                    <div class="flex items-center justify-between">
-                                        <div>
-                                            <p class="font-bold text-sm text-white">{{ config('portfolio.profile.name') }}</p>
-                                            <p class="text-xs text-slate-400">{{ config('portfolio.profile.location') }}</p>
-                                        </div>
-                                        <span class="px-2 py-0.5 rounded-md bg-brand-950 border border-brand-700 text-brand-300 text-[11px] font-mono">
-                                            Verified QA
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- 4 METRICS COUNTER BAR -->
-                <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-                    @foreach($metricList as $metric)
-                        <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800/80 hover:border-brand-500/50 transition-all group">
-                            <p class="text-3xl sm:text-4xl font-extrabold text-brand-400 font-mono group-hover:scale-105 transition-transform inline-block">
-                                {{ $metric['value'] ?? '' }}
-                            </p>
-                            <p class="font-bold text-sm text-slate-200 mt-1">{{ $metric['label'] ?? '' }}</p>
-                            <p class="text-xs text-slate-400 mt-0.5">{{ $metric['subtext'] ?? $metric['desc'] ?? '' }}</p>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </section>
-
-
-        <!-- 3. CORE COMPETENCIES (4 PILARS OF QA & SYSTEMS ANALYSIS) -->
-        <section id="competencies" class="py-20 bg-slate-900/40 border-y border-slate-800/60">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- Section Header -->
-                <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-                    <span class="text-xs font-mono uppercase tracking-wider text-accent-cyan px-3 py-1 rounded-full bg-accent-cyan/10 border border-accent-cyan/20">
-                        Technical Skillset
-                    </span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
-                        4 Pilar Kompetensi & Kapabilitas QA
-                    </h2>
-                    <p class="text-slate-400 text-sm sm:text-base">
-                        Kombinasi unik antara pengujian kualitas menyeluruh (*end-to-end testing*), analisis arsitektur sistem, dan pemahaman logika kode.
-                    </p>
-                </div>
-
-                <!-- 4 Pillars Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                    @foreach($compList as $pillar)
-                        <div class="p-7 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-brand-500/50 hover:bg-slate-900 transition-all flex flex-col justify-between group">
-                            <div>
-                                <div class="flex items-center gap-3.5 mb-4">
-                                    <div class="w-10 h-10 rounded-xl bg-brand-950 border border-brand-500/40 flex items-center justify-center text-brand-400 group-hover:bg-brand-600 group-hover:text-white transition-colors">
-                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
-                                    </div>
-                                    <h3 class="font-bold text-lg text-white">{{ $pillar['category'] }}</h3>
-                                </div>
-                                <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                                    {{ $pillar['description'] }}
-                                </p>
-                            </div>
-                            <!-- Skills Badges -->
-                            <div class="flex flex-wrap gap-2 pt-4 border-t border-slate-800/80">
-                                @foreach($pillar['skills'] as $skill)
-                                    <span class="px-3 py-1 rounded-lg bg-slate-950 text-slate-300 border border-slate-800 text-xs font-medium hover:border-brand-400/50 transition-colors">
-                                        {{ $skill }}
-                                    </span>
-                                @endforeach
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </section>
-
-
-        <!-- 4. FEATURED PROJECTS & QA CASE STUDIES -->
-        <section id="projects" class="py-24">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- Section Header -->
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-                    <div>
-                        <span class="text-xs font-mono uppercase tracking-wider text-brand-400 px-3 py-1 rounded-full bg-brand-950 border border-brand-800">
-                            Hands-On Evidence
-                        </span>
-                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">
-                            Proyek & Skenario Pengujian (QA Case Studies)
-                        </h2>
-                        <p class="text-slate-400 text-sm sm:text-base mt-2 max-w-2xl">
-                            Setiap proyek dilengkapi sudut pandang pengujian kualitas, verifikasi integrasi sistem, dan artefak dokumentasi teknis.
-                        </p>
-                    </div>
-
-                    <!-- Category Filter Tabs -->
-                    <div class="flex flex-wrap gap-2 p-1.5 rounded-xl bg-slate-900 border border-slate-800 text-xs font-medium" id="filter-container">
-                        <button onclick="filterProjects('all')" class="filter-btn active px-3.5 py-1.5 rounded-lg bg-brand-600 text-white transition-all" data-category="all">Semua ({{ count($projList) }})</button>
-                        <button onclick="filterProjects('flagship')" class="filter-btn px-3.5 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all" data-category="flagship">Flagship / Award</button>
-                        <button onclick="filterProjects('final-project')" class="filter-btn px-3.5 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all" data-category="final-project">Tugas Akhir</button>
-                        <button onclick="filterProjects('qa-testing')" class="filter-btn px-3.5 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all" data-category="qa-testing">QA Testing</button>
-                    </div>
-                </div>
-
-                <!-- Projects Cards Grid -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    @foreach($projList as $proj)
-                        <div class="project-card p-7 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-brand-500/60 transition-all flex flex-col justify-between group" data-category="{{ $proj['category'] }}">
-                            <div>
-                                <!-- Top Badge & Year -->
-                                <div class="flex items-center justify-between gap-3 mb-4">
-                                    <span class="px-3 py-1 rounded-full bg-brand-950 border border-brand-700/60 text-brand-300 text-xs font-semibold">
-                                        {{ $proj['badge'] }}
-                                    </span>
-                                    <span class="text-xs text-slate-400 font-mono">{{ $proj['year'] }}</span>
-                                </div>
-
-                                <!-- Title -->
-                                <h3 class="text-xl sm:text-2xl font-bold text-white group-hover:text-brand-300 transition-colors">
-                                    {{ $proj['title'] }}
-                                </h3>
-
-                                <!-- Summary -->
-                                <p class="text-slate-300 text-sm mt-3 leading-relaxed">
-                                    {{ $proj['summary'] }}
-                                </p>
-
-                                <!-- QA Focus Highlight Box -->
-                                <div class="mt-4 p-3.5 rounded-xl bg-slate-950/80 border border-slate-800 text-xs">
-                                    <span class="font-bold text-accent-cyan flex items-center gap-1.5 mb-1">
-                                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
-                                        Fokus Skenario Uji & Analisis:
-                                    </span>
-                                    <p class="text-slate-400 leading-normal">{{ $proj['qa_focus'] }}</p>
-                                </div>
-
-                                <!-- Tech Stack Badges -->
-                                <div class="flex flex-wrap gap-1.5 mt-5">
-                                    @foreach($proj['tech_stack'] as $tech)
-                                        <span class="px-2.5 py-0.5 rounded-md bg-slate-950 text-slate-400 border border-slate-800/80 text-[11px] font-mono">
-                                            {{ $tech }}
-                                        </span>
-                                    @endforeach
-                                </div>
-                            </div>
-
-                            <!-- Interactive Buttons Footer (Video Demo, GitHub, Attachment Preview) -->
-                            @php
-                                $demoVideo = $proj['demo_video_url'] ?? $proj['demo_video'] ?? '';
-                                $githubLink = $proj['github_web_url'] ?? $proj['github'] ?? '';
-                            @endphp
-                            <div class="mt-8 pt-5 border-t border-slate-800 flex flex-wrap items-center justify-between gap-3">
-                                <div class="flex flex-wrap items-center gap-2">
-                                    <!-- Video Demo Button (Triggers Modal) -->
-                                    @if(!empty($demoVideo))
-                                        <button onclick="openVideoModal('{{ $demoVideo }}', '{{ addslashes($proj['title']) }}')" class="px-3.5 py-2 rounded-xl bg-brand-600/20 hover:bg-brand-600 text-brand-300 hover:text-white border border-brand-500/40 text-xs font-semibold flex items-center gap-2 transition-all">
-                                            <svg class="w-4 h-4 text-accent-sky" fill="currentColor" viewBox="0 0 20 20"><path d="M6.3 2.841A1.5 1.5 0 004 4.11v11.78a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z"/></svg>
-                                            Tonton Demo Video
-                                        </button>
-                                    @endif
-
-                                    <!-- Attachment / Documentation Preview Button -->
-                                    @if(!empty($proj['attachment_type']))
-                                        <button onclick="openImageModal('{{ $proj['attachment_image'] ?? '' }}', '{{ addslashes($proj['attachment_type']) }}', '{{ addslashes($proj['title']) }}')" class="px-3 py-2 rounded-xl bg-slate-950 hover:bg-slate-800 text-slate-300 border border-slate-800 text-xs font-medium flex items-center gap-1.5 transition-all">
-                                            <svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
-                                            {{ $proj['attachment_type'] }}
-                                        </button>
-                                    @endif
-                                </div>
-
-                                <!-- GitHub Code Link -->
-                                @if(!empty($githubLink))
-                                    <a href="{{ $githubLink }}" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-400 hover:text-brand-300 font-semibold flex items-center gap-1 group/link">
-                                        Lihat Kode di GitHub
-                                        <span class="group-hover/link:translate-x-1 transition-transform">→</span>
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </section>
-
-
-        <!-- 5. INTERACTIVE QA TEST SCENARIO SAMPLE (ARTEFAK QA NYATA) -->
-        <section class="py-16 bg-slate-900/30 border-y border-slate-800">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="p-8 rounded-3xl bg-slate-900 border border-slate-800 shadow-2xl">
-                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
-                        <div>
-                            <span class="text-xs font-mono uppercase tracking-wider text-emerald-400">Sample QA Matrix Artifact</span>
-                            <h3 class="text-xl sm:text-2xl font-bold text-white mt-1">Cuplikan Format Skenario Pengujian (Test Case Matrix)</h3>
-                            <p class="text-xs sm:text-sm text-slate-400 mt-1">Standar dokumentasi uji yang digunakan untuk memverifikasi alur API dan transaksi multi-platform.</p>
-                        </div>
-                        <span class="px-3 py-1 rounded-md bg-emerald-950 border border-emerald-700/60 text-emerald-400 text-xs font-mono self-start sm:self-auto">
-                            STLC Standard
-                        </span>
-                    </div>
-
-                    <!-- Test Matrix Table -->
-                    <div class="overflow-x-auto rounded-xl border border-slate-800">
-                        <table class="w-full text-left text-xs sm:text-sm font-sans">
-                            <thead class="bg-slate-950 text-slate-300 font-mono text-xs uppercase border-b border-slate-800">
-                                <tr>
-                                    <th class="px-4 py-3">Test Case ID</th>
-                                    <th class="px-4 py-3">Modul & Skenario</th>
-                                    <th class="px-4 py-3 hidden md:table-cell">Kategori Uji</th>
-                                    <th class="px-4 py-3 hidden lg:table-cell">Expected Output</th>
-                                    <th class="px-4 py-3">Status</th>
-                                </tr>
-                            </thead>
-                            <tbody class="divide-y divide-slate-800/80 text-slate-300">
-                                <tr class="hover:bg-slate-800/30">
-                                    <td class="px-4 py-3.5 font-mono text-brand-400">TC-PAY-001</td>
-                                    <td class="px-4 py-3.5 font-medium">Validasi Response Webhook Midtrans saat status <code>settlement</code></td>
-                                    <td class="px-4 py-3.5 hidden md:table-cell text-slate-400">Integration / API</td>
-                                    <td class="px-4 py-3.5 hidden lg:table-cell text-slate-400">Order ID otomatis <code>paid</code> di MySQL dan notifikasi terkirim</td>
-                                    <td class="px-4 py-3.5"><span class="px-2.5 py-0.5 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800 text-xs font-bold">PASSED</span></td>
-                                </tr>
-                                <tr class="hover:bg-slate-800/30">
-                                    <td class="px-4 py-3.5 font-mono text-brand-400">TC-SYNC-004</td>
-                                    <td class="px-4 py-3.5 font-medium">Sinkronisasi stok menu real-time antar Mobile Kasir (Flutter) & Web (CI4)</td>
-                                    <td class="px-4 py-3.5 hidden md:table-cell text-slate-400">Cross-Platform E2E</td>
-                                    <td class="px-4 py-3.5 hidden lg:table-cell text-slate-400">Stok berkurang di database, UI web auto-disable item habis</td>
-                                    <td class="px-4 py-3.5"><span class="px-2.5 py-0.5 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800 text-xs font-bold">PASSED</span></td>
-                                </tr>
-                                <tr class="hover:bg-slate-800/30">
-                                    <td class="px-4 py-3.5 font-mono text-brand-400">TC-AUTH-008</td>
-                                    <td class="px-4 py-3.5 font-medium">Boundary Value Analysis pada input kuantitas order (nilai 0, minus, & max integer)</td>
-                                    <td class="px-4 py-3.5 hidden md:table-cell text-slate-400">Boundary Value (BVA)</td>
-                                    <td class="px-4 py-3.5 hidden lg:table-cell text-slate-400">Muncul HTTP 422 Unprocessable Entity & alert user yang valid</td>
-                                    <td class="px-4 py-3.5"><span class="px-2.5 py-0.5 rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800 text-xs font-bold">PASSED</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- 6. EXPERIENCE & LEADERSHIP TIMELINE -->
-        <section id="experience" class="py-24">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- Section Header -->
-                <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-                    <span class="text-xs font-mono uppercase tracking-wider text-brand-400 px-3 py-1 rounded-full bg-brand-950 border border-brand-800">
-                        Leadership & Coordination
-                    </span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
-                        Pengalaman Organisasi & Kepemimpinan
-                    </h2>
-                    <p class="text-slate-400 text-sm sm:text-base">
-                        Pengalaman 2+ tahun memimpin komunikasi publik, koordinasi tim lintas fungsi, dan manajemen acara teknologi.
-                    </p>
-                </div>
-
-                <!-- Timeline List -->
-                <div class="relative border-l-2 border-brand-800/60 ml-4 sm:ml-8 space-y-12">
-                    @foreach($expList as $exp)
-                        <div class="relative pl-6 sm:pl-10 group">
-                            <!-- Timeline Dot Icon -->
-                            <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-950 border-2 border-brand-500 group-hover:bg-brand-400 group-hover:scale-125 transition-all"></div>
-
-                            <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition-all">
-                                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
-                                    <h3 class="text-xl font-bold text-white">{{ $exp['organization'] }}</h3>
-                                    <span class="text-xs font-mono text-brand-400 px-2.5 py-1 rounded-md bg-brand-950 border border-brand-800 self-start sm:self-auto">
-                                        {{ $exp['period'] }}
-                                    </span>
-                                </div>
-                                <p class="text-sm font-semibold text-accent-sky mb-4">{{ $exp['role'] }}</p>
-
-                                <ul class="space-y-2 text-slate-300 text-sm list-disc list-inside">
-                                    @foreach($exp['highlights'] as $highlight)
-                                        <li class="leading-relaxed">{{ $highlight }}</li>
-                                    @endforeach
-                                </ul>
-
-                                <!-- Activity Photos (If any) -->
-                                @if(!empty($exp['activity_photos']))
-                                    <div class="mt-5 pt-4 border-t border-slate-800 flex items-center gap-3">
-                                        <span class="text-xs text-slate-400">Lampiran Dokumentasi:</span>
-                                        @foreach($exp['activity_photos'] as $photo)
-                                            <button onclick="openImageModal('{{ $photo['image'] }}', '{{ addslashes($photo['title']) }}', '{{ addslashes($exp['organization']) }}')" class="px-3 py-1.5 rounded-lg bg-slate-950 hover:bg-slate-800 text-brand-300 border border-brand-800/80 text-xs flex items-center gap-1.5 transition-colors">
-                                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                                                {{ $photo['title'] }}
-                                            </button>
-                                        @endforeach
-                                    </div>
-                                @endif
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </section>
-
-
-        <!-- 7. CERTIFICATIONS & ACHIEVEMENTS -->
-        <section id="certifications" class="py-20 bg-slate-900/40 border-t border-slate-800/60">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- Section Header -->
-                <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-                    <span class="text-xs font-mono uppercase tracking-wider text-accent-cyan px-3 py-1 rounded-full bg-accent-cyan/10 border border-accent-cyan/20">
-                        Credentials
-                    </span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
-                        Sertifikasi & Penghargaan
-                    </h2>
-                    <p class="text-slate-400 text-sm sm:text-base">
-                        Bukti kompetensi formal dalam bidang jaringan, AI, dan prestasi kompetisi.
-                    </p>
-                </div>
-
-                <!-- Certifications Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    @foreach($certList as $cert)
-                        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 transition-all flex flex-col justify-between group">
-                            <div>
-                                <span class="text-[11px] font-mono text-brand-400 block mb-2">{{ $cert['type'] }}</span>
-                                <h3 class="font-bold text-white text-base group-hover:text-brand-300 transition-colors">
-                                    {{ $cert['title'] }}
-                                </h3>
-                                <p class="text-xs text-slate-400 mt-2">{{ $cert['issuer'] }}</p>
-                                <p class="text-[11px] text-slate-500 mt-1 font-mono">{{ $cert['year'] }}</p>
-                            </div>
-
-                            <div class="mt-6 pt-4 border-t border-slate-800">
-                                <button onclick="openImageModal('{{ $cert['credential_url'] }}', '{{ addslashes($cert['title']) }}', '{{ addslashes($cert['issuer']) }}')" class="w-full py-2 rounded-xl bg-slate-950 hover:bg-brand-600 hover:text-white border border-slate-800 text-xs font-medium text-slate-300 flex items-center justify-center gap-1.5 transition-all">
-                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
-                                    Lihat Sertifikat / Lampiran
-                                </button>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </section>
-
-
-        <!-- 8. CONTACT & FOOTER -->
-        <section id="contact" class="py-24 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-slate-800">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-                <!-- Status Tag -->
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-950 border border-brand-800 text-brand-300 text-xs font-mono">
-                    Open for Opportunities
-                </div>
-
-                <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-                    Mari Terhubung & Berdiskusi
-                </h2>
-                
-                <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-                    Tertarik membahas peran <span class="text-white font-semibold">Software Quality Assurance (QA)</span> atau <span class="text-white font-semibold">Systems Analysis</span> untuk mendukung sistem berskala enterprise di organisasi Anda?
-                </p>
-
-                <!-- Big Contact Action Buttons -->
-                <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
-                    <!-- WhatsApp Direct -->
-                    <a href="{{ config('portfolio.profile.whatsapp') }}" target="_blank" rel="noopener noreferrer" class="px-7 py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm shadow-xl shadow-emerald-600/20 hover:scale-105 transition-all flex items-center gap-2.5">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-                        Hubungi via WhatsApp
-                    </a>
-
-                    <!-- Direct Email -->
-                    <a href="mailto:{{ config('portfolio.profile.email') }}" class="px-7 py-3.5 rounded-2xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-sm shadow-xl shadow-brand-600/20 hover:scale-105 transition-all flex items-center gap-2.5">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                        Kirim Email ({{ config('portfolio.profile.email') }})
-                    </a>
-
-                    <!-- LinkedIn -->
-                    <a href="{{ config('portfolio.profile.linkedin') }}" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-2xl bg-slate-900 border border-slate-700 hover:border-brand-500 text-slate-200 hover:text-white font-semibold text-sm hover:scale-105 transition-all flex items-center gap-2">
-                        <svg class="w-5 h-5 text-brand-400" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                        Profil LinkedIn
-                    </a>
-                </div>
-
-                <!-- Footer Copyright & Tech Specs -->
-                <div class="pt-16 mt-16 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-                    <p>© {{ date('Y') }} {{ config('portfolio.profile.name') }}. All rights reserved.</p>
-                    <p class="font-mono">Built with <span class="text-brand-400 font-bold">Laravel 13</span> & <span class="text-accent-cyan font-bold">Tailwind CSS</span></p>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- ========================================== -->
-    <!-- INTERACTIVE MODALS (VIDEO DEMO & ATTACHMENT) -->
-    <!-- ========================================== -->
-
-    <!-- 1. Video Demo Modal -->
-    <div id="videoModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="bg-slate-900 border border-slate-700 w-full max-w-4xl rounded-2xl overflow-hidden shadow-2xl relative">
-            <!-- Modal Header -->
-            <div class="p-4 border-b border-slate-800 flex items-center justify-between">
-                <div class="flex items-center gap-2">
-                    <span class="w-3 h-3 rounded-full bg-red-500"></span>
-                    <span id="videoModalTitle" class="font-bold text-white text-sm sm:text-base">Demo Video</span>
-                </div>
-                <button onclick="closeVideoModal()" class="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-                </button>
-            </div>
-            <!-- Video Player Frame -->
-            <div class="aspect-video w-full bg-black flex items-center justify-center" id="videoContainer">
-                <!-- Video player injected by JS -->
-            </div>
-            <div class="p-3 bg-slate-950 text-slate-400 text-xs flex items-center justify-between">
-                <span>Tekan <kbd class="px-1.5 py-0.5 rounded bg-slate-800 text-slate-300">ESC</kbd> untuk menutup</span>
-                <span class="text-brand-400">Video Player Portofolio</span>
-            </div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary mb-6 flex items-center gap-2">
+<span>About Me</span>
+<span class="text-secondary text-2xl font-normal">✦</span>
+</h2>
+<!-- Verbatim Bio Copy Provided in Specification -->
+<div class="space-y-4 font-body-lg text-body-md sm:text-body-lg text-on-surface leading-relaxed">
+<p>
+            Hi, I'm Zulfarida, an Informatics Engineering student (Full Stack Developer track) at State Polytechnic of Jakarta, in collaboration with CCIT FTUI, Universitas Indonesia. I enjoy turning real problems into working products, from designing the database and APIs to building the dashboard users actually touch.
+          </p>
+<p>
+            I co-founded CuitBox, a self-service photo booth platform, and won 1st place in CCIT Venture Studio Batch #1. Beyond code, I've led communications, hosted events as an MC, and mentored new students, so I'm comfortable working across technical and non-technical teams.
+          </p>
+<div class="p-4 bg-surface-container-low rounded-2xl border-l-4 border-primary mt-4">
+<p class="font-semibold text-primary">
+              I'm looking for opportunities in Full Stack Development, Quality Assurance (QA), IT Project/Product Management, or Business/Systems Analysis.
+            </p>
+</div>
+</div>
+<!-- Scrapbook Footnote -->
+<div class="mt-8 pt-6 border-t border-primary/10 flex flex-wrap items-center justify-between gap-4 text-body-sm font-body-sm text-outline">
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">school</span>
+            State Polytechnic of Jakarta x CCIT FTUI
+          </span>
+<span class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-primary">verified_user</span>
+            Full Stack Developer Track
+          </span>
+</div>
+</div>
+<!-- Achievement Metrics ("Audience Size" style pill cards from template) -->
+<div class="lg:col-span-5 flex flex-col space-y-4">
+<div class="bg-primary-container text-on-primary rounded-3xl p-6 sm:p-8 shadow-sm relative overflow-hidden border border-primary/20">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-headline-md text-xl font-bold">Metrics &amp; Traction</h3>
+<span class="text-secondary-fixed text-lg">✦</span>
+</div>
+<p class="text-surface-container text-body-sm mb-6">Proven execution metrics across software development, product ownership, and code commits.</p>
+<!-- 4 Dual-tone Metric Tiles (2x2 Grid) -->
+<div class="grid grid-cols-2 gap-3.5">
+<!-- Metric 1 -->
+<div class="bg-surface-container-lowest text-primary p-4 rounded-2xl shadow-sm border border-primary/10 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="text-xl">🏆</span>
+<span class="text-[10px] font-bold bg-secondary-container text-secondary px-2 py-0.5 rounded-full">VS #1</span>
+</div>
+<div class="mt-2">
+<div class="font-metric-num text-xl sm:text-2xl font-extrabold text-primary leading-tight">1st Winner</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant mt-1 leading-snug">CCIT Venture Studio Batch #1</div>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container-lowest text-primary p-4 rounded-2xl shadow-sm border border-primary/10 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary text-[22px]">terminal</span>
+<span class="text-[10px] font-bold bg-surface-container text-primary px-2 py-0.5 rounded-full">Open Source</span>
+</div>
+<div class="mt-2">
+<div class="font-metric-num text-2xl sm:text-3xl font-extrabold text-primary leading-tight">21</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant mt-1 leading-snug">Public GitHub Repositories</div>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-container-lowest text-primary p-4 rounded-2xl shadow-sm border border-primary/10 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-secondary text-[22px]">commit</span>
+<span class="text-[10px] font-bold bg-secondary-container text-secondary px-2 py-0.5 rounded-full">Annual</span>
+</div>
+<div class="mt-2">
+<div class="font-metric-num text-2xl sm:text-3xl font-extrabold text-secondary leading-tight">200+</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant mt-1 leading-snug">GitHub Contributions (Year)</div>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="bg-surface-container-lowest text-primary p-4 rounded-2xl shadow-sm border border-primary/10 flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-primary text-[22px]">devices</span>
+<span class="text-[10px] font-bold bg-surface-container text-primary px-2 py-0.5 rounded-full">Multi-tier</span>
+</div>
+<div class="mt-2">
+<div class="font-metric-num text-2xl sm:text-3xl font-extrabold text-primary leading-tight">3 Platforms</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant mt-1 leading-snug">One System (Web, Mobile, API)</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Quote Pill -->
+<div class="bg-secondary-container/60 p-4 rounded-2xl border border-secondary/20 flex items-center gap-3">
+<span class="text-2xl">💡</span>
+<p class="text-body-sm text-on-secondary-container font-medium">
+            "Comfortable presenting to executive panels and debugging multithreaded camera buffers."
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SECTION 3: WHAT I DO ("PICK YOUR VIBE") ==================== -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 py-12" id="what-i-do">
+<!-- Header banner in Zoe Laurent editorial style -->
+<div class="text-center max-w-2xl mx-auto mb-12">
+<div class="inline-block bg-surface-container-highest px-4 py-1 rounded-full text-xs font-bold text-primary mb-2">
+        Services &amp; Capabilities ✦ How I Create Value
+      </div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary italic font-serif">
+        pick your vibe
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+        Let's turn your team's product vision into the next production-ready release.
+      </p>
+</div>
+<!-- 3 Tier Cards (Solo Flex / Main Character / Brand Icon style) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+<!-- Card 1: Solo Flex -> Full Stack Development -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 sm:p-8 border border-primary/10 shadow-sm flex flex-col justify-between relative lift-hover">
+<div class="paper-clip"></div>
+<div>
+<div class="text-center pb-4 border-b border-outline-variant/30">
+<span class="inline-block px-3 py-1 bg-surface-container text-primary rounded-full text-xs font-bold tracking-wide uppercase mb-2">
+              BUILD &amp; CODE
+            </span>
+<h3 class="font-headline-md text-xl font-bold text-primary">Full Stack Development</h3>
+<p class="text-body-sm text-outline mt-1">Web, mobile, &amp; REST API architecture</p>
+</div>
+<ul class="py-6 space-y-3.5 text-body-md text-on-surface">
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span><strong>Backend APIs:</strong> Spring Boot (Java), CodeIgniter 4 (PHP), RESTful micro-endpoints.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span><strong>Client Apps:</strong> Flutter mobile apps, responsive Blade/HTML5 web dashboards.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span><strong>Databases:</strong> Relational MySQL modeling &amp; non-relational MongoDB schemas.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span><strong>Hardware &amp; Kiosks:</strong> Python OpenCV webcam and DSLR camera integration.</span>
+</li>
+</ul>
+</div>
+<div class="pt-4 border-t border-outline-variant/30">
+<div class="w-full py-2.5 rounded-full bg-primary-container text-on-primary text-center font-label-lg text-label-lg font-bold">
+            Ready to Build
+          </div>
+</div>
+</div>
+<!-- Card 2: Main Character -> Systems Analysis & Design (Highlighted) -->
+<div class="bg-surface-container rounded-3xl p-6 sm:p-8 border-2 border-primary shadow-md flex flex-col justify-between relative lift-hover scale-[1.02]">
+<div class="paper-clip"></div>
+<!-- Special Badge -->
+<div class="absolute -top-3 right-6 bg-secondary text-on-secondary px-3 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">
+          Core Strength ✦
         </div>
-    </div>
-
-    <!-- 2. Attachment / Certificate / Photo Preview Modal -->
-    <div id="imageModal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="bg-slate-900 border border-slate-700 w-full max-w-3xl rounded-2xl overflow-hidden shadow-2xl relative">
-            <!-- Modal Header -->
-            <div class="p-4 border-b border-slate-800 flex items-center justify-between">
-                <div>
-                    <span id="imageModalSubtitle" class="text-xs text-brand-400 font-mono block">Dokumentasi</span>
-                    <h4 id="imageModalTitle" class="font-bold text-white text-base">Preview Lampiran</h4>
-                </div>
-                <button onclick="closeImageModal()" class="text-slate-400 hover:text-white p-1 rounded-lg hover:bg-slate-800">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-                </button>
-            </div>
-            <!-- Image Container with Fallback Message -->
-            <div class="p-4 bg-slate-950 flex flex-col items-center justify-center min-h-[300px] max-h-[70vh] overflow-auto">
-                <img id="modalPreviewImg" src="" alt="Lampiran" class="max-h-[60vh] max-w-full rounded-xl object-contain border border-slate-800" onerror="handleImageModalError()">
-                <div id="imageModalPlaceholder" class="hidden text-center p-8">
-                    <div class="w-16 h-16 rounded-full bg-brand-950 border border-brand-700 text-brand-400 flex items-center justify-center mx-auto mb-3">
-                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                    </div>
-                    <p class="text-sm font-semibold text-white">File Lampiran Belum Diunggah</p>
-                    <p class="text-xs text-slate-400 mt-1 max-w-md">Anda dapat meletakkan file gambar sertifikat atau foto kegiatan ini ke folder yang sesuai di dalam direktori <code class="text-brand-300 font-mono">public/images/...</code></p>
-                </div>
-            </div>
-            <div class="p-3 bg-slate-900 border-t border-slate-800 text-right">
-                <button onclick="closeImageModal()" class="px-4 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold">Tutup Preview</button>
-            </div>
+<div>
+<div class="text-center pb-4 border-b border-primary/20">
+<span class="inline-block px-3 py-1 bg-surface-container-high text-primary rounded-full text-xs font-bold tracking-wide uppercase mb-2">
+              ANALYZE &amp; BLUEPRINT
+            </span>
+<h3 class="font-headline-md text-xl font-bold text-primary">Systems Analysis &amp; Design</h3>
+<p class="text-body-sm text-on-surface-variant mt-1">Bridging business needs to scalable code</p>
+</div>
+<ul class="py-6 space-y-3.5 text-body-md text-on-surface">
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span><strong>Requirements Analysis:</strong> Functional &amp; non-functional spec documentation.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span><strong>Database &amp; Architecture:</strong> ERD, UML sequence diagrams, and clean schema design.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span><strong>UI/UX Wireframing:</strong> High-fidelity interactive prototypes in Figma.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span><strong>Quality Assurance:</strong> Black-Box testing protocols and test case verification.</span>
+</li>
+</ul>
+</div>
+<div class="pt-4 border-t border-primary/20">
+<div class="w-full py-2.5 rounded-full bg-primary text-on-primary text-center font-label-lg text-label-lg font-bold shadow-sm">
+            Architect &amp; Ship
+          </div>
+</div>
+</div>
+<!-- Card 3: Brand Icon -> Project Coordination -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 sm:p-8 border border-primary/10 shadow-sm flex flex-col justify-between relative lift-hover">
+<div class="paper-clip"></div>
+<div>
+<div class="text-center pb-4 border-b border-outline-variant/30">
+<span class="inline-block px-3 py-1 bg-secondary-container text-secondary rounded-full text-xs font-bold tracking-wide uppercase mb-2">
+              LEAD &amp; COMMUNICATE
+            </span>
+<h3 class="font-headline-md text-xl font-bold text-primary">Project Coordination</h3>
+<p class="text-body-sm text-outline mt-1">Leadership, PR, &amp; cross-functional delivery</p>
+</div>
+<ul class="py-6 space-y-3.5 text-body-md text-on-surface">
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span><strong>Cross-Team Sync:</strong> Uniting developers, designers, and business stakeholders.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span><strong>Event &amp; Division Lead:</strong> CIFEST Head of Events, KOMANDRO PR Officer.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span><strong>Public Speaking:</strong> Master of Ceremonies for benchmark robotics conferences.</span>
+</li>
+<li class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<span><strong>Agile &amp; DevOps:</strong> Git workflow oversight, milestone tracking, and student mentoring.</span>
+</li>
+</ul>
+</div>
+<div class="pt-4 border-t border-outline-variant/30">
+<div class="w-full py-2.5 rounded-full bg-primary-container text-on-primary text-center font-label-lg text-label-lg font-bold">
+            Coordinate &amp; Scale
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SECTION 4: PROJECTS (3 IN-DEPTH FEATURED PROJECTS) ==================== -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 py-12" id="projects">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+<div>
+<div class="inline-block bg-surface-container-high px-3 py-1 rounded-full text-xs font-bold text-primary mb-2">
+          Featured Engineering Works ✦ 2025 - 2026
         </div>
-    </div>
-
-    <!-- Client-side Interactions Script -->
-    <script>
-        // 1. Projects Category Filter
-        function filterProjects(category) {
-            const buttons = document.querySelectorAll('.filter-btn');
-            buttons.forEach(btn => {
-                if (btn.getAttribute('data-category') === category) {
-                    btn.classList.add('bg-brand-600', 'text-white');
-                    btn.classList.remove('text-slate-400');
-                } else {
-                    btn.classList.remove('bg-brand-600', 'text-white');
-                    btn.classList.add('text-slate-400');
-                }
-            });
-
-            const cards = document.querySelectorAll('.project-card');
-            cards.forEach(card => {
-                if (category === 'all' || card.getAttribute('data-category') === category) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-
-        // 2. Video Modal Logic
-        function openVideoModal(url, title) {
-            const modal = document.getElementById('videoModal');
-            const container = document.getElementById('videoContainer');
-            document.getElementById('videoModalTitle').innerText = title;
-
-            // Handle YouTube Embed or Direct MP4
-            let embedHtml = '';
-            if (url.includes('youtube.com') || url.includes('youtu.be')) {
-                let videoId = '';
-                if (url.includes('watch?v=')) {
-                    videoId = url.split('watch?v=')[1].split('&')[0];
-                } else if (url.includes('youtu.be/')) {
-                    videoId = url.split('youtu.be/')[1].split('?')[0];
-                }
-                embedHtml = `<iframe class="w-full h-full" src="https://www.youtube.com/embed/${videoId}?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
-            } else {
-                embedHtml = `<video class="w-full h-full" controls autoplay><source src="${url}" type="video/mp4">Browser Anda tidak mendukung tag video.</video>`;
-            }
-
-            container.innerHTML = embedHtml;
-            modal.classList.remove('hidden');
-        }
-
-        function closeVideoModal() {
-            const modal = document.getElementById('videoModal');
-            const container = document.getElementById('videoContainer');
-            modal.classList.add('hidden');
-            container.innerHTML = '';
-        }
-
-        // 3. Image / Certificate / Attachment Modal Logic
-        function openImageModal(imgUrl, title, subtitle) {
-            const modal = document.getElementById('imageModal');
-            const previewImg = document.getElementById('modalPreviewImg');
-            const placeholder = document.getElementById('imageModalPlaceholder');
-
-            document.getElementById('imageModalTitle').innerText = title;
-            document.getElementById('imageModalSubtitle').innerText = subtitle;
-
-            if (imgUrl && imgUrl.trim() !== '') {
-                previewImg.style.display = 'block';
-                placeholder.classList.add('hidden');
-                previewImg.src = imgUrl;
-            } else {
-                previewImg.style.display = 'none';
-                placeholder.classList.remove('hidden');
-            }
-
-            modal.classList.remove('hidden');
-        }
-
-        function handleImageModalError() {
-            document.getElementById('modalPreviewImg').style.display = 'none';
-            document.getElementById('imageModalPlaceholder').classList.remove('hidden');
-        }
-
-        function closeImageModal() {
-            document.getElementById('imageModal').classList.add('hidden');
-        }
-
-        // Close on ESC key
-        window.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeVideoModal();
-                closeImageModal();
-            }
-        });
-    </script>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary">
+          Production Projects
+        </h2>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-md">
+        In-depth architecture breakdown of hardware-integrated kiosks, distributed multi-tier platforms, and computer vision systems.
+      </p>
+</div>
+<div class="space-y-12">
+<!-- ⭐ FEATURED 1: CUITBOX PHOTOBOX PLATFORM -->
+<article class="bg-surface-container-lowest rounded-3xl p-6 sm:p-10 border border-primary/20 shadow-md relative overflow-hidden">
+<!-- Scrapbook Tape & Crown Winner Badge -->
+<div class="absolute -top-3 right-12 w-32 h-8 washi-tape rotate-[2deg] rounded-sm pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<div class="lg:col-span-8 space-y-6">
+<!-- Meta & Award Ribbon -->
+<div class="flex flex-wrap items-center gap-3">
+<span class="bg-secondary text-on-secondary px-3.5 py-1 rounded-full text-xs font-bold flex items-center gap-1 shadow-sm">
+<span>🏆 1st Winner</span>
+<span>CCIT Venture Studio Batch #1 'Manggala'</span>
+</span>
+<span class="bg-surface-container px-3 py-1 rounded-full text-xs font-bold text-primary">
+                Self-Service Photo Booth | Web &amp; Desktop Kiosk | 2026
+              </span>
+<span class="bg-surface-variant px-3 py-1 rounded-full text-xs font-semibold text-on-surface">
+                Role: Co-Founder &amp; Lead Engineer (Core Backend Architect)
+              </span>
+</div>
+<!-- Project Title -->
+<div>
+<h3 class="font-headline-lg text-2xl sm:text-3xl font-bold text-primary flex items-center gap-2">
+<span>CuitBox (Photobox Platform)</span>
+<span class="text-secondary">✦</span>
+</h3>
+<p class="font-title-editorial italic text-on-surface-variant text-base sm:text-lg mt-1">
+                "A self-service photo booth system where customers book online and take photos at a kiosk, while owners manage everything from one dashboard."
+              </p>
+</div>
+<!-- The Architecture / What I Built -->
+<div class="bg-surface-container-low/70 rounded-2xl p-5 border border-primary/10 space-y-3">
+<h4 class="font-label-lg text-label-lg font-bold uppercase tracking-wider text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">hub</span>
+<span>System Architecture &amp; Engineering Deliverables</span>
+</h4>
+<ul class="space-y-2 text-body-md text-on-surface">
+<li class="flex items-start gap-2">
+<span class="text-primary font-bold">›</span>
+<span><strong>Relational Database &amp; APIs:</strong> Designed normalized relational database architecture &amp; RESTful endpoints bridging the online booking website and the standalone desktop kiosk.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-primary font-bold">›</span>
+<span><strong>Comprehensive Admin Dashboard:</strong> Slot reservation management, real-time slot scheduling, dynamic tiered pricing, booth machine telemetry, and automated financial report generation in Excel, CSV, and PDF formats.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-primary font-bold">›</span>
+<span><strong>Desktop Kiosk Application:</strong> Interactive touch-screen capture UI with countdown timers, template selection, and automatic session cleanup.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-primary font-bold">›</span>
+<span><strong>Security &amp; Authentication:</strong> Role-Based Access Control (RBAC), session tokens, and secure transaction validation.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-primary font-bold">›</span>
+<span><strong>3rd Party Integrations:</strong> Midtrans QRIS payment gateway with real-time webhooks, Google Drive OAuth API for automated cloud photo archiving, and SMTP transactional emails with download links.</span>
+</li>
+</ul>
+</div>
+<!-- Hardest Challenge Box -->
+<div class="bg-secondary-container/40 rounded-2xl p-5 border border-secondary/20 space-y-2">
+<div class="flex items-center gap-2 text-secondary font-bold text-sm">
+<span class="material-symbols-outlined text-[18px]">build</span>
+<span>Hardest Engineering Challenge Solved</span>
+</div>
+<p class="text-body-md text-on-secondary-container">
+<strong>Problem:</strong> Getting DSLR and webcam live-view streams to render stably on low-latency kiosk displays without frame jitter, while concurrently saving high-res RAW frames and recording behind-the-scenes video in the background.<br/>
+<strong>Solution:</strong> Implemented hardware driver abstraction layers and dedicated multithreaded capture pipelines using Python OpenCV and native device bindings, guaranteeing zero UI freeze during disk I/O.
+              </p>
+</div>
+</div>
+<!-- Project Specs Sidebar -->
+<div class="lg:col-span-4 bg-surface-container rounded-2xl p-6 border border-primary/10 flex flex-col justify-between space-y-6">
+<div class="space-y-4">
+<h4 class="font-label-badge text-label-badge font-bold uppercase tracking-wider text-primary">
+                Tech Stack &amp; Libraries
+              </h4>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold shadow-xs">Spring Boot</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold shadow-xs">CodeIgniter 4</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold shadow-xs">Blade / HTML5</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold shadow-xs">Python OpenCV</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold shadow-xs">Electron</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold shadow-xs">MySQL</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest text-secondary rounded-lg text-xs font-bold shadow-xs">Midtrans QRIS</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold shadow-xs">Google Drive API</span>
+</div>
+<!-- Metrics Mini List -->
+<div class="pt-4 border-t border-primary/20 space-y-2 text-body-sm font-body-sm">
+<div class="flex justify-between text-on-surface">
+<span class="text-outline">Live Booking:</span>
+<span class="font-bold">Real-time QRIS</span>
+</div>
+<div class="flex justify-between text-on-surface">
+<span class="text-outline">Sync Architecture:</span>
+<span class="font-bold">REST API + Polling</span>
+</div>
+<div class="flex justify-between text-on-surface">
+<span class="text-outline">Report Generation:</span>
+<span class="font-bold">Excel, CSV, PDF</span>
+</div>
+</div>
+</div>
+<!-- Project Action Links -->
+<div class="space-y-2 pt-4 border-t border-primary/20">
+<a class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-primary text-on-primary font-label-lg text-label-lg font-bold hover:bg-primary-container transition-all" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">code</span>
+<span>GitHub (Photobox_Website)</span>
+</a>
+<a class="w-full inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest text-primary border border-primary/20 font-label-lg text-label-lg font-semibold hover:bg-surface-variant transition-all" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">desktop_windows</span>
+<span>GitHub (photobox-dekstop)</span>
+</a>
+<div class="text-center pt-1">
+<span class="text-[11px] font-bold text-secondary uppercase tracking-wider">✦ Live Demo Available on Request</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- PROJECT 2: COFFEE SHOP INTEGRATED INFORMATION SYSTEM -->
+<article class="bg-surface-container-lowest rounded-3xl p-6 sm:p-10 border border-primary/10 shadow-sm relative overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<div class="lg:col-span-8 space-y-6">
+<div class="flex flex-wrap items-center gap-3">
+<span class="bg-primary text-on-primary px-3 py-1 rounded-full text-xs font-bold">
+                Capstone Project | 2025 - 2026
+              </span>
+<span class="bg-surface-container px-3 py-1 rounded-full text-xs font-semibold text-primary">
+                Multi-Platform Architecture (Web, Mobile, REST API)
+              </span>
+</div>
+<div>
+<h3 class="font-headline-lg text-2xl sm:text-3xl font-bold text-primary">
+                Coffee Shop Integrated Information System
+              </h3>
+<p class="font-title-editorial italic text-on-surface-variant text-base sm:text-lg mt-1">
+                "Complete ecosystem connecting patron web-ordering, barista order fulfillment, and managerial mobile dashboards in real-time."
+              </p>
+</div>
+<div class="bg-surface-container-low/70 rounded-2xl p-5 border border-primary/10 space-y-3">
+<h4 class="font-label-lg text-label-lg font-bold uppercase tracking-wider text-primary">
+                Key Deliverables &amp; Responsibilities
+              </h4>
+<ul class="space-y-2 text-body-md text-on-surface">
+<li class="flex items-start gap-2">
+<span class="text-primary font-bold">›</span>
+<span><strong>Full Ownership:</strong> Spearheaded requirements analysis, relational database design, interactive UI/UX wireframes, and cross-platform coding.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-primary font-bold">›</span>
+<span><strong>Customer Web Portal:</strong> Built with CodeIgniter 4 featuring real-time menu catalogues, cart calculation, and order tracking.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-primary font-bold">›</span>
+<span><strong>Admin Mobile App:</strong> Native-feel Flutter application for coffee shop owners and baristas to manage live kitchen queues and stock inventory.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-primary font-bold">›</span>
+<span><strong>REST API Server:</strong> Spring Boot microservice handling transaction locking, token authorization, and MySQL synchronization.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-primary font-bold">›</span>
+<span><strong>Testing &amp; Validation:</strong> Documented full Black-Box Testing matrix to verify boundary values and fault tolerance.</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="lg:col-span-4 bg-surface-container-low rounded-2xl p-6 border border-primary/10 flex flex-col justify-between space-y-6">
+<div class="space-y-4">
+<h4 class="font-label-badge text-label-badge font-bold uppercase tracking-wider text-primary">
+                Technologies
+              </h4>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold">CodeIgniter 4</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold">Flutter (Dart)</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold">Spring Boot (Java)</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold">MySQL Relational</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold">Figma Prototyping</span>
+</div>
+</div>
+<!-- Repositories -->
+<div class="space-y-2 pt-4 border-t border-outline-variant/30">
+<span class="text-xs font-bold text-outline block">Linked Repositories:</span>
+<a class="block text-body-sm font-semibold text-primary hover:underline truncate" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
+                🔗 ta-ci4-web-coffeeshop
+              </a>
+<a class="block text-body-sm font-semibold text-primary hover:underline truncate" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
+                🔗 ta-flutter-aplikasi-coffeeshop
+              </a>
+<a class="block text-body-sm font-semibold text-primary hover:underline truncate" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
+                🔗 ta-server-coffeeshop
+              </a>
+</div>
+</div>
+</div>
+</article>
+<!-- PROJECT 3: BISINDO GESTURE RECOGNITION & AI EXPLORATION -->
+<article class="bg-surface-container-lowest rounded-3xl p-6 sm:p-10 border border-primary/10 shadow-sm relative overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<div class="lg:col-span-8 space-y-6">
+<div class="flex flex-wrap items-center gap-3">
+<span class="bg-secondary-container text-on-secondary-fixed px-3 py-1 rounded-full text-xs font-bold">
+                Machine Learning &amp; CV Exploration | 2025 - Present
+              </span>
+<span class="bg-surface-container-high text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                In Progress ✦ Active Research
+              </span>
+</div>
+<div>
+<h3 class="font-headline-lg text-2xl sm:text-3xl font-bold text-primary">
+                BISINDO Gesture Recognition &amp; AI Exploration
+              </h3>
+<p class="font-title-editorial italic text-on-surface-variant text-base sm:text-lg mt-1">
+                "Computer vision system recognizing Indonesian Sign Language (BISINDO) to improve digital accessibility."
+              </p>
+</div>
+<div class="bg-surface-container-low/70 rounded-2xl p-5 border border-primary/10 space-y-3">
+<h4 class="font-label-lg text-label-lg font-bold uppercase tracking-wider text-primary">
+                Research Focus &amp; Pipelines
+              </h4>
+<ul class="space-y-2 text-body-md text-on-surface">
+<li class="flex items-start gap-2">
+<span class="text-primary font-bold">›</span>
+<span><strong>Computer Vision Engine:</strong> Python &amp; OpenCV real-time video stream ingestion pipeline.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-primary font-bold">›</span>
+<span><strong>Landmark Feature Extraction:</strong> Leveraging Google MediaPipe hands and pose models to extract 21 precise 3D coordinate hand landmarks per frame.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-primary font-bold">›</span>
+<span><strong>Classification Models:</strong> Training lightweight deep learning models for accurate translation of BISINDO alphabets and conversational words.</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="lg:col-span-4 bg-surface-container-low rounded-2xl p-6 border border-primary/10 flex flex-col justify-between space-y-6">
+<div class="space-y-4">
+<h4 class="font-label-badge text-label-badge font-bold uppercase tracking-wider text-primary">
+                Research Toolkit
+              </h4>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold">Python 3.x</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold shadow-xs">OpenCV</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold shadow-xs">MediaPipe</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold shadow-xs">NumPy / Pandas</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold shadow-xs">TensorFlow / Keras</span>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/30">
+<div class="p-3 bg-surface-container-lowest rounded-xl border border-primary/10 text-body-sm text-outline">
+<span class="font-bold text-primary block mb-0.5">Status: Active Model Tuning</span>
+                Benchmarking latency on edge device webcams for real-time human-computer interaction.
+              </div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- ==================== SECTION 5: TECH STACK SECTION ==================== -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 py-12" id="tech-stack">
+<div class="text-center max-w-2xl mx-auto mb-10">
+<div class="inline-block bg-surface-container-high px-4 py-1 rounded-full text-xs font-bold text-primary mb-2">
+        Tactile Toolbox ✦ Verified Competencies
+      </div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary">
+        Technical Stack &amp; Practices
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+        Categorized technologies practiced through production code, enterprise coursework, and hardware implementations.
+      </p>
+</div>
+<!-- Category Bento Grid with Aesthetic Pastel Badges -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Box 1: Languages -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 border border-primary/10 shadow-sm lift-hover">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-2xl bg-surface-container flex items-center justify-center text-primary font-bold">
+            &lt;/&gt;
+          </div>
+<div>
+<h3 class="font-headline-md text-lg font-bold text-primary">Languages</h3>
+<span class="text-xs text-outline">Core programming foundations</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 bg-surface-container text-primary rounded-full text-xs font-bold">Java</span>
+<span class="px-3 py-1.5 bg-surface-container text-primary rounded-full text-xs font-bold">Python</span>
+<span class="px-3 py-1.5 bg-surface-container text-primary rounded-full text-xs font-bold">PHP</span>
+<span class="px-3 py-1.5 bg-surface-container text-primary rounded-full text-xs font-bold">Dart</span>
+<span class="px-3 py-1.5 bg-surface-container text-primary rounded-full text-xs font-bold">JavaScript</span>
+</div>
+</div>
+<!-- Box 2: Frameworks -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 border border-primary/10 shadow-sm lift-hover">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-2xl bg-secondary-container flex items-center justify-center text-secondary font-bold">
+<span class="material-symbols-outlined text-[20px]">layers</span>
+</div>
+<div>
+<h3 class="font-headline-md text-lg font-bold text-primary">Frameworks</h3>
+<span class="text-xs text-outline">Production application stacks</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 bg-secondary-container/70 text-on-secondary-fixed rounded-full text-xs font-bold">Spring Boot</span>
+<span class="px-3 py-1.5 bg-secondary-container/70 text-on-secondary-fixed rounded-full text-xs font-bold">CodeIgniter 4</span>
+<span class="px-3 py-1.5 bg-secondary-container/70 text-on-secondary-fixed rounded-full text-xs font-bold">Flutter</span>
+<span class="px-3 py-1.5 bg-secondary-container/70 text-on-secondary-fixed rounded-full text-xs font-bold">Electron</span>
+</div>
+</div>
+<!-- Box 3: Databases -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 border border-primary/10 shadow-sm lift-hover">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-2xl bg-surface-container-high flex items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined text-[20px]">database</span>
+</div>
+<div>
+<h3 class="font-headline-md text-lg font-bold text-primary">Databases</h3>
+<span class="text-xs text-outline">Relational &amp; document stores</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 bg-surface-container text-primary rounded-full text-xs font-bold">MySQL</span>
+<span class="px-3 py-1.5 bg-surface-container text-primary rounded-full text-xs font-bold">MongoDB</span>
+<span class="px-3 py-1.5 bg-surface-container text-primary rounded-full text-xs font-bold">ERD Architecture</span>
+</div>
+</div>
+<!-- Box 4: Security & Infra -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 border border-primary/10 shadow-sm lift-hover">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-2xl bg-surface-container flex items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined text-[20px]">shield</span>
+</div>
+<div>
+<h3 class="font-headline-md text-lg font-bold text-primary">Security &amp; Infra</h3>
+<span class="text-xs text-outline">Access control &amp; server systems</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 bg-surface-container-low text-primary rounded-full text-xs font-bold">RBAC</span>
+<span class="px-3 py-1.5 bg-surface-container-low text-primary rounded-full text-xs font-bold">PKI &amp; X.509</span>
+<span class="px-3 py-1.5 bg-surface-container-low text-primary rounded-full text-xs font-bold">SSL/TLS Analysis</span>
+<span class="px-3 py-1.5 bg-surface-container-low text-primary rounded-full text-xs font-bold">Linux (CentOS)</span>
+<span class="px-3 py-1.5 bg-surface-container-low text-primary rounded-full text-xs font-bold">Windows Server</span>
+</div>
+</div>
+<!-- Box 5: Practices & Methodologies -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 border border-primary/10 shadow-sm lift-hover">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-2xl bg-secondary-container flex items-center justify-center text-secondary font-bold">
+<span class="material-symbols-outlined text-[20px]">account_tree</span>
+</div>
+<div>
+<h3 class="font-headline-md text-lg font-bold text-primary">Engineering Practices</h3>
+<span class="text-xs text-outline">Methodologies &amp; standards</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 bg-secondary-container/70 text-on-secondary-fixed rounded-full text-xs font-bold">OOP Principles</span>
+<span class="px-3 py-1.5 bg-secondary-container/70 text-on-secondary-fixed rounded-full text-xs font-bold">SQA &amp; Black-Box Testing</span>
+<span class="px-3 py-1.5 bg-secondary-container/70 text-on-secondary-fixed rounded-full text-xs font-bold">DevOps Pipelines</span>
+<span class="px-3 py-1.5 bg-secondary-container/70 text-on-secondary-fixed rounded-full text-xs font-bold">HCI Design</span>
+</div>
+</div>
+<!-- Box 6: Tools & Networking -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 border border-primary/10 shadow-sm lift-hover">
+<div class="flex items-center gap-3 mb-4">
+<div class="w-10 h-10 rounded-2xl bg-surface-container-high flex items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined text-[20px]">construction</span>
+</div>
+<div>
+<h3 class="font-headline-md text-lg font-bold text-primary">Tools &amp; Networking</h3>
+<span class="text-xs text-outline">Productivity &amp; certified networks</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 bg-surface-container text-primary rounded-full text-xs font-bold">Git &amp; GitHub</span>
+<span class="px-3 py-1.5 bg-surface-container text-primary rounded-full text-xs font-bold">Figma</span>
+<span class="px-3 py-1.5 bg-surface-container text-primary rounded-full text-xs font-bold">Postman</span>
+<span class="px-3 py-1.5 bg-surface-container text-primary rounded-full text-xs font-bold">Cisco CCNA (Certified)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SECTION 6: EXPERIENCE & LEADERSHIP ==================== -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 py-12" id="experience">
+<!-- Header with Zoe Laurent 'Brands' banner aesthetic -->
+<div class="bg-primary-container text-on-primary rounded-3xl p-6 sm:p-10 mb-8 border border-primary/20 shadow-sm relative overflow-hidden">
+<!-- Tape Accent -->
+<div class="absolute -top-3 left-12 w-28 h-7 washi-tape rotate-[-2deg] rounded-sm pointer-events-none opacity-70"></div>
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<span class="text-xs font-bold tracking-widest uppercase text-on-primary-container">Leadership &amp; Team Impact</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-surface-container-lowest">
+            Organizations &amp; Teams
+          </h2>
+</div>
+<p class="text-surface-container text-body-md max-w-md font-body-md">
+          Proven leadership in robotics human resources, student developer communities, and large-scale tech summits.
+        </p>
+</div>
+</div>
+<!-- Timeline Grid Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Exp 1: TRUI -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 border border-primary/10 shadow-sm relative">
+<div class="flex justify-between items-start mb-3">
+<span class="text-xs font-bold bg-surface-container text-primary px-3 py-1 rounded-full">2024 - 2025</span>
+<span class="text-secondary text-base">✦</span>
+</div>
+<h3 class="font-headline-md text-lg font-bold text-primary">Universitas Indonesia Robotics Team (TRUI)</h3>
+<p class="text-body-sm font-semibold text-secondary mb-3">HR Development (PSDM) Member &amp; Benchmarking MC</p>
+<p class="text-body-md text-on-surface-variant">
+          Managed internal human resource development strategies and served as Master of Ceremonies (MC) for the high-profile robotics benchmarking event with Universitas Siliwangi (UNSIL).
+        </p>
+</div>
+<!-- Exp 2: KOMANDRO -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 border border-primary/10 shadow-sm relative">
+<div class="flex justify-between items-start mb-3">
+<span class="text-xs font-bold bg-surface-container text-primary px-3 py-1 rounded-full">2024 - 2026</span>
+<span class="text-secondary text-base">✦</span>
+</div>
+<h3 class="font-headline-md text-lg font-bold text-primary">Android Community CCIT FTUI (KOMANDRO)</h3>
+<p class="text-body-sm font-semibold text-secondary mb-3">Public Relations Officer</p>
+<p class="text-body-md text-on-surface-variant">
+          Led external communication channels, MC for the Chairman Election, and headed PR committees coordinating alumni reunion panels and developer workshops.
+        </p>
+</div>
+<!-- Exp 3: MABIM & CIFEST -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 border border-primary/10 shadow-sm relative">
+<div class="flex justify-between items-start mb-3">
+<span class="text-xs font-bold bg-surface-container text-primary px-3 py-1 rounded-full">2025</span>
+<span class="text-secondary text-base">✦</span>
+</div>
+<h3 class="font-headline-md text-lg font-bold text-primary">MABIM Freshman Orientation &amp; CIFEST</h3>
+<p class="text-body-sm font-semibold text-secondary mb-3">Freshman Mentor &amp; Head of Event Division</p>
+<p class="text-body-md text-on-surface-variant">
+          Mentored incoming engineering freshmen navigating academic coding tracks. Appointed Head of Event Division for CIFEST, directing operational run-downs and agenda blueprints.
+        </p>
+</div>
+<!-- Exp 4: Major Summits -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 border border-primary/10 shadow-sm relative">
+<div class="flex justify-between items-start mb-3">
+<span class="text-xs font-bold bg-surface-container text-primary px-3 py-1 rounded-full">2024</span>
+<span class="text-secondary text-base">✦</span>
+</div>
+<h3 class="font-headline-md text-lg font-bold text-primary">Summit &amp; Festival Committees</h3>
+<p class="text-body-sm font-semibold text-secondary mb-3">D'Futuro Futurist Summit &amp; CSFEST</p>
+<p class="text-body-md text-on-surface-variant">
+          Greeter &amp; Volunteer at D'Futuro Futurist Summit 2024 welcoming national innovators; Logistics &amp; Medical team officer for CSFEST 2024 supporting hundreds of attendees.
+        </p>
+</div>
+</div>
+</section>
+<!-- ==================== SECTION 7: WHY ME? ("WHY ME? / THE CREATOR EDGE") ==================== -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 py-12" id="why-me">
+<!-- Dark Forest Green Card inspired directly by Zoe Laurent template's bottom right "WHY ME?" panel -->
+<div class="bg-primary-container rounded-[2rem] p-6 sm:p-12 text-on-primary relative overflow-hidden shadow-xl border border-primary/20">
+<!-- Top Center Ripped Tape Label -->
+<div class="flex justify-center mb-8">
+<div class="bg-surface-container-lowest text-primary px-6 py-2 rounded-sm shadow-md rotate-[-1.5deg] border border-primary/10">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-extrabold tracking-wider uppercase flex items-center gap-2">
+<span>WHY ME?</span>
+<span class="text-secondary">✦</span>
+</h2>
+</div>
+</div>
+<p class="text-center text-surface-container text-body-lg max-w-2xl mx-auto mb-12 italic font-serif">
+        "I don't just write syntax that compiles. I solve real hardware, user, and commercial challenges from day zero."
+      </p>
+<!-- 4 Distinct Bold Bullet Pillars -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+<!-- Pillar 1 -->
+<div class="bg-primary/50 p-6 rounded-2xl border border-surface-container/20 relative">
+<div class="flex items-center gap-3 mb-2">
+<span class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center font-bold text-sm">1</span>
+<h3 class="font-headline-md text-xl font-bold text-surface-container-lowest">Founder Mindset</h3>
+</div>
+<p class="text-surface-container text-body-md">
+            I've built a product from concept to launch and won, so I think about users, conversions, and business sustainability, not just pure code.
+          </p>
+</div>
+<!-- Pillar 2 -->
+<div class="bg-primary/50 p-6 rounded-2xl border border-surface-container/20 relative">
+<div class="flex items-center gap-3 mb-2">
+<span class="w-8 h-8 rounded-full bg-surface-container text-primary flex items-center justify-center font-bold text-sm">2</span>
+<h3 class="font-headline-md text-xl font-bold text-surface-container-lowest">End-to-End Builder</h3>
+</div>
+<p class="text-surface-container text-body-md">
+            Database, REST APIs, responsive dashboard, physical kiosk hardware, and QRIS payments. I understand how every layer connects and breaks.
+          </p>
+</div>
+<!-- Pillar 3 -->
+<div class="bg-primary/50 p-6 rounded-2xl border border-surface-container/20 relative">
+<div class="flex items-center gap-3 mb-2">
+<span class="w-8 h-8 rounded-full bg-surface-container text-primary flex items-center justify-center font-bold text-sm">3</span>
+<h3 class="font-headline-md text-xl font-bold text-surface-container-lowest">Team Player &amp; Communicator</h3>
+</div>
+<p class="text-surface-container text-body-md">
+            Cross-functional experience across robotics, developer communities, and formal MC roles. I bridge communication gaps with zero friction.
+          </p>
+</div>
+<!-- Pillar 4 -->
+<div class="bg-primary/50 p-6 rounded-2xl border border-surface-container/20 relative">
+<div class="flex items-center gap-3 mb-2">
+<span class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-fixed flex items-center justify-center font-bold text-sm">4</span>
+<h3 class="font-headline-md text-xl font-bold text-surface-container-lowest">Fast, Honest Learner</h3>
+</div>
+<p class="text-surface-container text-body-md">
+            I tackle complex multithreaded camera buffers, computer vision landmarks, and obscure server bugs—and I rigorously document what I learn.
+          </p>
+</div>
+</div>
+<!-- Playful Bottom Sticker -->
+<div class="text-center mt-10">
+<span class="inline-block bg-surface-container-lowest text-primary px-4 py-1.5 rounded-full text-xs font-bold rotate-[1deg] shadow-sm">
+          MVP Execution ✦ Clean Code ✦ High Retention
+        </span>
+</div>
+</div>
+</section>
+<!-- ==================== SECTION 8: CERTIFICATIONS & EDUCATION ==================== -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+<div>
+<div class="inline-block bg-surface-container-high px-3 py-1 rounded-full text-xs font-bold text-primary mb-2">
+          Academic Foundations &amp; Industry Badges
+        </div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary">
+          Certifications &amp; Education
+        </h2>
+</div>
+</div>
+<!-- Interactive Badge Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Cert 1 -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 border border-primary/10 shadow-sm flex flex-col justify-between lift-hover">
+<div>
+<div class="w-10 h-10 rounded-2xl bg-surface-container flex items-center justify-center text-primary font-bold mb-4">
+<span class="material-symbols-outlined text-[22px]">router</span>
+</div>
+<h3 class="font-headline-md text-base font-bold text-primary">CCNA: Introduction to Networks</h3>
+<p class="text-body-sm text-outline mt-1">Cisco Networking Academy</p>
+</div>
+<div class="mt-4 pt-4 border-t border-outline-variant/30 flex justify-between items-center text-xs font-bold text-primary">
+<span>Certified 2025</span>
+<span class="text-secondary">✦</span>
+</div>
+</div>
+<!-- Cert 2 -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 border border-primary/10 shadow-sm flex flex-col justify-between lift-hover">
+<div>
+<div class="w-10 h-10 rounded-2xl bg-secondary-container flex items-center justify-center text-secondary font-bold mb-4">
+<span class="material-symbols-outlined text-[22px]">psychology</span>
+</div>
+<h3 class="font-headline-md text-base font-bold text-primary">Copywriting AI for Digital Ads</h3>
+<p class="text-body-sm text-outline mt-1">Komdigi Digital Talent Scholarship</p>
+</div>
+<div class="mt-4 pt-4 border-t border-outline-variant/30 flex justify-between items-center text-xs font-bold text-primary">
+<span>Certified 2025</span>
+<span class="text-secondary">✦</span>
+</div>
+</div>
+<!-- Cert 3 -->
+<div class="bg-surface-container-lowest rounded-3xl p-6 border border-primary/10 shadow-sm flex flex-col justify-between lift-hover">
+<div>
+<div class="w-10 h-10 rounded-2xl bg-surface-container flex items-center justify-center text-primary font-bold mb-4">
+<span class="material-symbols-outlined text-[22px]">campaign</span>
+</div>
+<h3 class="font-headline-md text-base font-bold text-primary">Social Media Management</h3>
+<p class="text-body-sm text-outline mt-1">Komdigi Digital Talent Scholarship</p>
+</div>
+<div class="mt-4 pt-4 border-t border-outline-variant/30 flex justify-between items-center text-xs font-bold text-primary">
+<span>Certified 2025</span>
+<span class="text-secondary">✦</span>
+</div>
+</div>
+<!-- Education Box -->
+<div class="bg-surface-container rounded-3xl p-6 border border-primary/20 shadow-sm flex flex-col justify-between lift-hover">
+<div>
+<div class="w-10 h-10 rounded-2xl bg-surface-container-high flex items-center justify-center text-primary font-bold mb-4">
+<span class="material-symbols-outlined text-[22px]">school</span>
+</div>
+<h3 class="font-headline-md text-base font-bold text-primary">Diploma in Informatics Engineering</h3>
+<p class="text-body-sm text-on-surface-variant mt-1">Full Stack Track • State Polytechnic of Jakarta x CCIT FTUI</p>
+</div>
+<div class="mt-4 pt-4 border-t border-primary/20 flex justify-between items-center text-xs font-bold text-primary">
+<span>2024 - Present</span>
+<span class="text-secondary">✦ Ongoing</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SECTION 9: CONTACT CARD & CTAS ==================== -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 py-12" id="contact">
+<!-- Tactile Scrapbook Card for Contact -->
+<div class="bg-surface-container-lowest rounded-3xl p-8 sm:p-12 border border-primary/20 shadow-md relative overflow-hidden">
+<!-- Aesthetic Washi Tape -->
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 w-40 h-8 washi-tape rotate-[1deg] rounded-sm pointer-events-none"></div>
+<div class="max-w-3xl mx-auto text-center space-y-6">
+<div class="inline-block bg-secondary-container px-4 py-1 rounded-full text-xs font-bold text-on-secondary-fixed">
+          Open For Opportunities ✦ Full Stack • IT PM • Systems Analysis
+        </div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold text-primary">
+          Let's build something together.
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+          Whether you need a developer who understands product lifecycle, a reliable backend engineer, or an organized project coordinator, I'd love to chat.
+        </p>
+<!-- Contact Links Cluster -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+<!-- Email Link -->
+<a class="p-4 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-colors border border-primary/10 flex flex-col items-center group" href="mailto:afafaridaz91@gmail.com">
+<span class="material-symbols-outlined text-primary text-[26px] mb-2 group-hover:scale-110 transition-transform">mail</span>
+<span class="text-xs text-outline font-medium">Email Direct</span>
+<span class="text-body-sm font-bold text-primary mt-0.5">afafaridaz91@gmail.com</span>
+</a>
+<!-- LinkedIn Link -->
+<a class="p-4 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-colors border border-primary/10 flex flex-col items-center group" href="https://linkedin.com/in/zulfa-rida-685714322" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-primary text-[26px] mb-2 group-hover:scale-110 transition-transform">work</span>
+<span class="text-xs text-outline font-medium">LinkedIn Network</span>
+<span class="text-body-sm font-bold text-primary mt-0.5">zulfa-rida-685714322</span>
+</a>
+<!-- GitHub Link -->
+<a class="p-4 rounded-2xl bg-surface-container hover:bg-surface-container-high transition-colors border border-primary/10 flex flex-col items-center group" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-primary text-[26px] mb-2 group-hover:scale-110 transition-transform">terminal</span>
+<span class="text-xs text-outline font-medium">GitHub Repos</span>
+<span class="text-body-sm font-bold text-primary mt-0.5">zulfarida0107-crypto</span>
+</a>
+</div>
+<!-- Download CV Action -->
+<div class="pt-6">
+<a class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-primary text-on-primary font-label-lg text-label-lg font-bold shadow-md hover:bg-primary-container hover:scale-[1.02] active:scale-[0.98] transition-all" href="mailto:afafaridaz91@gmail.com?subject=CV%20Request%20-%20Zulfarida">
+<span class="material-symbols-outlined text-[20px]">download</span>
+<span>Download CV (PDF)</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== SHARED COMPONENT 2: Footer ==================== -->
+<footer class="w-full mt-24 border-t border-primary/10 dark:border-inverse-primary/10 bg-surface-container dark:bg-inverse-surface">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-6 py-10 gap-6">
+<!-- Copyright Exact String from JSON -->
+<div class="text-center md:text-left">
+<p class="font-body-sm text-body-sm text-on-surface-variant dark:text-inverse-on-surface">
+          © 2024 Zulfarida • Crafted with tactile vibes &amp; clean code
+        </p>
+</div>
+<!-- Footer Links from JSON -->
+<div class="flex flex-wrap items-center justify-center gap-6">
+<a class="text-label-badge font-label-badge text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-colors active:scale-95" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
+          GitHub
+        </a>
+<a class="text-label-badge font-label-badge text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-colors active:scale-95" href="https://linkedin.com/in/zulfa-rida-685714322" rel="noopener noreferrer" target="_blank">
+          LinkedIn
+        </a>
+<a class="text-label-badge font-label-badge text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-colors active:scale-95" href="#projects">
+          CuitBox
+        </a>
+<a class="text-label-badge font-label-badge text-on-surface-variant dark:text-inverse-on-surface hover:text-primary dark:hover:text-inverse-primary transition-colors active:scale-95" href="mailto:afafaridaz91@gmail.com">
+          Email Me
+        </a>
+<a class="text-label-badge font-label-badge text-primary dark:text-inverse-primary font-bold hover:text-primary dark:hover:text-inverse-primary transition-colors active:scale-95" href="#contact">
+          Resume
+        </a>
+</div>
+</div>
+</footer>
 </body>
 </html>
