@@ -602,9 +602,9 @@ Architect &amp; Ship
 <div class="lg:col-span-8 space-y-6">
 <!-- Meta & Award Ribbon -->
 <div class="flex flex-wrap items-center gap-3">
-<span class="bg-secondary text-on-secondary px-3.5 py-1 rounded-full text-xs font-bold flex items-center gap-1 shadow-sm">
-<span>🏆 1st Winner</span>
-<span>CCIT Venture Studio Batch #1 'Manggala'</span>
+<span class="bg-secondary text-on-secondary px-4 py-1.5 rounded-xl text-xs sm:text-[13px] font-bold inline-flex items-center gap-2 shadow-sm border border-secondary-container/50 whitespace-nowrap">
+<span>🏆</span>
+<span>1st Winner CCIT Venture Studio Batch #1 'Manggala'</span>
 </span>
 <span class="bg-surface-container px-3 py-1 rounded-full text-xs font-bold text-primary">
                 Self-Service Photo Booth | Web &amp; Desktop Kiosk | 2026
