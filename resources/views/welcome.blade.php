@@ -233,11 +233,6 @@
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
 <!-- Left Column: Content & Badges -->
 <div class="lg:col-span-7 flex flex-col items-start space-y-6">
-<!-- Venture Studio Winner Badge -->
-<div class="inline-flex items-center gap-2 bg-surface-container-lowest/95 text-primary px-4 py-1.5 rounded-full shadow-sm border border-primary/10 rotate-[-1.5deg] hover:rotate-0 transition-transform">
-<span class="text-base">🏆</span>
-<span class="font-label-badge text-label-badge font-bold tracking-wide uppercase" data-i18n="hero_winner_badge">1st Winner, CCIT Venture Studio Batch #1 'Manggala'</span>
-</div>
 <!-- Giant Aesthetic Title -->
 <div class="space-y-2">
 <div class="flex items-center gap-3">
@@ -276,9 +271,7 @@
 </div>
 <!-- Mini Pills Row -->
 <div class="flex flex-wrap items-center gap-2 pt-2 text-surface-container text-body-sm font-body-sm">
-<span class="px-3 py-1 bg-surface-container-high/20 rounded-full border border-surface-container/20">📍 Depok &amp; Jakarta, ID</span>
-<span class="px-3 py-1 bg-surface-container-high/20 rounded-full border border-surface-container/20">⚡ Spring Boot &amp; CI4</span>
-<span class="px-3 py-1 bg-surface-container-high/20 rounded-full border border-surface-container/20">📱 Flutter &amp; Kiosk</span>
+<span class="px-3 py-1 bg-surface-container-high/20 rounded-full border border-surface-container/20">Depok &amp; Jakarta, ID</span>
 </div>
 </div>
 <!-- Right Column: Tactile Photo Card with Paperclip & Stickers -->
@@ -305,15 +298,11 @@
 <p class="text-body-sm font-body-sm text-outline">CCIT FTUI x Politeknik Negeri Jakarta</p>
 </div>
 <div class="flex items-center gap-1 bg-secondary-container/60 text-secondary px-2.5 py-1 rounded-full text-xs font-bold">
-<span data-i18n="hero_batch">✦ 2026 Batch</span>
+<span data-i18n="hero_batch">✦ Angkatan 2024 (Semester 5 Sekarang)</span>
 </div>
 </div>
 </div>
 <!-- Sticker Pin Badges Overlapping Photo Frame -->
-<div class="absolute -bottom-4 -left-4 bg-secondary text-on-secondary px-3.5 py-2 rounded-xl text-xs font-bold shadow-lg rotate-[-6deg] flex items-center gap-1.5 border border-secondary-container">
-<span class="text-sm">⚡</span>
-<span data-i18n="hero_vs1_pin">1st Winner CCIT VS #1</span>
-</div>
 <div class="absolute -bottom-3 right-6 bg-surface-container-lowest text-primary px-3 py-1 rounded-full text-xs font-bold shadow-md rotate-[4deg] border border-outline-variant/40 flex items-center gap-1">
 <span data-i18n="hero_strategy_pin">Code + Strategy</span>
 <span class="text-secondary">✦</span>
@@ -1261,8 +1250,7 @@ const translations = {
     hero_btn_projects: "Lihat Proyek",
     hero_btn_cv: "Unduh CV (PDF)",
     hero_verified: "Terverifikasi Full-Stack",
-    hero_batch: "✦ Angkatan 2026",
-    hero_vs1_pin: "Juara 1 CCIT VS #1",
+    hero_batch: "✦ Angkatan 2024 (Semester 5 Sekarang)",
     hero_strategy_pin: "Kode + Strategi",
 
     about_tape: "Kisah Pribadi ✦ Etos Rekayasa",
@@ -1332,8 +1320,7 @@ const translations = {
     hero_btn_projects: "View Projects",
     hero_btn_cv: "Download CV (PDF)",
     hero_verified: "Verified Full-Stack",
-    hero_batch: "✦ 2026 Batch",
-    hero_vs1_pin: "1st Winner CCIT VS #1",
+    hero_batch: "✦ 2024 Batch (Current 5th Semester)",
     hero_strategy_pin: "Code + Strategy",
 
     about_tape: "Personal Story ✦ Engineering Ethos",
