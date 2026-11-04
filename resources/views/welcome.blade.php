@@ -331,16 +331,11 @@
 <p class="font-semibold text-primary" data-i18n="about_highlight">I'm looking for opportunities in Full Stack Development, Quality Assurance (QA), IT Project/Product Management, or Business/Systems Analysis.</p>
 </div>
 </div>
-<!-- Scrapbook Footnote -->
-<div class="mt-8 pt-6 border-t border-primary/10 flex flex-wrap items-center justify-between gap-4 text-body-sm font-body-sm text-outline">
-<span class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[18px] text-primary">school</span>
-            State Polytechnic of Jakarta x CCIT FTUI
-          </span>
-<span class="flex items-center gap-1.5">
-<span class="material-symbols-outlined text-[18px] text-primary">verified_user</span>
-            Full Stack Developer Track
-          </span>
+<!-- Academic Logos (PNJ & CCIT FTUI) -->
+<div class="mt-8 pt-6 border-t border-primary/10 flex items-center gap-4">
+<img src="{{ asset('images/logos/logo-pnj.png') }}" alt="Politeknik Negeri Jakarta" class="h-10 w-auto object-contain hover:scale-105 transition-transform" title="Politeknik Negeri Jakarta" />
+<div class="h-6 w-px bg-primary/20"></div>
+<img src="{{ asset('images/logos/logo-ccit-ftui.png') }}" alt="CCIT FTUI Universitas Indonesia" class="h-10 w-auto object-contain hover:scale-105 transition-transform" title="CCIT FTUI Universitas Indonesia" />
 </div>
 </div>
 <!-- Achievement Metrics ("Audience Size" style pill cards from template) -->
@@ -399,12 +394,12 @@
 </div>
 </div>
 </div>
-<!-- Secondary Quote Pill -->
+<!-- Track Highlight Pill -->
 <div class="bg-secondary-container/60 p-4 rounded-2xl border border-secondary/20 flex items-center gap-3">
-<span class="text-2xl">💡</span>
-<p class="text-body-sm text-on-secondary-container font-medium">
-            "Comfortable presenting to executive panels and debugging multithreaded camera buffers."
-          </p>
+<span class="material-symbols-outlined text-secondary text-[24px]">verified_user</span>
+<p class="text-body-sm text-on-secondary-container font-bold" data-i18n="hero_track_pill">
+Full Stack Developer Track
+</p>
 </div>
 </div>
 </div>
@@ -1265,6 +1260,7 @@ const translations = {
     metric_3_lbl: "Kontribusi GitHub (Tahun)",
     metric_4_val: "3 Platform",
     metric_4_lbl: "Satu Ekosistem (Web, Mobile, API)",
+    hero_track_pill: "Full Stack Developer Track",
 
     vibes_badge: "Layanan & Kemampuan ✦ Solusi Bernilai Nyata",
     vibes_title: "pilih vibe anda",
@@ -1335,6 +1331,7 @@ const translations = {
     metric_3_lbl: "GitHub Contributions (Year)",
     metric_4_val: "3 Platforms",
     metric_4_lbl: "One System (Web, Mobile, API)",
+    hero_track_pill: "Full Stack Developer Track",
 
     vibes_badge: "Services & Capabilities ✦ How I Create Value",
     vibes_title: "pick your vibe",
