@@ -423,118 +423,157 @@ Full Stack Developer Track
         Let's turn your team's product vision into the next production-ready release.
       </p>
 </div>
-<!-- 3 Tier Cards (Solo Flex / Main Character / Brand Icon style) -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
-<!-- Card 1: Solo Flex -> Full Stack Development -->
-<div class="bg-surface-container-lowest rounded-3xl p-6 sm:p-8 border border-primary/10 shadow-sm flex flex-col justify-between relative lift-hover">
+<!-- 4 Tier Cards (Full Stack, QA, IT PM, Systems Analysis) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+<!-- Card 1: Full Stack Development (Label: Hijau) -->
+<div class="bg-surface-container-lowest hover:bg-surface-container border border-primary/20 hover:border-primary transition-all duration-300 hover:scale-[1.02] hover:shadow-lg rounded-3xl p-6 flex flex-col justify-between relative group cursor-pointer">
 <div class="paper-clip"></div>
 <div>
 <div class="text-center pb-4 border-b border-outline-variant/30">
-<span class="inline-block px-3 py-1 bg-surface-container text-primary rounded-full text-xs font-bold tracking-wide uppercase mb-2">
-              BUILD &amp; CODE
-            </span>
-<h3 class="font-headline-md text-xl font-bold text-primary">Full Stack Development</h3>
-<p class="text-body-sm text-outline mt-1">Web, mobile, &amp; REST API architecture</p>
+<span class="inline-block px-3 py-1 bg-surface-container text-primary rounded-full text-xs font-bold tracking-wide uppercase mb-2" data-i18n="vibe1_badge">
+BUILD &amp; CODE
+</span>
+<h3 class="font-headline-md text-xl font-bold text-primary" data-i18n="vibe1_title">Full Stack Development</h3>
+<p class="text-body-sm text-outline mt-1" data-i18n="vibe1_sub">Web, mobile, &amp; REST API architecture</p>
 </div>
-<ul class="py-6 space-y-3.5 text-body-md text-on-surface">
-<li class="flex items-start gap-2.5">
-<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
-<span><strong>Backend APIs:</strong> Spring Boot (Java), CodeIgniter 4 (PHP), RESTful micro-endpoints.</span>
+<ul class="py-5 space-y-3 text-body-sm text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
+<span><strong>Backend APIs:</strong> Spring Boot (Java), CodeIgniter 4 (PHP), REST micro-endpoints.</span>
 </li>
-<li class="flex items-start gap-2.5">
-<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
 <span><strong>Client Apps:</strong> Flutter mobile apps, responsive Blade/HTML5 web dashboards.</span>
 </li>
-<li class="flex items-start gap-2.5">
-<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
 <span><strong>Databases:</strong> Relational MySQL modeling &amp; non-relational MongoDB schemas.</span>
 </li>
-<li class="flex items-start gap-2.5">
-<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
-<span><strong>Hardware &amp; Kiosks:</strong> Python OpenCV webcam and DSLR camera integration.</span>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
+<span><strong>Hardware &amp; Kiosks:</strong> Python OpenCV camera integration and multithreaded buffering.</span>
 </li>
 </ul>
 </div>
 <div class="pt-4 border-t border-outline-variant/30">
-<div class="w-full py-2.5 rounded-full bg-primary-container text-on-primary text-center font-label-lg text-label-lg font-bold">
-            Ready to Build
-          </div>
+<a href="#contact" class="w-full block py-2.5 rounded-full bg-primary-container text-on-primary text-center font-label-lg text-label-lg font-bold group-hover:bg-primary group-hover:shadow-md transition-all" data-i18n="vibe1_btn">
+Ready to Build
+</a>
 </div>
 </div>
-<!-- Card 2: Main Character -> Systems Analysis & Design (Highlighted) -->
-<div class="bg-surface-container rounded-3xl p-6 sm:p-8 border-2 border-primary shadow-md flex flex-col justify-between relative lift-hover scale-[1.02]">
+
+<!-- Card 2: Quality Assurance (QA) (Label: Pink) -->
+<div class="bg-surface-container-lowest hover:bg-surface-container border border-primary/20 hover:border-primary transition-all duration-300 hover:scale-[1.02] hover:shadow-lg rounded-3xl p-6 flex flex-col justify-between relative group cursor-pointer">
+<div class="paper-clip"></div>
+<div>
+<div class="text-center pb-4 border-b border-outline-variant/30">
+<span class="inline-block px-3 py-1 bg-secondary-container text-secondary rounded-full text-xs font-bold tracking-wide uppercase mb-2" data-i18n="vibe2_badge">
+TEST &amp; VERIFY
+</span>
+<h3 class="font-headline-md text-xl font-bold text-primary" data-i18n="vibe2_title">Quality Assurance (QA)</h3>
+<p class="text-body-sm text-outline mt-1" data-i18n="vibe2_sub">Software reliability &amp; bug prevention</p>
+</div>
+<ul class="py-5 space-y-3 text-body-sm text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
+<span><strong>Black-Box Testing:</strong> Boundary Value Analysis (BVA), Equivalence Partitioning, &amp; UI test cases.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
+<span><strong>Test Documentation:</strong> Test scenarios, execution matrices, &amp; reproducible bug reports.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
+<span><strong>API Verification:</strong> Automated Postman test collections, response assertion, &amp; schema checks.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
+<span><strong>Performance &amp; Stream QA:</strong> Hardware stress testing, multithreading, and zero UI freezing.</span>
+</li>
+</ul>
+</div>
+<div class="pt-4 border-t border-outline-variant/30">
+<a href="#contact" class="w-full block py-2.5 rounded-full bg-primary-container text-on-primary text-center font-label-lg text-label-lg font-bold group-hover:bg-primary group-hover:shadow-md transition-all" data-i18n="vibe2_btn">
+Test &amp; Verify
+</a>
+</div>
+</div>
+
+<!-- Card 3: IT Project/Product Management (Label: Hijau) -->
+<div class="bg-surface-container-lowest hover:bg-surface-container border border-primary/20 hover:border-primary transition-all duration-300 hover:scale-[1.02] hover:shadow-lg rounded-3xl p-6 flex flex-col justify-between relative group cursor-pointer">
+<div class="paper-clip"></div>
+<div>
+<div class="text-center pb-4 border-b border-outline-variant/30">
+<span class="inline-block px-3 py-1 bg-surface-container text-primary rounded-full text-xs font-bold tracking-wide uppercase mb-2" data-i18n="vibe3_badge">
+LEAD &amp; COORDINATE
+</span>
+<h3 class="font-headline-md text-xl font-bold text-primary" data-i18n="vibe3_title">IT Project Management</h3>
+<p class="text-body-sm text-outline mt-1" data-i18n="vibe3_sub">Leadership, agile tracking, &amp; delivery</p>
+</div>
+<ul class="py-5 space-y-3 text-body-sm text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
+<span><strong>Cross-Team Sync:</strong> Uniting developers, designers, and business stakeholders.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
+<span><strong>Agile &amp; Milestones:</strong> Git workflow oversight, sprint backlogs, &amp; deadline management.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
+<span><strong>Division Leadership:</strong> CIFEST Head of Events, KOMANDRO PR Officer.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
+<span><strong>Public Speaking:</strong> Master of Ceremonies, PR channels, &amp; peer student mentoring.</span>
+</li>
+</ul>
+</div>
+<div class="pt-4 border-t border-outline-variant/30">
+<a href="#contact" class="w-full block py-2.5 rounded-full bg-primary-container text-on-primary text-center font-label-lg text-label-lg font-bold group-hover:bg-primary group-hover:shadow-md transition-all" data-i18n="vibe3_btn">
+Coordinate &amp; Scale
+</a>
+</div>
+</div>
+
+<!-- Card 4: Business/Systems Analysis (Label: Pink) -->
+<div class="bg-surface-container-lowest hover:bg-surface-container border border-primary/20 hover:border-primary transition-all duration-300 hover:scale-[1.02] hover:shadow-lg rounded-3xl p-6 flex flex-col justify-between relative group cursor-pointer">
 <div class="paper-clip"></div>
 <!-- Special Badge -->
-<div class="absolute -top-3 right-6 bg-secondary text-on-secondary px-3 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm">
-          Core Strength ✦
-        </div>
+<div class="absolute -top-3 right-6 bg-secondary text-on-secondary px-3 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm" data-i18n="vibe4_pill">
+Core Strength ✦
+</div>
 <div>
 <div class="text-center pb-4 border-b border-primary/20">
-<span class="inline-block px-3 py-1 bg-surface-container-high text-primary rounded-full text-xs font-bold tracking-wide uppercase mb-2">
-              ANALYZE &amp; BLUEPRINT
-            </span>
-<h3 class="font-headline-md text-xl font-bold text-primary">Systems Analysis &amp; Design</h3>
-<p class="text-body-sm text-on-surface-variant mt-1">Bridging business needs to scalable code</p>
+<span class="inline-block px-3 py-1 bg-secondary-container text-secondary rounded-full text-xs font-bold tracking-wide uppercase mb-2" data-i18n="vibe4_badge">
+ANALYZE &amp; BLUEPRINT
+</span>
+<h3 class="font-headline-md text-xl font-bold text-primary" data-i18n="vibe4_title">Systems Analysis &amp; Design</h3>
+<p class="text-body-sm text-outline mt-1" data-i18n="vibe4_sub">Bridging business needs to scalable code</p>
 </div>
-<ul class="py-6 space-y-3.5 text-body-md text-on-surface">
-<li class="flex items-start gap-2.5">
-<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
-<span><strong>Requirements Analysis:</strong> Functional &amp; non-functional spec documentation.</span>
+<ul class="py-5 space-y-3 text-body-sm text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
+<span><strong>Requirements Analysis:</strong> Functional &amp; non-functional specification documents.</span>
 </li>
-<li class="flex items-start gap-2.5">
-<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
-<span><strong>Database &amp; Architecture:</strong> ERD, UML sequence diagrams, and clean schema design.</span>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
+<span><strong>Database Architecture:</strong> ERD, UML sequence diagrams, and clean schema design.</span>
 </li>
-<li class="flex items-start gap-2.5">
-<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
 <span><strong>UI/UX Wireframing:</strong> High-fidelity interactive prototypes in Figma.</span>
 </li>
-<li class="flex items-start gap-2.5">
-<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
-<span><strong>Quality Assurance:</strong> Black-Box testing protocols and test case verification.</span>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] mt-0.5 shrink-0">check_circle</span>
+<span><strong>Feasibility &amp; Logic:</strong> Translating real-world business logic into code blueprints.</span>
 </li>
 </ul>
 </div>
 <div class="pt-4 border-t border-primary/20">
-<div class="w-full py-2.5 rounded-full bg-primary text-on-primary text-center font-label-lg text-label-lg font-bold shadow-sm">
-            Architect &amp; Ship
-          </div>
-</div>
-</div>
-<!-- Card 3: Brand Icon -> Project Coordination -->
-<div class="bg-surface-container-lowest rounded-3xl p-6 sm:p-8 border border-primary/10 shadow-sm flex flex-col justify-between relative lift-hover">
-<div class="paper-clip"></div>
-<div>
-<div class="text-center pb-4 border-b border-outline-variant/30">
-<span class="inline-block px-3 py-1 bg-secondary-container text-secondary rounded-full text-xs font-bold tracking-wide uppercase mb-2">
-              LEAD &amp; COMMUNICATE
-            </span>
-<h3 class="font-headline-md text-xl font-bold text-primary">Project Coordination</h3>
-<p class="text-body-sm text-outline mt-1">Leadership, PR, &amp; cross-functional delivery</p>
-</div>
-<ul class="py-6 space-y-3.5 text-body-md text-on-surface">
-<li class="flex items-start gap-2.5">
-<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
-<span><strong>Cross-Team Sync:</strong> Uniting developers, designers, and business stakeholders.</span>
-</li>
-<li class="flex items-start gap-2.5">
-<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
-<span><strong>Event &amp; Division Lead:</strong> CIFEST Head of Events, KOMANDRO PR Officer.</span>
-</li>
-<li class="flex items-start gap-2.5">
-<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
-<span><strong>Public Speaking:</strong> Master of Ceremonies for benchmark robotics conferences.</span>
-</li>
-<li class="flex items-start gap-2.5">
-<span class="material-symbols-outlined text-primary text-[18px] mt-0.5">check_circle</span>
-<span><strong>Agile &amp; DevOps:</strong> Git workflow oversight, milestone tracking, and student mentoring.</span>
-</li>
-</ul>
-</div>
-<div class="pt-4 border-t border-outline-variant/30">
-<div class="w-full py-2.5 rounded-full bg-primary-container text-on-primary text-center font-label-lg text-label-lg font-bold">
-            Coordinate &amp; Scale
-          </div>
+<a href="#contact" class="w-full block py-2.5 rounded-full bg-primary text-on-primary text-center font-label-lg text-label-lg font-bold shadow-sm group-hover:bg-primary-container transition-all" data-i18n="vibe4_btn">
+Architect &amp; Ship
+</a>
 </div>
 </div>
 </div>
@@ -1274,16 +1313,20 @@ const translations = {
     vibe1_badge: "BANGUN & KODE",
     vibe1_title: "Full Stack Development",
     vibe1_sub: "Arsitektur web, mobile, & REST API",
-    vibe1_btn: "Siap Membangun",
-    vibe2_badge: "ANALISIS & RANCANG",
-    vibe2_pill: "Keahlian Utama ✦",
-    vibe2_title: "Systems Analysis & Design",
-    vibe2_sub: "Menjembatani kebutuhan bisnis ke kode terukur",
-    vibe2_btn: "Rancang & Rilis",
-    vibe3_badge: "PIMPIN & KOMUNIKASIKAN",
-    vibe3_title: "Koordinasi Proyek & QA",
-    vibe3_sub: "Kepemimpinan, relasi publik, & rilis lintas fungsi",
-    vibe3_btn: "Koordinasi & Skala",
+    vibe1_btn: "Ready to Build",
+    vibe2_badge: "UJI & VERIFIKASI",
+    vibe2_title: "Quality Assurance (QA)",
+    vibe2_sub: "Keandalan perangkat lunak & pencegahan bug",
+    vibe2_btn: "Test & Verify",
+    vibe3_badge: "PIMPIN & KOORDINASI",
+    vibe3_title: "IT Project Management",
+    vibe3_sub: "Kepemimpinan, alur agile, & rilis lintas fungsi",
+    vibe3_btn: "Coordinate & Scale",
+    vibe4_badge: "ANALISIS & RANCANG",
+    vibe4_pill: "Core Strength ✦",
+    vibe4_title: "Systems Analysis & Design",
+    vibe4_sub: "Menjembatani kebutuhan bisnis ke kode terukur",
+    vibe4_btn: "Architect & Ship",
 
     proj_badge: "Karya Rekayasa Unggulan ✦ 2025 - 2026",
     proj_title: "Proyek Produksi",
@@ -1347,15 +1390,19 @@ const translations = {
     vibe1_title: "Full Stack Development",
     vibe1_sub: "Web, mobile, & REST API architecture",
     vibe1_btn: "Ready to Build",
-    vibe2_badge: "ANALYZE & BLUEPRINT",
-    vibe2_pill: "Core Strength ✦",
-    vibe2_title: "Systems Analysis & Design",
-    vibe2_sub: "Bridging business needs to scalable code",
-    vibe2_btn: "Architect & Ship",
-    vibe3_badge: "LEAD & COMMUNICATE",
-    vibe3_title: "Project Coordination",
-    vibe3_sub: "Leadership, PR, & cross-functional delivery",
+    vibe2_badge: "TEST & VERIFY",
+    vibe2_title: "Quality Assurance (QA)",
+    vibe2_sub: "Software reliability & bug prevention",
+    vibe2_btn: "Test & Verify",
+    vibe3_badge: "LEAD & COORDINATE",
+    vibe3_title: "IT Project Management",
+    vibe3_sub: "Leadership, agile tracking, & delivery",
     vibe3_btn: "Coordinate & Scale",
+    vibe4_badge: "ANALYZE & BLUEPRINT",
+    vibe4_pill: "Core Strength ✦",
+    vibe4_title: "Systems Analysis & Design",
+    vibe4_sub: "Bridging business needs to scalable code",
+    vibe4_btn: "Architect & Ship",
 
     proj_badge: "Featured Engineering Works ✦ 2025 - 2026",
     proj_title: "Production Projects",
