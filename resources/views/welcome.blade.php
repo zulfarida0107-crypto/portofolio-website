@@ -663,6 +663,31 @@ Architect &amp; Ship
 <strong>Solution:</strong> Implemented hardware driver abstraction layers and dedicated multithreaded capture pipelines using Python OpenCV and native device bindings, guaranteeing zero UI freeze during disk I/O.
               </p>
 </div>
+<!-- Real Event Deployment Banner -->
+<div class="bg-surface-container rounded-2xl p-5 border border-primary/20 space-y-3">
+<div class="flex items-center gap-2 text-primary font-bold text-sm sm:text-base">
+<span class="text-lg">🎪</span>
+<span>Real Event Deployment: CCIT CREATION (2-Day Live Booth Exhibition)</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+<div class="bg-surface-container-lowest p-4 rounded-xl text-center shadow-xs border border-primary/10">
+<div class="font-extrabold text-2xl sm:text-3xl text-primary font-metric-num">2 Days</div>
+<div class="text-xs text-on-surface-variant font-medium mt-1">Live Exhibition</div>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl text-center shadow-xs border border-primary/10">
+<div class="font-extrabold text-2xl sm:text-3xl text-primary font-metric-num">40+</div>
+<div class="text-xs text-on-surface-variant font-medium mt-1">Real Users (Lecturers &amp; Students)</div>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl text-center shadow-xs border border-primary/10">
+<div class="font-extrabold text-2xl sm:text-3xl text-primary font-metric-num">23</div>
+<div class="text-xs text-on-surface-variant font-medium mt-1">UAT Survey Respondents</div>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-xl text-center shadow-xs border border-primary/10">
+<div class="font-extrabold text-2xl sm:text-3xl text-primary font-metric-num">100%</div>
+<div class="text-xs text-on-surface-variant font-medium mt-1">Session Completion Rate</div>
+</div>
+</div>
+</div>
 </div>
 <!-- Project Specs Sidebar -->
 <div class="lg:col-span-4 bg-surface-container rounded-2xl p-6 border border-primary/10 flex flex-col justify-between space-y-6">
@@ -671,14 +696,17 @@ Architect &amp; Ship
                 Tech Stack &amp; Libraries
               </h4>
 <div class="flex flex-wrap gap-2">
-<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold shadow-xs">Spring Boot</span>
-<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold shadow-xs">CodeIgniter 4</span>
-<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold shadow-xs">Blade / HTML5</span>
-<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold shadow-xs">Python OpenCV</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold shadow-xs">React.js</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold shadow-xs">Vite</span>
 <span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold shadow-xs">Electron</span>
-<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold shadow-xs">MySQL</span>
-<span class="px-2.5 py-1 bg-surface-container-lowest text-secondary rounded-lg text-xs font-bold shadow-xs">Midtrans QRIS</span>
-<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold shadow-xs">Google Drive API</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold shadow-xs">HTML5 Canvas API</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold shadow-xs">Bootstrap 5</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold shadow-xs">CodeIgniter 4</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold shadow-xs">REST API</span>
+<span class="px-2.5 py-1 bg-secondary-container text-secondary rounded-lg text-xs font-bold shadow-xs">Python (Camera Driver)</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold shadow-xs">digiCamControl</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold shadow-xs">Figma</span>
+<span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold shadow-xs">UAT Matrix</span>
 </div>
 <!-- Metrics Mini List -->
 <div class="pt-4 border-t border-primary/20 space-y-2 text-body-sm font-body-sm">
@@ -698,6 +726,11 @@ Architect &amp; Ship
 </div>
 <!-- Project Action Links -->
 <div class="space-y-2 pt-4 border-t border-primary/20">
+<a class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-secondary text-on-secondary font-label-lg text-label-lg font-bold shadow-sm hover:opacity-90 active:scale-[0.98] transition-all" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">photo_library</span>
+<span class="text-xs">👁</span>
+<span>Preview Screenshots &amp; Gallery</span>
+</a>
 <a class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-primary text-on-primary font-label-lg text-label-lg font-bold hover:bg-primary-container transition-all" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-[18px]">code</span>
 <span>GitHub (Photobox_Website)</span>
