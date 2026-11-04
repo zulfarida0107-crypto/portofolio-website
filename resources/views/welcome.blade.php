@@ -201,13 +201,11 @@
 <div class="flex items-center space-x-3">
 <!-- Language Switcher Pill (ID | EN) -->
 <div class="inline-flex items-center bg-surface-container rounded-full p-1 border border-primary/20 shadow-xs text-xs font-bold" id="lang-switcher">
-<button type="button" onclick="changeLanguage('id')" id="lang-btn-id" class="px-2.5 py-1 rounded-full transition-all flex items-center gap-1.5 cursor-pointer text-primary hover:bg-surface-container-high" title="Ubah ke Bahasa Indonesia">
-<span class="text-xs">🇮🇩</span>
-<span class="font-mono text-[11px] font-bold">ID</span>
+<button type="button" onclick="changeLanguage('id')" id="lang-btn-id" class="px-2.5 py-1 rounded-full transition-all flex items-center justify-center cursor-pointer text-primary hover:bg-surface-container-high" title="Bahasa Indonesia">
+<span class="font-mono text-[11px] font-bold tracking-wider">ID</span>
 </button>
-<button type="button" onclick="changeLanguage('en')" id="lang-btn-en" class="px-2.5 py-1 rounded-full transition-all flex items-center gap-1.5 cursor-pointer bg-primary text-on-primary shadow-xs" title="Switch to English">
-<span class="text-xs">🇬🇧</span>
-<span class="font-mono text-[11px] font-bold">EN</span>
+<button type="button" onclick="changeLanguage('en')" id="lang-btn-en" class="px-2.5 py-1 rounded-full transition-all flex items-center justify-center cursor-pointer bg-primary text-on-primary shadow-xs" title="English">
+<span class="font-mono text-[11px] font-bold tracking-wider">EN</span>
 </button>
 </div>
 
@@ -1389,11 +1387,11 @@ function changeLanguage(lang) {
   const btnEn = document.getElementById('lang-btn-en');
   if (btnId && btnEn) {
     if (lang === 'id') {
-      btnId.className = 'px-2.5 py-1 rounded-full transition-all flex items-center gap-1.5 cursor-pointer bg-primary text-on-primary shadow-xs';
-      btnEn.className = 'px-2.5 py-1 rounded-full transition-all flex items-center gap-1.5 cursor-pointer text-primary hover:bg-surface-container-high';
+      btnId.className = 'px-2.5 py-1 rounded-full transition-all flex items-center justify-center cursor-pointer bg-primary text-on-primary shadow-xs';
+      btnEn.className = 'px-2.5 py-1 rounded-full transition-all flex items-center justify-center cursor-pointer text-primary hover:bg-surface-container-high';
     } else {
-      btnEn.className = 'px-2.5 py-1 rounded-full transition-all flex items-center gap-1.5 cursor-pointer bg-primary text-on-primary shadow-xs';
-      btnId.className = 'px-2.5 py-1 rounded-full transition-all flex items-center gap-1.5 cursor-pointer text-primary hover:bg-surface-container-high';
+      btnEn.className = 'px-2.5 py-1 rounded-full transition-all flex items-center justify-center cursor-pointer bg-primary text-on-primary shadow-xs';
+      btnId.className = 'px-2.5 py-1 rounded-full transition-all flex items-center justify-center cursor-pointer text-primary hover:bg-surface-container-high';
     }
   }
 
