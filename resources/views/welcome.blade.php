@@ -331,11 +331,16 @@
 <p class="font-semibold text-primary" data-i18n="about_highlight">I'm looking for opportunities in Full Stack Development, Quality Assurance (QA), IT Project/Product Management, or Business/Systems Analysis.</p>
 </div>
 </div>
-<!-- Academic Logos (PNJ & CCIT FTUI) -->
-<div class="mt-8 pt-6 border-t border-primary/10 flex items-center gap-4">
+<!-- Academic Affiliation (Logos & Label) -->
+<div class="mt-8 pt-6 border-t border-primary/10 flex flex-wrap items-center gap-4">
+<div class="flex items-center gap-3 shrink-0">
 <img src="{{ asset('images/logos/logo-pnj.png') }}" alt="Politeknik Negeri Jakarta" class="h-10 w-auto object-contain hover:scale-105 transition-transform" title="Politeknik Negeri Jakarta" />
 <div class="h-6 w-px bg-primary/20"></div>
 <img src="{{ asset('images/logos/logo-ccit-ftui.png') }}" alt="CCIT FTUI Universitas Indonesia" class="h-10 w-auto object-contain hover:scale-105 transition-transform" title="CCIT FTUI Universitas Indonesia" />
+</div>
+<span class="text-xs sm:text-body-sm font-semibold text-on-surface-variant font-mono" data-i18n="about_academic_label">
+State Polytechnic of Jakarta x CCIT FTUI
+</span>
 </div>
 </div>
 <!-- Achievement Metrics ("Audience Size" style pill cards from template) -->
@@ -1251,6 +1256,7 @@ const translations = {
     about_p1: "Halo, saya Zulfarida, mahasiswi Teknik Informatika (konsentrasi Full Stack Developer) di Politeknik Negeri Jakarta yang berkolaborasi dengan CCIT FTUI, Universitas Indonesia. Saya gemar mengubah tantangan nyata menjadi produk fungsional siap pakai, mulai dari merancang database dan API hingga membangun dashboard yang nyaman digunakan pengguna.",
     about_p2: "Saya adalah Co-Founder CuitBox, platform photobox mandiri (self-service), dan meraih Juara 1 pada ajang CCIT Venture Studio Batch #1. Selain rekayasa kode, saya aktif memimpin komunikasi publik, membawakan acara formal sebagai MC, serta mendampingi mahasiswa baru, sehingga sangat terbiasa berkolaborasi lintas tim teknis maupun bisnis.",
     about_highlight: "Saya sangat terbuka untuk peluang karier di bidang Full Stack Development, Quality Assurance (QA), IT Project/Product Management, atau Business/Systems Analysis.",
+    about_academic_label: "Politeknik Negeri Jakarta x CCIT FTUI",
 
     metrics_title: "Metrik & Pencapaian",
     metrics_desc: "Metrik rekam jejak terbukti dalam pengembangan perangkat lunak, kepemilikan produk, dan kontribusi kode.",
@@ -1322,6 +1328,7 @@ const translations = {
     about_p1: "Hi, I'm Zulfarida, an Informatics Engineering student (Full Stack Developer track) at State Polytechnic of Jakarta, in collaboration with CCIT FTUI, Universitas Indonesia. I enjoy turning real problems into working products, from designing the database and APIs to building the dashboard users actually touch.",
     about_p2: "I co-founded CuitBox, a self-service photo booth platform, and won 1st place in CCIT Venture Studio Batch #1. Beyond code, I've led communications, hosted events as an MC, and mentored new students, so I'm comfortable working across technical and non-technical teams.",
     about_highlight: "I'm looking for opportunities in Full Stack Development, Quality Assurance (QA), IT Project/Product Management, or Business/Systems Analysis.",
+    about_academic_label: "State Polytechnic of Jakarta x CCIT FTUI",
 
     metrics_title: "Metrics & Traction",
     metrics_desc: "Proven execution metrics across software development, product ownership, and code commits.",
