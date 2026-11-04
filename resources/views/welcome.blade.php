@@ -820,15 +820,18 @@ Real Event Deployment: CCIT CREATION (2-Day Live Booth Exhibition)
 <!-- Repositories -->
 <div class="space-y-2 pt-4 border-t border-outline-variant/30">
 <span class="text-xs font-bold text-outline block">Linked Repositories:</span>
-<a class="block text-body-sm font-semibold text-primary hover:underline truncate" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
-                🔗 ta-ci4-web-coffeeshop
-              </a>
-<a class="block text-body-sm font-semibold text-primary hover:underline truncate" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
-                🔗 ta-flutter-aplikasi-coffeeshop
-              </a>
-<a class="block text-body-sm font-semibold text-primary hover:underline truncate" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
-                🔗 ta-server-coffeeshop
-              </a>
+<a class="w-full inline-flex items-center justify-center gap-2 px-3 py-2 rounded-full bg-surface-container-lowest text-primary border border-primary/20 font-label-lg text-xs sm:text-sm font-semibold hover:bg-surface-variant transition-all shadow-xs" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
+  <span class="material-symbols-outlined text-[18px]">desktop_windows</span>
+  <span>GitHub (ta-ci4-web-coffeeshop)</span>
+</a>
+<a class="w-full inline-flex items-center justify-center gap-2 px-3 py-2 rounded-full bg-surface-container-lowest text-primary border border-primary/20 font-label-lg text-xs sm:text-sm font-semibold hover:bg-surface-variant transition-all shadow-xs" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
+  <span class="material-symbols-outlined text-[18px]">desktop_windows</span>
+  <span>GitHub (ta-flutter-aplikasi-coffeeshop)</span>
+</a>
+<a class="w-full inline-flex items-center justify-center gap-2 px-3 py-2 rounded-full bg-surface-container-lowest text-primary border border-primary/20 font-label-lg text-xs sm:text-sm font-semibold hover:bg-surface-variant transition-all shadow-xs" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
+  <span class="material-symbols-outlined text-[18px]">desktop_windows</span>
+  <span>GitHub (ta-server-coffeeshop)</span>
+</a>
 </div>
 </div>
 </div>
