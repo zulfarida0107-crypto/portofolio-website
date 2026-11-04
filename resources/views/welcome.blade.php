@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ config('portfolio.profile.name') }} | {{ config('portfolio.profile.headline') }}</title>
-    <meta name="description" content="{{ config('portfolio.profile.summary') }}">
+    <title>{{ $profName ?? 'Zulfarida' }} | {{ $profHeadline ?? 'QA & Systems Analyst' }}</title>
+    <meta name="description" content="{{ $profSummary ?? '' }}">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -63,6 +63,28 @@
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-600 selection:text-white">
+
+    @php
+        $profName = $profile->name ?? config('portfolio.profile.name');
+        $profStatus = $profile->badge_status ?? config('portfolio.profile.badge_status');
+        $profHeadline = $profile->headline ?? config('portfolio.profile.headline');
+        $profSubheadline = $profile->subheadline ?? config('portfolio.profile.subheadline');
+        $profLocation = $profile->location ?? config('portfolio.profile.location');
+        $profSummary = $profile->bio_summary ?? config('portfolio.profile.summary');
+        $profExtSummary = $profile->extended_summary ?? config('portfolio.profile.extended_summary');
+        $profEmail = $profile->email ?? config('portfolio.profile.email');
+        $profWhatsapp = $profile->whatsapp_url ?? config('portfolio.profile.whatsapp');
+        $profLinkedin = $profile->linkedin_url ?? config('portfolio.profile.linkedin');
+        $profGithub = $profile->github_url ?? config('portfolio.profile.github');
+        $profPhoto = $profile->photo_path ?? config('portfolio.profile.photo');
+        $profCv = $profile->cv_path ?? config('portfolio.profile.cv_file');
+
+        $metricList = isset($metrics) && $metrics->count() > 0 ? $metrics->toArray() : config('portfolio.metrics');
+        $compList = isset($competencies) && $competencies->count() > 0 ? $competencies->toArray() : config('portfolio.competencies');
+        $projList = isset($projects) && $projects->count() > 0 ? $projects->toArray() : config('portfolio.projects');
+        $expList = isset($experiences) && $experiences->count() > 0 ? $experiences->toArray() : config('portfolio.experience');
+        $certList = isset($certifications) && $certifications->count() > 0 ? $certifications->toArray() : config('portfolio.certifications');
+    @endphp
 
     <!-- Subtle Background Glow Elements -->
     <div class="fixed inset-0 bg-grid-pattern pointer-events-none z-0"></div>
@@ -226,7 +248,7 @@
 
                 <!-- 4 METRICS COUNTER BAR -->
                 <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-                    @foreach(config('portfolio.metrics') as $metric)
+                    @foreach($metricList as $metric)
                         <div class="p-5 rounded-2xl bg-slate-900/90 border border-slate-800/80 hover:border-brand-500/50 transition-all group">
                             <p class="text-3xl sm:text-4xl font-extrabold text-brand-400 font-mono group-hover:scale-105 transition-transform inline-block">
                                 {{ $metric['value'] }}
@@ -258,7 +280,7 @@
 
                 <!-- 4 Pillars Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                    @foreach(config('portfolio.competencies') as $pillar)
+                    @foreach($compList as $pillar)
                         <div class="p-7 rounded-2xl bg-slate-900/80 border border-slate-800 hover:border-brand-500/50 hover:bg-slate-900 transition-all flex flex-col justify-between group">
                             <div>
                                 <div class="flex items-center gap-3.5 mb-4">
@@ -305,7 +327,7 @@
 
                     <!-- Category Filter Tabs -->
                     <div class="flex flex-wrap gap-2 p-1.5 rounded-xl bg-slate-900 border border-slate-800 text-xs font-medium" id="filter-container">
-                        <button onclick="filterProjects('all')" class="filter-btn active px-3.5 py-1.5 rounded-lg bg-brand-600 text-white transition-all" data-category="all">Semua ({{ count(config('portfolio.projects')) }})</button>
+                        <button onclick="filterProjects('all')" class="filter-btn active px-3.5 py-1.5 rounded-lg bg-brand-600 text-white transition-all" data-category="all">Semua ({{ count($projList) }})</button>
                         <button onclick="filterProjects('flagship')" class="filter-btn px-3.5 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all" data-category="flagship">Flagship / Award</button>
                         <button onclick="filterProjects('final-project')" class="filter-btn px-3.5 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all" data-category="final-project">Tugas Akhir</button>
                         <button onclick="filterProjects('qa-testing')" class="filter-btn px-3.5 py-1.5 rounded-lg text-slate-400 hover:text-white transition-all" data-category="qa-testing">QA Testing</button>
@@ -314,7 +336,7 @@
 
                 <!-- Projects Cards Grid -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                    @foreach(config('portfolio.projects') as $proj)
+                    @foreach($projList as $proj)
                         <div class="project-card p-7 rounded-2xl bg-slate-900/90 border border-slate-800 hover:border-brand-500/60 transition-all flex flex-col justify-between group" data-category="{{ $proj['category'] }}">
                             <div>
                                 <!-- Top Badge & Year -->
@@ -464,7 +486,7 @@
 
                 <!-- Timeline List -->
                 <div class="relative border-l-2 border-brand-800/60 ml-4 sm:ml-8 space-y-12">
-                    @foreach(config('portfolio.experience') as $exp)
+                    @foreach($expList as $exp)
                         <div class="relative pl-6 sm:pl-10 group">
                             <!-- Timeline Dot Icon -->
                             <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-950 border-2 border-brand-500 group-hover:bg-brand-400 group-hover:scale-125 transition-all"></div>
@@ -522,7 +544,7 @@
 
                 <!-- Certifications Grid -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    @foreach(config('portfolio.certifications') as $cert)
+                    @foreach($certList as $cert)
                         <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 transition-all flex flex-col justify-between group">
                             <div>
                                 <span class="text-[11px] font-mono text-brand-400 block mb-2">{{ $cert['type'] }}</span>
