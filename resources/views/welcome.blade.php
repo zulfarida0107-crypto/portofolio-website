@@ -721,28 +721,36 @@ Architect &amp; Ship
 </div>
 </div>
 
-<!-- Real Event Deployment Card (Matched Layout) -->
+<!-- Real Event Deployment Card (Matched Layout to Tech Stack Specs) -->
 <div class="bg-surface-container rounded-2xl p-6 border border-primary/10 space-y-4">
 <h4 class="font-label-badge text-label-badge font-bold uppercase tracking-wider text-primary">
 Real Event Deployment: CCIT CREATION (2-Day Live Booth Exhibition)
 </h4>
-<div class="grid grid-cols-2 gap-2.5">
-<div class="bg-surface-container-lowest p-3.5 rounded-xl text-center shadow-xs border border-primary/10">
-<div class="font-extrabold text-xl text-primary font-metric-num">2 Days</div>
-<div class="text-xs text-on-surface-variant font-medium mt-1 leading-snug">Live Exhibition</div>
+<!-- Metrics List -->
+<div class="space-y-2 text-body-sm font-body-sm">
+<div class="flex justify-between text-on-surface">
+<span class="text-outline">Live Exhibition:</span>
+<span class="font-bold">2 Days</span>
 </div>
-<div class="bg-surface-container-lowest p-3.5 rounded-xl text-center shadow-xs border border-primary/10">
-<div class="font-extrabold text-xl text-primary font-metric-num">40+</div>
-<div class="text-xs text-on-surface-variant font-medium mt-1 leading-snug">Real Users (Lecturers &amp; Students)</div>
+<div class="flex justify-between text-on-surface">
+<span class="text-outline">Real Users:</span>
+<span class="font-bold">40+ (Lecturers &amp; Students)</span>
 </div>
-<div class="bg-surface-container-lowest p-3.5 rounded-xl text-center shadow-xs border border-primary/10">
-<div class="font-extrabold text-xl text-primary font-metric-num">23</div>
-<div class="text-xs text-on-surface-variant font-medium mt-1 leading-snug">UAT Survey Respondents</div>
+<div class="flex justify-between text-on-surface">
+<span class="text-outline">UAT Survey Respondents:</span>
+<span class="font-bold">23</span>
 </div>
-<div class="bg-surface-container-lowest p-3.5 rounded-xl text-center shadow-xs border border-primary/10">
-<div class="font-extrabold text-xl text-primary font-metric-num">100%</div>
-<div class="text-xs text-on-surface-variant font-medium mt-1 leading-snug">Session Completion Rate</div>
+<div class="flex justify-between text-on-surface">
+<span class="text-outline">Session Completion Rate:</span>
+<span class="font-bold">100%</span>
 </div>
+</div>
+<!-- Documentation Action Button (Same Color as Preview Button) -->
+<div class="pt-4 border-t border-primary/20">
+<a class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-secondary text-on-secondary font-label-lg text-label-lg font-bold shadow-sm hover:opacity-90 active:scale-[0.98] transition-all" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">description</span>
+<span>Documentation</span>
+</a>
 </div>
 </div>
 </div>
