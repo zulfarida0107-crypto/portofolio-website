@@ -822,7 +822,6 @@ Real Event Deployment: CCIT CREATION (2-Day Live Booth Exhibition)
   <span class="material-symbols-outlined text-[18px]">photo_library</span>
   <span>Preview</span>
 </a>
-<span class="text-xs font-bold text-outline block pt-1">Linked Repositories:</span>
 <a class="w-full inline-flex items-center justify-center gap-2 px-3 py-2 rounded-full bg-surface-container-lowest text-primary border border-primary/20 font-label-lg text-xs sm:text-sm font-semibold hover:bg-surface-variant transition-all shadow-xs" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
   <span class="material-symbols-outlined text-[18px]">desktop_windows</span>
   <span>GitHub (ta-ci4-web-coffeeshop)</span>
