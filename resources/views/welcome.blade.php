@@ -891,11 +891,19 @@ Real Event Deployment: CCIT CREATION (2-Day Live Booth Exhibition)
 <span class="px-2.5 py-1 bg-surface-container-lowest text-primary rounded-lg text-xs font-bold shadow-xs">TensorFlow / Keras</span>
 </div>
 </div>
-<div class="pt-4 border-t border-outline-variant/30">
+<div class="pt-4 border-t border-outline-variant/30 space-y-3">
 <div class="p-3 bg-surface-container-lowest rounded-xl border border-primary/10 text-body-sm text-outline">
 <span class="font-bold text-primary block mb-0.5">Status: Active Model Tuning</span>
                 Benchmarking latency on edge device webcams for real-time human-computer interaction.
               </div>
+<a class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-secondary text-on-secondary font-label-lg text-label-lg font-bold shadow-sm hover:opacity-90 active:scale-[0.98] transition-all" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
+  <span class="material-symbols-outlined text-[18px]">photo_library</span>
+  <span>Preview</span>
+</a>
+<a class="w-full inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest text-primary border border-primary/20 font-label-lg text-label-lg font-semibold hover:bg-surface-variant transition-all shadow-xs" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
+  <span class="material-symbols-outlined text-[18px]">code</span>
+  <span>GitHub</span>
+</a>
 </div>
 </div>
 </div>
