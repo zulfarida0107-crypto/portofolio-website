@@ -3,25 +3,16 @@
   <div class="relative w-full max-w-6xl max-h-[94vh] bg-surface-container-low rounded-3xl border border-primary/20 shadow-2xl flex flex-col overflow-hidden text-on-surface my-auto">
     
     <!-- Modal Header -->
-    <div class="px-5 sm:px-8 py-5 bg-surface-container border-b border-primary/10 flex flex-col md:flex-row md:items-center justify-between gap-4 shrink-0">
+    <div class="px-5 sm:px-8 py-5 bg-surface-container border-b border-primary/10 flex items-center justify-between gap-4 shrink-0">
       <div>
-        <div class="flex items-center gap-2 mb-1">
-          <span class="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-secondary-container text-secondary text-xs font-bold uppercase tracking-wide">
-            <span class="material-symbols-outlined text-[15px]">photo_camera</span>
-            <span>CuitBox Architecture Showcase</span>
-          </span>
-          <span class="text-xs text-outline font-semibold">Interactive Previews</span>
-        </div>
-        <h3 class="font-headline-md text-xl sm:text-2xl font-bold text-primary">
-          CuitBox Multi-Platform Interfaces
+        <h3 class="font-headline-md text-xl sm:text-2xl font-bold text-primary flex items-center gap-2">
+          <span>📷</span>
+          <span>CuitBox Multi-Platform Interfaces</span>
         </h3>
-        <p class="text-xs sm:text-sm text-outline mt-0.5">
-          Tampilan sistem di perangkat nyata: Kiosk Program (Laptop), Admin Panel (Laptop & HP), dan Customer Web (Laptop & HP).
-        </p>
       </div>
 
       <!-- Close Button -->
-      <button type="button" onclick="closeCuitboxModal()" class="self-end md:self-center w-10 h-10 rounded-full bg-surface-container-high hover:bg-surface-variant text-primary flex items-center justify-center transition-colors cursor-pointer shadow-xs" title="Tutup Modal (ESC)">
+      <button type="button" onclick="closeCuitboxModal()" class="w-10 h-10 rounded-full bg-surface-container-high hover:bg-surface-variant text-primary flex items-center justify-center transition-colors cursor-pointer shadow-xs" title="Tutup Modal (ESC)">
         <span class="material-symbols-outlined text-[22px]">close</span>
       </button>
     </div>
@@ -47,21 +38,6 @@
 
       <!-- ================= TAB 1: LAPTOP KIOSK PROGRAM ================= -->
       <div id="tab-content-kiosk" class="cuitbox-tab-pane space-y-6">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-          <div>
-            <h4 class="font-headline-md text-lg font-bold text-primary flex items-center gap-2">
-              <span class="material-symbols-outlined text-secondary">computer</span>
-              <span>Desktop Kiosk Application (Touchscreen Kiosk Program)</span>
-            </h4>
-            <p class="text-xs sm:text-sm text-outline">
-              Program mandiri berbasis Electron & Python OpenCV yang berjalan pada booth photobox fisik untuk pengunjung mengambil foto langsung.
-            </p>
-          </div>
-          <span class="px-3 py-1 bg-surface-container-high text-primary rounded-full text-xs font-bold uppercase tracking-wider self-start sm:self-auto">
-            Resolusi Layar: 16:10 Touch Kiosk
-          </span>
-        </div>
-
         <!-- LAPTOP FRAME -->
         <div class="w-full max-w-4xl mx-auto">
           <!-- Laptop Lid / Top Shell -->
