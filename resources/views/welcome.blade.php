@@ -706,11 +706,11 @@ Architect &amp; Ship
 <span class="material-symbols-outlined text-[18px]">photo_library</span>
 <span>Preview</span>
 </a>
-<a class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-primary text-on-primary font-label-lg text-label-lg font-bold hover:bg-primary-container transition-all" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
+<a class="w-full inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest text-primary border border-primary/20 font-label-lg text-label-lg font-semibold hover:bg-surface-variant transition-all shadow-xs" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-[18px]">code</span>
 <span>GitHub (Photobox_Website)</span>
 </a>
-<a class="w-full inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest text-primary border border-primary/20 font-label-lg text-label-lg font-semibold hover:bg-surface-variant transition-all" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
+<a class="w-full inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest text-primary border border-primary/20 font-label-lg text-label-lg font-semibold hover:bg-surface-variant transition-all shadow-xs" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-[18px]">desktop_windows</span>
 <span>GitHub (photobox-dekstop)</span>
 </a>
