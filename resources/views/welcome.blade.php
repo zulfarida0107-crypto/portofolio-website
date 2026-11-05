@@ -682,10 +682,10 @@ ANALYZE &amp; BLUEPRINT
 </div>
 <!-- Project Action Links -->
 <div class="space-y-2 pt-4 border-t border-primary/20">
-<a class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-secondary text-on-secondary font-label-lg text-label-lg font-bold shadow-sm hover:opacity-90 active:scale-[0.98] transition-all" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
+<button type="button" onclick="openCuitboxModal()" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-secondary text-on-secondary font-label-lg text-label-lg font-bold shadow-sm hover:opacity-90 active:scale-[0.98] transition-all cursor-pointer">
 <span class="material-symbols-outlined text-[18px]">photo_library</span>
 <span>Preview</span>
-</a>
+</button>
 <a class="w-full inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest text-primary border border-primary/20 font-label-lg text-label-lg font-semibold hover:bg-surface-variant transition-all shadow-xs" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-[18px]">code</span>
 <span>Github (Photobox_Website)</span>
@@ -1547,5 +1547,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupNavActiveState();
 });
 </script>
+
+@include('partials.cuitbox-modal')
 </body>
 </html>
