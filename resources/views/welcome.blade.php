@@ -688,11 +688,11 @@ ANALYZE &amp; BLUEPRINT
 </a>
 <a class="w-full inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest text-primary border border-primary/20 font-label-lg text-label-lg font-semibold hover:bg-surface-variant transition-all shadow-xs" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-[18px]">code</span>
-<span>GitHub (Photobox_Website)</span>
+<span>Github (Photobox_Website)</span>
 </a>
 <a class="w-full inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest text-primary border border-primary/20 font-label-lg text-label-lg font-semibold hover:bg-surface-variant transition-all shadow-xs" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
-<span class="material-symbols-outlined text-[18px]">desktop_windows</span>
-<span>GitHub (photobox-dekstop)</span>
+<span class="material-symbols-outlined text-[18px]">code</span>
+<span>Github (photobox-dekstop)</span>
 </a>
 <div class="text-center pt-1">
 <span class="text-[11px] font-bold text-secondary uppercase tracking-wider">✦ Live Demo Available on Request</span>
@@ -803,16 +803,16 @@ Real Event Deployment: CCIT CREATION (2-Day Live Booth Exhibition)
   <span>Preview</span>
 </a>
 <a class="w-full inline-flex items-center justify-center gap-2 px-3 py-2 rounded-full bg-surface-container-lowest text-primary border border-primary/20 font-label-lg text-xs sm:text-sm font-semibold hover:bg-surface-variant transition-all shadow-xs" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
-  <span class="material-symbols-outlined text-[18px]">desktop_windows</span>
-  <span>GitHub (ta-ci4-web-coffeeshop)</span>
+  <span class="material-symbols-outlined text-[18px]">code</span>
+  <span>Github (ta-ci4-web-coffeeshop)</span>
 </a>
 <a class="w-full inline-flex items-center justify-center gap-2 px-3 py-2 rounded-full bg-surface-container-lowest text-primary border border-primary/20 font-label-lg text-xs sm:text-sm font-semibold hover:bg-surface-variant transition-all shadow-xs" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
-  <span class="material-symbols-outlined text-[18px]">desktop_windows</span>
-  <span>GitHub (ta-flutter-aplikasi-coffeeshop)</span>
+  <span class="material-symbols-outlined text-[18px]">code</span>
+  <span>Github (ta-flutter-aplikasi-coffeeshop)</span>
 </a>
 <a class="w-full inline-flex items-center justify-center gap-2 px-3 py-2 rounded-full bg-surface-container-lowest text-primary border border-primary/20 font-label-lg text-xs sm:text-sm font-semibold hover:bg-surface-variant transition-all shadow-xs" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
-  <span class="material-symbols-outlined text-[18px]">desktop_windows</span>
-  <span>GitHub (ta-server-coffeeshop)</span>
+  <span class="material-symbols-outlined text-[18px]">code</span>
+  <span>Github (ta-server-coffeeshop)</span>
 </a>
 </div>
 </div>
@@ -882,7 +882,7 @@ Real Event Deployment: CCIT CREATION (2-Day Live Booth Exhibition)
 </a>
 <a class="w-full inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-surface-container-lowest text-primary border border-primary/20 font-label-lg text-label-lg font-semibold hover:bg-surface-variant transition-all shadow-xs" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
   <span class="material-symbols-outlined text-[18px]">code</span>
-  <span>GitHub</span>
+  <span>Github</span>
 </a>
 </div>
 </div>
