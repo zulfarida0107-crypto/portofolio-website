@@ -426,7 +426,7 @@ Full Stack Developer Track
 <!-- 4 Tier Cards (Full Stack, QA, IT PM, Systems Analysis) -->
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
 <!-- Card 1: Full Stack Development (Label: Hijau) -->
-<div class="bg-surface-container-lowest hover:bg-surface-container border border-primary/20 hover:border-primary transition-all duration-300 hover:scale-[1.02] hover:shadow-lg rounded-3xl p-6 flex flex-col justify-between relative group cursor-pointer">
+<div class="bg-surface-container-lowest hover:bg-surface-container border border-primary/20 hover:border-primary transition-all duration-300 hover:scale-[1.02] hover:shadow-lg rounded-3xl p-6 flex flex-col justify-between relative group">
 <div class="paper-clip"></div>
 <div>
 <div class="text-center pb-4 border-b border-outline-variant/30">
@@ -455,15 +455,10 @@ BUILD &amp; CODE
 </li>
 </ul>
 </div>
-<div class="pt-4 border-t border-outline-variant/30">
-<a href="#contact" class="w-full block py-2.5 rounded-full bg-primary-container text-on-primary text-center font-label-lg text-label-lg font-bold group-hover:bg-primary group-hover:shadow-md transition-all" data-i18n="vibe1_btn">
-Ready to Build
-</a>
-</div>
 </div>
 
 <!-- Card 2: Quality Assurance (QA) (Label: Pink) -->
-<div class="bg-surface-container-lowest hover:bg-surface-container border border-primary/20 hover:border-primary transition-all duration-300 hover:scale-[1.02] hover:shadow-lg rounded-3xl p-6 flex flex-col justify-between relative group cursor-pointer">
+<div class="bg-surface-container-lowest hover:bg-surface-container border border-primary/20 hover:border-primary transition-all duration-300 hover:scale-[1.02] hover:shadow-lg rounded-3xl p-6 flex flex-col justify-between relative group">
 <div class="paper-clip"></div>
 <div>
 <div class="text-center pb-4 border-b border-outline-variant/30">
@@ -492,15 +487,10 @@ TEST &amp; VERIFY
 </li>
 </ul>
 </div>
-<div class="pt-4 border-t border-outline-variant/30">
-<a href="#contact" class="w-full block py-2.5 rounded-full bg-primary-container text-on-primary text-center font-label-lg text-label-lg font-bold group-hover:bg-primary group-hover:shadow-md transition-all" data-i18n="vibe2_btn">
-Test &amp; Verify
-</a>
-</div>
 </div>
 
 <!-- Card 3: IT Project/Product Management (Label: Hijau) -->
-<div class="bg-surface-container-lowest hover:bg-surface-container border border-primary/20 hover:border-primary transition-all duration-300 hover:scale-[1.02] hover:shadow-lg rounded-3xl p-6 flex flex-col justify-between relative group cursor-pointer">
+<div class="bg-surface-container-lowest hover:bg-surface-container border border-primary/20 hover:border-primary transition-all duration-300 hover:scale-[1.02] hover:shadow-lg rounded-3xl p-6 flex flex-col justify-between relative group">
 <div class="paper-clip"></div>
 <div>
 <div class="text-center pb-4 border-b border-outline-variant/30">
@@ -529,15 +519,10 @@ LEAD &amp; COORDINATE
 </li>
 </ul>
 </div>
-<div class="pt-4 border-t border-outline-variant/30">
-<a href="#contact" class="w-full block py-2.5 rounded-full bg-primary-container text-on-primary text-center font-label-lg text-label-lg font-bold group-hover:bg-primary group-hover:shadow-md transition-all" data-i18n="vibe3_btn">
-Coordinate &amp; Scale
-</a>
-</div>
 </div>
 
 <!-- Card 4: Business/Systems Analysis (Label: Pink) -->
-<div class="bg-surface-container-lowest hover:bg-surface-container border border-primary/20 hover:border-primary transition-all duration-300 hover:scale-[1.02] hover:shadow-lg rounded-3xl p-6 flex flex-col justify-between relative group cursor-pointer">
+<div class="bg-surface-container-lowest hover:bg-surface-container border border-primary/20 hover:border-primary transition-all duration-300 hover:scale-[1.02] hover:shadow-lg rounded-3xl p-6 flex flex-col justify-between relative group">
 <div class="paper-clip"></div>
 <!-- Special Badge -->
 <div class="absolute -top-3 right-6 bg-secondary text-on-secondary px-3 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider shadow-sm" data-i18n="vibe4_pill">
@@ -569,11 +554,6 @@ ANALYZE &amp; BLUEPRINT
 <span><strong>Feasibility &amp; Logic:</strong> Translating real-world business logic into code blueprints.</span>
 </li>
 </ul>
-</div>
-<div class="pt-4 border-t border-primary/20">
-<a href="#contact" class="w-full block py-2.5 rounded-full bg-primary text-on-primary text-center font-label-lg text-label-lg font-bold shadow-sm group-hover:bg-primary-container transition-all" data-i18n="vibe4_btn">
-Architect &amp; Ship
-</a>
 </div>
 </div>
 </div>
