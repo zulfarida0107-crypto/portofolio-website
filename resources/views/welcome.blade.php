@@ -704,8 +704,7 @@ Architect &amp; Ship
 <div class="space-y-2 pt-4 border-t border-primary/20">
 <a class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-secondary text-on-secondary font-label-lg text-label-lg font-bold shadow-sm hover:opacity-90 active:scale-[0.98] transition-all" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-[18px]">photo_library</span>
-<span class="text-xs">👁</span>
-<span>Preview Screenshots &amp; Gallery</span>
+<span>Preview</span>
 </a>
 <a class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-primary text-on-primary font-label-lg text-label-lg font-bold hover:bg-primary-container transition-all" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-[18px]">code</span>
