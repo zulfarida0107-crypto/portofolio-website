@@ -53,9 +53,6 @@
                 <h4 class="font-headline-md text-base sm:text-lg font-bold text-primary">
                   Video Demo Interaksi Photobox Kiosk
                 </h4>
-                <p class="text-xs text-on-surface-variant">
-                  Dokumentasi operasional mesin booth mandiri pada pameran CCIT CREATION
-                </p>
               </div>
             </div>
             <span class="px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-700 text-xs font-bold self-start sm:self-auto border border-emerald-500/20">
@@ -120,82 +117,26 @@
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            
-            <!-- Photo 1: Suasana Booth -->
-            <div class="bg-surface-container-lowest rounded-2xl overflow-hidden border border-primary/15 shadow-xs flex flex-col group hover:shadow-md transition-all">
-              <div class="h-44 bg-gradient-to-br from-slate-800 to-slate-900 relative flex items-center justify-center overflow-hidden">
-                <div class="absolute inset-0 bg-primary/10 flex flex-col items-center justify-center p-4 text-center space-y-2">
-                  <span class="material-symbols-outlined text-[42px] text-secondary">groups</span>
-                  <span class="text-xs font-bold text-slate-200">Suasana Antrean Pengunjung</span>
-                </div>
-                <div class="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-black/60 text-[10px] text-emerald-400 font-mono">
-                  CCIT CREATION Day 1
-                </div>
-              </div>
-              <div class="p-4 space-y-1.5 flex-1 flex flex-col justify-between">
-                <div>
-                  <h5 class="text-xs sm:text-sm font-bold text-primary">Antrean Pengunjung Booth Fisik</h5>
-                  <p class="text-[11px] sm:text-xs text-on-surface-variant leading-relaxed">
-                    Lebih dari 40 pengunjung mahasiswa dan dosen mencoba langsung photobox mandiri selama 2 hari pameran.
-                  </p>
-                </div>
-                <div class="pt-2 border-t border-primary/10 flex items-center justify-between text-[10px] text-outline">
-                  <span>Metrik: 40+ Sesi</span>
-                  <span class="text-secondary font-bold">100% Sukses Print</span>
-                </div>
+            <!-- Photo Slot 1 -->
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-primary/15 bg-surface-container shadow-xs flex items-center justify-center group hover:border-primary/30 transition-all">
+              <div class="w-full h-full bg-slate-900/60 flex items-center justify-center">
+                <span class="material-symbols-outlined text-[44px] text-primary/40 group-hover:scale-105 transition-transform">add_photo_alternate</span>
               </div>
             </div>
 
-            <!-- Photo 2: Live View & Touchscreen -->
-            <div class="bg-surface-container-lowest rounded-2xl overflow-hidden border border-primary/15 shadow-xs flex flex-col group hover:shadow-md transition-all">
-              <div class="h-44 bg-gradient-to-br from-slate-900 to-slate-950 relative flex items-center justify-center overflow-hidden">
-                <div class="absolute inset-0 bg-primary/10 flex flex-col items-center justify-center p-4 text-center space-y-2">
-                  <span class="material-symbols-outlined text-[42px] text-emerald-400">touch_app</span>
-                  <span class="text-xs font-bold text-slate-200">Pengujian Kiosk Touchscreen</span>
-                </div>
-                <div class="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-black/60 text-[10px] text-emerald-400 font-mono">
-                  Hardware Testing
-                </div>
-              </div>
-              <div class="p-4 space-y-1.5 flex-1 flex flex-col justify-between">
-                <div>
-                  <h5 class="text-xs sm:text-sm font-bold text-primary">Interaksi Layar Sentuh & Kamera</h5>
-                  <p class="text-[11px] sm:text-xs text-on-surface-variant leading-relaxed">
-                    Pengunjung berinteraksi tanpa keyboard/mouse fisik; preview kamera 60 FPS berjalan stabil tanpa latency.
-                  </p>
-                </div>
-                <div class="pt-2 border-t border-primary/10 flex items-center justify-between text-[10px] text-outline">
-                  <span>Latency: &lt; 16.4ms</span>
-                  <span class="text-secondary font-bold">Zero UI Freeze</span>
-                </div>
+            <!-- Photo Slot 2 -->
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-primary/15 bg-surface-container shadow-xs flex items-center justify-center group hover:border-primary/30 transition-all">
+              <div class="w-full h-full bg-slate-900/60 flex items-center justify-center">
+                <span class="material-symbols-outlined text-[44px] text-primary/40 group-hover:scale-105 transition-transform">add_photo_alternate</span>
               </div>
             </div>
 
-            <!-- Photo 3: Hasil Cetak & Drive Sync -->
-            <div class="bg-surface-container-lowest rounded-2xl overflow-hidden border border-primary/15 shadow-xs flex flex-col group hover:shadow-md transition-all">
-              <div class="h-44 bg-gradient-to-br from-slate-800 to-slate-900 relative flex items-center justify-center overflow-hidden">
-                <div class="absolute inset-0 bg-primary/10 flex flex-col items-center justify-center p-4 text-center space-y-2">
-                  <span class="material-symbols-outlined text-[42px] text-secondary">print</span>
-                  <span class="text-xs font-bold text-slate-200">Output Foto Fisik & Digital</span>
-                </div>
-                <div class="absolute top-2 left-2 px-2 py-0.5 rounded-md bg-black/60 text-[10px] text-secondary font-mono">
-                  Final Deliverable
-                </div>
-              </div>
-              <div class="p-4 space-y-1.5 flex-1 flex flex-col justify-between">
-                <div>
-                  <h5 class="text-xs sm:text-sm font-bold text-primary">Cetak Foto 300 DPI & QR Softfile</h5>
-                  <p class="text-[11px] sm:text-xs text-on-surface-variant leading-relaxed">
-                    Foto terpotong 4-strip langsung dicetak dalam 45 detik dan softfile terarsip ke Google Drive secara instan.
-                  </p>
-                </div>
-                <div class="pt-2 border-t border-primary/10 flex items-center justify-between text-[10px] text-outline">
-                  <span>Resolusi: 300 DPI</span>
-                  <span class="text-secondary font-bold">Auto Cloud Sync</span>
-                </div>
+            <!-- Photo Slot 3 -->
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-primary/15 bg-surface-container shadow-xs flex items-center justify-center group hover:border-primary/30 transition-all">
+              <div class="w-full h-full bg-slate-900/60 flex items-center justify-center">
+                <span class="material-symbols-outlined text-[44px] text-primary/40 group-hover:scale-105 transition-transform">add_photo_alternate</span>
               </div>
             </div>
-
           </div>
         </div>
 
