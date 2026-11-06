@@ -21,15 +21,15 @@
     <div class="px-5 sm:px-8 py-3 bg-surface-container-lowest border-b border-primary/10 flex flex-wrap items-center gap-2 shrink-0">
       <button type="button" id="tab-btn-kiosk" onclick="switchCuitboxTab('kiosk')" class="cuitbox-tab-btn inline-flex items-center gap-2 px-4 py-2 rounded-full font-label-lg text-xs sm:text-sm font-bold transition-all cursor-pointer bg-primary text-on-primary shadow-xs">
         <span class="material-symbols-outlined text-[18px]">terminal</span>
-        <span>1. Laptop Kiosk Program</span>
+        <span>1. Desktop Kiosk Program</span>
       </button>
       <button type="button" id="tab-btn-admin" onclick="switchCuitboxTab('admin')" class="cuitbox-tab-btn inline-flex items-center gap-2 px-4 py-2 rounded-full font-label-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer bg-surface-container text-primary hover:bg-surface-container-high">
         <span class="material-symbols-outlined text-[18px]">admin_panel_settings</span>
-        <span>2. Laptop & HP: Admin Panel</span>
+        <span>2. Desktop & Mobile: Admin Panel</span>
       </button>
       <button type="button" id="tab-btn-cust" onclick="switchCuitboxTab('cust')" class="cuitbox-tab-btn inline-flex items-center gap-2 px-4 py-2 rounded-full font-label-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer bg-surface-container text-primary hover:bg-surface-container-high">
         <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
-        <span>3. Laptop & HP: Customer Web</span>
+        <span>3. Desktop & Mobile: Customer Web</span>
       </button>
     </div>
 
@@ -276,34 +276,34 @@
         </div>
       </div>
 
-      <!-- ================= TAB 2: LAPTOP & HP ADMIN PANEL ================= -->
-      <div id="tab-content-admin" class="cuitbox-tab-pane hidden space-y-6">
+      <!-- ================= TAB 2: DESKTOP & MOBILE ADMIN PANEL ================= -->
+      <div id="tab-content-admin" class="cuitbox-tab-pane hidden space-y-4 pt-1">
         <!-- Device View Switcher -->
-        <div class="flex justify-end pb-1">
+        <div class="flex justify-start pb-1">
           <div class="inline-flex p-1 rounded-full bg-surface-container border border-primary/10 text-xs font-semibold">
             <button type="button" onclick="switchCuitboxDevice('admin', 'both')" id="admin-dev-both" class="cuitbox-dev-btn inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary text-on-secondary font-bold shadow-xs transition-all cursor-pointer">
               <span class="material-symbols-outlined text-[15px]">devices</span>
               <span>Berdampingan</span>
             </button>
             <button type="button" onclick="switchCuitboxDevice('admin', 'laptop')" id="admin-dev-laptop" class="cuitbox-dev-btn inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-primary hover:text-on-surface transition-all cursor-pointer">
-              <span class="material-symbols-outlined text-[15px]">laptop_mac</span>
-              <span>Laptop</span>
+              <span class="material-symbols-outlined text-[15px]">desktop_windows</span>
+              <span>Desktop</span>
             </button>
             <button type="button" onclick="switchCuitboxDevice('admin', 'phone')" id="admin-dev-phone" class="cuitbox-dev-btn inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-primary hover:text-on-surface transition-all cursor-pointer">
               <span class="material-symbols-outlined text-[15px]">smartphone</span>
-              <span>HP</span>
+              <span>Mobile</span>
             </button>
           </div>
         </div>
 
-        <!-- MOCKUP CONTAINER (FLEX / GRID FOR LAPTOP & HP) -->
+        <!-- MOCKUP CONTAINER (FLEX / GRID FOR DESKTOP & MOBILE) -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
-          <!-- LAPTOP ADMIN FRAME (COL 8) -->
+          <!-- DESKTOP ADMIN FRAME (COL 8) -->
           <div id="admin-laptop-wrapper" class="lg:col-span-8 w-full transition-all">
             <div class="text-xs font-bold text-outline uppercase tracking-wider mb-2 flex items-center gap-1.5">
-              <span class="material-symbols-outlined text-[16px] text-primary">laptop_mac</span>
-              <span>Tampilan Laptop (Full Web Owner Dashboard)</span>
+              <span class="material-symbols-outlined text-[16px] text-primary">desktop_windows</span>
+              <span>Tampilan Desktop (Full Web Owner Dashboard)</span>
             </div>
 
             <!-- Laptop Frame Outer -->
@@ -393,7 +393,7 @@
           <div id="admin-phone-wrapper" class="lg:col-span-4 w-full flex flex-col items-center transition-all">
             <div class="text-xs font-bold text-outline uppercase tracking-wider mb-2 flex items-center gap-1.5 self-center">
               <span class="material-symbols-outlined text-[16px] text-secondary">smartphone</span>
-              <span>Tampilan HP (Mobile Companion)</span>
+              <span>Tampilan Mobile (Companion App)</span>
             </div>
 
             <!-- Phone Frame Outer -->
@@ -543,45 +543,34 @@
         </div>
       </div>
 
-      <!-- ================= TAB 3: LAPTOP & HP CUSTOMER WEB ================= -->
-      <div id="tab-content-cust" class="cuitbox-tab-pane hidden space-y-6">
-        <!-- Sub-header & Device view toggler -->
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-2 border-b border-primary/10">
-          <div>
-            <h4 class="font-headline-md text-lg font-bold text-primary flex items-center gap-2">
-              <span class="material-symbols-outlined text-secondary">shopping_bag</span>
-              <span>Customer Web Portal (Booking Slot & Pemilihan Frame)</span>
-            </h4>
-            <p class="text-xs sm:text-sm text-outline">
-              Web reservasi interaktif tempat pelanggan memilih jadwal foto, memilih template cetak, dan membayar langsung lewat QRIS secara instan.
-            </p>
-          </div>
-
-          <!-- Device View Switcher -->
-          <div class="inline-flex p-1 rounded-full bg-surface-container border border-primary/10 self-start sm:self-auto text-xs font-semibold">
+      <!-- ================= TAB 3: DESKTOP & MOBILE CUSTOMER WEB ================= -->
+      <div id="tab-content-cust" class="cuitbox-tab-pane hidden space-y-4 pt-1">
+        <!-- Device View Switcher -->
+        <div class="flex justify-start pb-1">
+          <div class="inline-flex p-1 rounded-full bg-surface-container border border-primary/10 text-xs font-semibold">
             <button type="button" onclick="switchCuitboxDevice('cust', 'both')" id="cust-dev-both" class="cuitbox-dev-btn inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary text-on-secondary font-bold shadow-xs transition-all cursor-pointer">
               <span class="material-symbols-outlined text-[15px]">devices</span>
               <span>Berdampingan</span>
             </button>
             <button type="button" onclick="switchCuitboxDevice('cust', 'laptop')" id="cust-dev-laptop" class="cuitbox-dev-btn inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-primary hover:text-on-surface transition-all cursor-pointer">
-              <span class="material-symbols-outlined text-[15px]">laptop_mac</span>
-              <span>Laptop</span>
+              <span class="material-symbols-outlined text-[15px]">desktop_windows</span>
+              <span>Desktop</span>
             </button>
             <button type="button" onclick="switchCuitboxDevice('cust', 'phone')" id="cust-dev-phone" class="cuitbox-dev-btn inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-primary hover:text-on-surface transition-all cursor-pointer">
               <span class="material-symbols-outlined text-[15px]">smartphone</span>
-              <span>HP</span>
+              <span>Mobile</span>
             </button>
           </div>
         </div>
 
-        <!-- MOCKUP CONTAINER (FLEX / GRID FOR LAPTOP & HP) -->
+        <!-- MOCKUP CONTAINER (FLEX / GRID FOR DESKTOP & MOBILE) -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
 
-          <!-- LAPTOP CUSTOMER FRAME (COL 8) -->
+          <!-- DESKTOP CUSTOMER FRAME (COL 8) -->
           <div id="cust-laptop-wrapper" class="lg:col-span-8 w-full transition-all">
             <div class="text-xs font-bold text-outline uppercase tracking-wider mb-2 flex items-center gap-1.5">
-              <span class="material-symbols-outlined text-[16px] text-primary">laptop_mac</span>
-              <span>Tampilan Laptop (Desktop Customer Web Portal)</span>
+              <span class="material-symbols-outlined text-[16px] text-primary">desktop_windows</span>
+              <span>Tampilan Desktop (Customer Web Portal)</span>
             </div>
 
             <!-- Laptop Frame Outer -->
@@ -706,7 +695,7 @@
           <div id="cust-phone-wrapper" class="lg:col-span-4 w-full flex flex-col items-center transition-all">
             <div class="text-xs font-bold text-outline uppercase tracking-wider mb-2 flex items-center gap-1.5 self-center">
               <span class="material-symbols-outlined text-[16px] text-secondary">smartphone</span>
-              <span>Tampilan HP (Mobile Web Booking)</span>
+              <span>Tampilan Mobile (Web Booking)</span>
             </div>
 
             <!-- Phone Frame Outer -->
