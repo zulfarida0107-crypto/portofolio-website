@@ -34,10 +34,10 @@
     </div>
 
     <!-- Modal Scrollable Body -->
-    <div class="p-4 sm:p-8 overflow-y-auto space-y-6">
+    <div class="px-4 sm:px-8 pt-2 sm:pt-3 pb-6 sm:pb-8 overflow-y-auto space-y-3">
 
-      <!-- ================= TAB 1: LAPTOP KIOSK PROGRAM ================= -->
-      <div id="tab-content-kiosk" class="cuitbox-tab-pane space-y-6">
+      <!-- ================= TAB 1: DESKTOP KIOSK PROGRAM ================= -->
+      <div id="tab-content-kiosk" class="cuitbox-tab-pane space-y-4">
         <!-- LAPTOP FRAME -->
         <div class="w-full max-w-4xl mx-auto">
           <!-- Laptop Lid / Top Shell -->
@@ -277,9 +277,9 @@
       </div>
 
       <!-- ================= TAB 2: DESKTOP & MOBILE ADMIN PANEL ================= -->
-      <div id="tab-content-admin" class="cuitbox-tab-pane hidden space-y-4 pt-1">
+      <div id="tab-content-admin" class="cuitbox-tab-pane hidden space-y-3">
         <!-- Device View Switcher -->
-        <div class="flex justify-start pb-1">
+        <div class="flex justify-start">
           <div class="inline-flex p-1 rounded-full bg-surface-container border border-primary/10 text-xs font-semibold">
             <button type="button" onclick="switchCuitboxDevice('admin', 'both')" id="admin-dev-both" class="cuitbox-dev-btn inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary text-on-secondary font-bold shadow-xs transition-all cursor-pointer">
               <span class="material-symbols-outlined text-[15px]">devices</span>
@@ -544,9 +544,9 @@
       </div>
 
       <!-- ================= TAB 3: DESKTOP & MOBILE CUSTOMER WEB ================= -->
-      <div id="tab-content-cust" class="cuitbox-tab-pane hidden space-y-4 pt-1">
+      <div id="tab-content-cust" class="cuitbox-tab-pane hidden space-y-3">
         <!-- Device View Switcher -->
-        <div class="flex justify-start pb-1">
+        <div class="flex justify-start">
           <div class="inline-flex p-1 rounded-full bg-surface-container border border-primary/10 text-xs font-semibold">
             <button type="button" onclick="switchCuitboxDevice('cust', 'both')" id="cust-dev-both" class="cuitbox-dev-btn inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary text-on-secondary font-bold shadow-xs transition-all cursor-pointer">
               <span class="material-symbols-outlined text-[15px]">devices</span>
