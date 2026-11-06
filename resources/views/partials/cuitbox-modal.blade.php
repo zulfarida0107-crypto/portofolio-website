@@ -5,8 +5,8 @@
     <!-- Modal Header -->
     <div class="px-5 sm:px-8 py-5 bg-surface-container border-b border-primary/10 flex items-center justify-between gap-4 shrink-0">
       <div>
-        <h3 class="font-headline-md text-xl sm:text-2xl font-bold text-primary flex items-center gap-2">
-          <span>📷</span>
+        <h3 class="font-headline-md text-xl sm:text-2xl font-bold text-primary flex items-center gap-2.5">
+          <span class="material-symbols-outlined text-[24px] sm:text-[28px] text-secondary">photo_camera</span>
           <span>CuitBox Multi-Platform Interfaces</span>
         </h3>
       </div>
