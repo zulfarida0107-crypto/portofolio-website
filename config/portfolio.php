@@ -87,7 +87,9 @@ return [
             'qa_focus' => 'Validasi alur bisnis, user acceptance criteria, skenario pengujian fungsionalitas inti, dan koordinasi kelayakan sistem.',
             'tech_stack' => ['System Analysis', 'QA Verification', 'Product Design', 'Technical Documentation'],
             'demo_video' => 'https://www.youtube.com/watch?v=dQw4w9WgXcQ', // Ganti dengan link video demo Anda
-            'github' => 'https://github.com/zulfarida0107-crypto',
+            'github' => 'https://github.com/khanzaen/Photobox_Website',
+            'github_web' => 'https://github.com/khanzaen/Photobox_Website',
+            'github_desktop' => 'https://github.com/Aidan-Joe/Photobox',
             'attachment_type' => 'Penghargaan & Dokumentasi',
             'attachment_image' => '/images/certifications/cuitbox-award.jpg',
             'year' => '2025',
