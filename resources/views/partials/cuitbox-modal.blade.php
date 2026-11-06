@@ -71,7 +71,7 @@
               </div>
 
               <!-- Main Kiosk Touch Interface -->
-              <div class="grid grid-cols-1 md:grid-cols-12 min-h-[380px] sm:min-h-[440px] bg-gradient-to-b from-slate-950 to-slate-900">
+              <div class="grid grid-cols-1 md:grid-cols-12 min-h-[460px] sm:min-h-[520px] bg-gradient-to-b from-slate-950 to-slate-900">
                 <!-- Left: Viewfinder Camera Feed (Col 8) -->
                 <div class="md:col-span-8 p-4 flex flex-col justify-between relative border-b md:border-b-0 md:border-r border-slate-800 bg-[#0e1017]">
                   <!-- Camera Overlays -->
@@ -327,7 +327,7 @@
                 </div>
 
                 <!-- Admin Dashboard Content -->
-                <div class="p-4 space-y-4 bg-slate-900/60 min-h-[380px]">
+                <div class="p-4 sm:p-5 space-y-4 bg-slate-900/60 min-h-[480px] sm:min-h-[530px] flex flex-col justify-between">
                   <!-- KPI Cards Row -->
                   <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-xs">
                     <div class="p-3 rounded-xl bg-slate-800/80 border border-slate-700/60">
@@ -377,7 +377,28 @@
                         <span class="text-white">Sesi #37 (Sarah T.)</span>
                         <span class="px-2 py-0.5 rounded bg-amber-500/20 text-amber-400 font-bold">BOOKED (MENUNGGU)</span>
                       </div>
+                      <div class="flex items-center justify-between p-2 rounded bg-slate-900/40 border border-slate-800">
+                        <span class="text-slate-400">15:30 - 15:45</span>
+                        <span class="text-white">Sesi #38 (Dina & Rian)</span>
+                        <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold">BOOKED (QRIS LUNAS)</span>
+                      </div>
+                      <div class="flex items-center justify-between p-2 rounded bg-slate-900/30 border border-slate-800/80">
+                        <span class="text-slate-500">16:00 - 16:15</span>
+                        <span class="text-slate-400 italic">Sesi #39 (Slot Terbuka)</span>
+                        <span class="px-2 py-0.5 rounded bg-slate-800 text-slate-400 font-bold">TERSEDIA</span>
+                      </div>
                     </div>
+                  </div>
+
+                  <!-- Telemetry Status Bar -->
+                  <div class="pt-2 border-t border-slate-800 flex flex-wrap justify-between items-center text-[10px] text-slate-400">
+                    <span class="flex items-center gap-1.5">
+                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                      <span>Canon EOS 1500D (Tether USB Ready) • Memory 128GB (74% Free)</span>
+                    </span>
+                    <span class="font-mono text-slate-400">
+                      Cloud Sync: Drive Active (Latency 14ms)
+                    </span>
                   </div>
                 </div>
               </div>
@@ -594,92 +615,175 @@
                 </div>
 
                 <!-- Customer Web Portal Content -->
-                <div class="p-4 sm:p-5 space-y-4 bg-slate-900/60 min-h-[380px]">
-                  <!-- Mini Web Navbar -->
+                <div class="p-4 sm:p-6 space-y-5 bg-slate-900/60 min-h-[480px] sm:min-h-[530px] flex flex-col justify-between">
+                  <!-- Top: Mini Web Navbar -->
                   <div class="flex justify-between items-center pb-3 border-b border-slate-800">
-                    <span class="font-headline-md font-bold text-white text-sm sm:text-base flex items-center gap-1.5">
-                      <span class="w-2 h-2 rounded-full bg-secondary"></span>
-                      CuitBox Studio
-                    </span>
-                    <div class="hidden sm:flex gap-4 text-xs text-slate-300">
-                      <span class="text-emerald-400 font-bold border-b border-emerald-400">Pilih Jadwal</span>
-                      <span>Katalog Frame</span>
-                      <span>Cek Tiket</span>
+                    <div class="flex items-center gap-3">
+                      <span class="font-headline-md font-bold text-white text-sm sm:text-base flex items-center gap-1.5">
+                        <span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+                        CuitBox Studio
+                      </span>
+                      <span class="hidden sm:inline-block px-2.5 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400 text-[10px] font-bold border border-emerald-500/20">
+                        Live Booking Open
+                      </span>
+                    </div>
+                    <div class="hidden sm:flex items-center gap-4 text-xs text-slate-300">
+                      <span class="text-emerald-400 font-bold border-b-2 border-emerald-400 pb-1">1. Pilih Jadwal</span>
+                      <span class="text-slate-400">2. Template & Data</span>
+                      <span class="text-slate-400">3. Bayar QRIS</span>
                     </div>
                   </div>
 
                   <!-- Booking Stepper Layout -->
-                  <div class="grid grid-cols-1 sm:grid-cols-12 gap-4">
-                    <!-- Left: Slot Selector (7 cols) -->
-                    <div class="sm:col-span-7 space-y-3">
+                  <div class="grid grid-cols-1 sm:grid-cols-12 gap-5">
+                    <!-- Left: Slot Selector & Customization (7 cols) -->
+                    <div class="sm:col-span-7 space-y-4">
+                      <!-- Date Selection Row -->
                       <div>
-                        <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wide block mb-1">1. Pilih Waktu Sesi (Hari Ini)</span>
-                        <div class="grid grid-cols-3 gap-1.5 text-xs">
-                          <div class="p-2 rounded bg-slate-800 text-slate-500 line-through text-center text-[10px]">13:00 (Penuh)</div>
-                          <div class="p-2 rounded bg-slate-800 text-slate-500 line-through text-center text-[10px]">13:30 (Penuh)</div>
-                          <div class="p-2 rounded bg-emerald-500/20 border border-emerald-400 text-emerald-300 font-bold text-center text-[10px] cursor-pointer">14:00 (Pilih)</div>
-                          <div class="p-2 rounded bg-slate-800/80 hover:bg-slate-800 text-slate-200 text-center text-[10px] cursor-pointer">14:30</div>
-                          <div class="p-2 rounded bg-slate-800/80 hover:bg-slate-800 text-slate-200 text-center text-[10px] cursor-pointer">15:00</div>
-                          <div class="p-2 rounded bg-slate-800/80 hover:bg-slate-800 text-slate-200 text-center text-[10px] cursor-pointer">15:30</div>
+                        <div class="flex justify-between items-center mb-1.5">
+                          <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wide">Pilih Tanggal Sesi</span>
+                          <span class="text-[10px] text-emerald-400">Hari ini buka s/d 22:00</span>
+                        </div>
+                        <div class="flex gap-2 text-xs">
+                          <button type="button" class="px-3 py-1.5 rounded-lg bg-emerald-500/20 border border-emerald-400 text-emerald-300 font-bold text-[11px] flex items-center gap-1">
+                            <span class="material-symbols-outlined text-[13px]">calendar_today</span>
+                            <span>Hari Ini (Jumat, 24 Okt)</span>
+                          </button>
+                          <button type="button" class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-slate-200 text-[11px]">
+                            Besok (Sabtu)
+                          </button>
+                          <button type="button" class="px-3 py-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-slate-200 text-[11px]">
+                            Minggu
+                          </button>
                         </div>
                       </div>
 
+                      <!-- 1. Time Slots -->
                       <div>
-                        <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wide block mb-1">2. Pilih Template Frame</span>
+                        <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wide block mb-1.5">1. Pilih Waktu Sesi (15 Menit)</span>
+                        <div class="grid grid-cols-4 gap-1.5 text-xs">
+                          <div class="p-2 rounded bg-slate-800/60 text-slate-500 line-through text-center text-[10px]">13:00 (Penuh)</div>
+                          <div class="p-2 rounded bg-slate-800/60 text-slate-500 line-through text-center text-[10px]">13:30 (Penuh)</div>
+                          <div class="p-2 rounded bg-emerald-500/20 border border-emerald-400 text-emerald-300 font-bold text-center text-[10px] cursor-pointer shadow-xs">14:00 (Pilih)</div>
+                          <div class="p-2 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 text-center text-[10px] cursor-pointer">14:30</div>
+                          <div class="p-2 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 text-center text-[10px] cursor-pointer">15:00</div>
+                          <div class="p-2 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 text-center text-[10px] cursor-pointer">15:30</div>
+                          <div class="p-2 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 text-center text-[10px] cursor-pointer">16:00</div>
+                          <div class="p-2 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 text-center text-[10px] cursor-pointer">16:30</div>
+                        </div>
+                      </div>
+
+                      <!-- 2. Template Frame -->
+                      <div>
+                        <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wide block mb-1.5">2. Pilih Template Frame & Cetak</span>
                         <div class="grid grid-cols-2 gap-2 text-xs">
-                          <div class="p-2.5 rounded-lg bg-slate-800/80 border border-emerald-400 flex items-center gap-2">
-                            <span class="w-6 h-10 rounded bg-slate-700 border border-white/20 shrink-0"></span>
+                          <div class="p-2.5 rounded-xl bg-slate-800/90 border-2 border-emerald-400 flex items-center gap-2.5 shadow-sm">
+                            <div class="w-7 h-11 rounded bg-slate-900 border border-white/20 p-0.5 flex flex-col justify-between shrink-0">
+                              <div class="bg-white/40 h-2 rounded-xs"></div>
+                              <div class="bg-white/40 h-2 rounded-xs"></div>
+                              <div class="bg-emerald-400 h-1.5 rounded-xs"></div>
+                            </div>
                             <div>
-                              <span class="font-bold text-white text-[11px] block">4-Cut Classic</span>
-                              <span class="text-[10px] text-slate-400">2 Print Fisik</span>
+                              <span class="font-bold text-white text-[11px] block">4-Cut Classic Strip</span>
+                              <span class="text-[10px] text-emerald-400 font-medium">Termasuk 2x Cetak Fisik</span>
                             </div>
                           </div>
-                          <div class="p-2.5 rounded-lg bg-slate-800/40 border border-slate-700/60 flex items-center gap-2 opacity-70">
-                            <span class="w-6 h-10 rounded bg-slate-700 border border-white/20 shrink-0"></span>
-                            <div>
-                              <span class="font-bold text-slate-300 text-[11px] block">Duo Polaroid</span>
-                              <span class="text-[10px] text-slate-400">1 Print Lebar</span>
+                          <div class="p-2.5 rounded-xl bg-slate-800/40 border border-slate-700/60 flex items-center gap-2.5 opacity-70">
+                            <div class="w-7 h-11 rounded bg-slate-900 border border-white/20 p-0.5 flex flex-col justify-between shrink-0">
+                              <div class="bg-white/40 h-5 rounded-xs"></div>
+                              <div class="bg-white/20 h-1.5 rounded-xs"></div>
                             </div>
+                            <div>
+                              <span class="font-bold text-slate-300 text-[11px] block">Duo Polaroid Wide</span>
+                              <span class="text-[10px] text-slate-400">1x Print Lebar</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- 3. Form Softfile & Notifikasi -->
+                      <div>
+                        <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wide block mb-1.5">3. Data Pelanggan & Pengiriman Google Drive</span>
+                        <div class="grid grid-cols-2 gap-2 text-[11px]">
+                          <div class="p-2 rounded-lg bg-slate-950/80 border border-slate-800 flex items-center gap-1.5 text-slate-300">
+                            <span class="material-symbols-outlined text-[14px] text-slate-500">person</span>
+                            <span>Zulfarida R.</span>
+                          </div>
+                          <div class="p-2 rounded-lg bg-slate-950/80 border border-slate-800 flex items-center gap-1.5 text-slate-300">
+                            <span class="material-symbols-outlined text-[14px] text-slate-500">mail</span>
+                            <span class="truncate">zulfarida@email.com</span>
                           </div>
                         </div>
                       </div>
                     </div>
 
                     <!-- Right: Checkout & QRIS Preview (5 cols) -->
-                    <div class="sm:col-span-5 p-3 rounded-xl bg-slate-950 border border-slate-800 flex flex-col justify-between text-xs space-y-2">
+                    <div class="sm:col-span-5 p-4 rounded-2xl bg-slate-950 border border-slate-800 flex flex-col justify-between text-xs space-y-3">
                       <div>
-                        <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Ringkasan Pesanan</span>
-                        <div class="mt-2 text-[11px] space-y-1 text-slate-300">
+                        <div class="flex justify-between items-center pb-2 border-b border-slate-800">
+                          <span class="text-[11px] font-bold text-slate-300 uppercase tracking-wider">Ringkasan Pesanan</span>
+                          <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-mono">ID: #CB-7429</span>
+                        </div>
+                        <div class="mt-2.5 text-[11px] space-y-1.5 text-slate-300">
                           <div class="flex justify-between">
-                            <span>Sesi 15 Menit:</span>
+                            <span class="text-slate-400">Sesi Foto (15 Menit):</span>
                             <span class="text-white font-bold">Rp 35.000</span>
                           </div>
                           <div class="flex justify-between">
-                            <span>Cetakan (2 Lembar):</span>
-                            <span class="text-emerald-400 font-bold">Gratis</span>
+                            <span class="text-slate-400">Cetak Fisik (2 Lembar):</span>
+                            <span class="text-emerald-400 font-bold">Gratis (Included)</span>
                           </div>
                           <div class="flex justify-between">
-                            <span>Digital Softfile:</span>
+                            <span class="text-slate-400">Google Drive Softfile:</span>
                             <span class="text-emerald-400 font-bold">Termasuk</span>
+                          </div>
+                          <div class="pt-2 border-t border-slate-800 flex justify-between items-baseline">
+                            <span class="font-bold text-white">Total Tagihan:</span>
+                            <span class="text-base font-bold text-emerald-400">Rp 35.000</span>
                           </div>
                         </div>
                       </div>
 
                       <!-- QRIS Modal Preview -->
-                      <div class="p-2.5 rounded-lg bg-white text-slate-900 text-center space-y-1 shadow-sm">
-                        <span class="text-[10px] font-bold uppercase tracking-wider text-slate-600 block">Bayar Instan QRIS</span>
-                        <div class="w-20 h-20 bg-slate-900 mx-auto rounded flex items-center justify-center p-1">
+                      <div class="p-3 rounded-xl bg-white text-slate-900 text-center space-y-2 shadow-sm">
+                        <div class="flex justify-between items-center px-1">
+                          <span class="text-[10px] font-bold uppercase tracking-wider text-slate-700">Bayar Instan QRIS</span>
+                          <span class="text-[9px] font-mono text-rose-600 bg-rose-50 px-1.5 py-0.5 rounded font-bold">⏳ 14:48</span>
+                        </div>
+                        <div class="w-24 h-24 bg-slate-950 mx-auto rounded-lg flex items-center justify-center p-1.5 shadow-xs">
                           <!-- Simulated QR pattern -->
-                          <div class="w-full h-full bg-white grid grid-cols-4 gap-0.5 p-1">
-                            <div class="bg-black"></div><div class="bg-black"></div><div class="bg-white"></div><div class="bg-black"></div>
-                            <div class="bg-black"></div><div class="bg-white"></div><div class="bg-black"></div><div class="bg-white"></div>
-                            <div class="bg-white"></div><div class="bg-black"></div><div class="bg-black"></div><div class="bg-black"></div>
-                            <div class="bg-black"></div><div class="bg-white"></div><div class="bg-white"></div><div class="bg-black"></div>
+                          <div class="w-full h-full bg-white grid grid-cols-5 gap-0.5 p-1">
+                            <div class="bg-black"></div><div class="bg-black"></div><div class="bg-white"></div><div class="bg-black"></div><div class="bg-black"></div>
+                            <div class="bg-black"></div><div class="bg-white"></div><div class="bg-black"></div><div class="bg-white"></div><div class="bg-black"></div>
+                            <div class="bg-white"></div><div class="bg-black"></div><div class="bg-black"></div><div class="bg-black"></div><div class="bg-white"></div>
+                            <div class="bg-black"></div><div class="bg-white"></div><div class="bg-white"></div><div class="bg-black"></div><div class="bg-black"></div>
+                            <div class="bg-black"></div><div class="bg-black"></div><div class="bg-white"></div><div class="bg-black"></div><div class="bg-black"></div>
                           </div>
                         </div>
-                        <span class="text-[9px] text-slate-500 font-mono block">Scan via GoPay / BCA / OVO</span>
+                        <div class="flex justify-center items-center gap-1.5 text-[8px] font-bold text-slate-500 uppercase tracking-tighter">
+                          <span class="px-1 py-0.5 bg-slate-100 rounded">GoPay</span>
+                          <span class="px-1 py-0.5 bg-slate-100 rounded">BCA</span>
+                          <span class="px-1 py-0.5 bg-slate-100 rounded">ShopeePay</span>
+                          <span class="px-1 py-0.5 bg-slate-100 rounded">OVO</span>
+                        </div>
+                        <div class="text-[9px] text-emerald-700 bg-emerald-50 py-1 px-2 rounded-md font-medium flex items-center justify-center gap-1">
+                          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                          <span>Webhook otomatis memverifikasi dalam 3 detik</span>
+                        </div>
                       </div>
                     </div>
+                  </div>
+
+                  <!-- Bottom Security & Cloud Trust Bar -->
+                  <div class="pt-2.5 border-t border-slate-800 flex flex-wrap justify-between items-center text-[10px] text-slate-500">
+                    <span class="flex items-center gap-1">
+                      <span class="material-symbols-outlined text-[13px] text-emerald-400">verified_user</span>
+                      256-Bit SSL Encrypted Midtrans Gateway
+                    </span>
+                    <span class="flex items-center gap-1">
+                      <span class="material-symbols-outlined text-[13px] text-secondary">cloud_done</span>
+                      Otomatis Terhubung ke Google Drive Booth
+                    </span>
                   </div>
                 </div>
               </div>
@@ -910,7 +1014,7 @@ function switchCuitboxDevice(tabPrefix, mode) {
       btnBoth.classList.remove('text-primary');
     }
     if (laptop) {
-      laptop.classList.remove('hidden', 'lg:col-span-12');
+      laptop.classList.remove('hidden', 'lg:col-span-12', 'max-w-5xl', 'mx-auto');
       laptop.classList.add('lg:col-span-8');
     }
     if (phone) {
@@ -924,7 +1028,7 @@ function switchCuitboxDevice(tabPrefix, mode) {
     }
     if (laptop) {
       laptop.classList.remove('hidden', 'lg:col-span-8');
-      laptop.classList.add('lg:col-span-12');
+      laptop.classList.add('lg:col-span-12', 'max-w-5xl', 'mx-auto');
     }
     if (phone) phone.classList.add('hidden');
   } else if (mode === 'phone') {
