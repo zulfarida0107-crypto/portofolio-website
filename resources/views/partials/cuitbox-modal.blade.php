@@ -204,19 +204,74 @@
           <div class="h-3 bg-black/25 blur-md rounded-full max-w-[94%] mx-auto mt-1"></div>
         </div>
 
-        <!-- Technical Explanation Card -->
-        <div class="p-5 bg-surface-container rounded-2xl border border-primary/10 grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
-          <div>
-            <span class="font-bold text-primary block mb-1">⚡ Multithreaded Buffer (Python)</span>
-            <p class="text-outline">Mencegah UI freeze saat menyimpan file RAW resolusi tinggi sambil tetap menjaga kelancaran preview 60 FPS di layar touch.</p>
+        <!-- 3 Separate Technical Explanation Cards with Big Logos and Larger Text -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 pt-2">
+          <!-- Card 1: Python -->
+          <div class="bg-surface-container-lowest hover:bg-surface-container rounded-3xl p-6 border border-primary/15 shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-md flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="w-14 h-14 rounded-2xl bg-[#3776AB]/10 flex items-center justify-center p-2.5 border border-[#3776AB]/20 shadow-xs">
+                <svg class="w-full h-full" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M63.666 4c-16.173 0-26.666 7.039-26.666 20.485v15.228h27.172v3.807H24.382C10.936 43.52 4 53.794 4 67.24c0 13.447 11.233 22.01 24.679 22.01h8.381v-12.19c0-13.447 11.455-24.679 24.9-24.679h26.471V24.485C88.431 11.039 79.839 4 63.666 4zm-11.42 8.381a4.57 4.57 0 1 1 0 9.143 4.57 4.57 0 0 1 0-9.143z" fill="url(#python-blue)"/>
+                  <path d="M64.334 124c16.173 0 26.666-7.039 26.666-20.485V88.287H63.828v-3.807h39.79C117.064 84.48 124 74.206 124 60.76c0-13.447-11.233-22.01-24.679-22.01h-8.381v12.19c0 13.447-11.455 24.679-24.9 24.679H39.569v27.896c0 13.446 8.592 20.485 24.765 20.485zm11.42-8.381a4.57 4.57 0 1 1 0-9.143 4.57 4.57 0 0 1 0 9.143z" fill="url(#python-yellow)"/>
+                  <defs>
+                    <linearGradient id="python-blue" x1="4" y1="4" x2="88.431" y2="88.431" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#387EB8"/>
+                      <stop offset="1" stop-color="#366994"/>
+                    </linearGradient>
+                    <linearGradient id="python-yellow" x1="124" y1="124" x2="39.569" y2="39.569" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#FFE873"/>
+                      <stop offset="1" stop-color="#FFD43B"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <h5 class="font-headline-md text-base sm:text-lg font-bold text-primary leading-snug">
+                Multithreaded Buffer (Python)
+              </h5>
+            </div>
+            <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+              Mencegah UI freeze saat menyimpan file RAW resolusi tinggi sambil tetap menjaga kelancaran preview 60 FPS di layar touch.
+            </p>
           </div>
-          <div>
-            <span class="font-bold text-primary block mb-1">🖥️ Electron Touch Wrapper</span>
-            <p class="text-outline">Mengunci aplikasi dalam mode fullscreen kiosk, menangani gesture sentuh, hitung mundur otomatis, dan reset sesi otomatis.</p>
+
+          <!-- Card 2: Electron -->
+          <div class="bg-surface-container-lowest hover:bg-surface-container rounded-3xl p-6 border border-primary/15 shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-md flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="w-14 h-14 rounded-2xl bg-[#47c6e0]/15 flex items-center justify-center p-2.5 border border-[#47c6e0]/30 shadow-xs">
+                <svg class="w-full h-full text-[#2ba8c2]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                  <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(0 12 12)" />
+                  <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(60 12 12)" />
+                  <ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(120 12 12)" />
+                  <circle cx="12" cy="12" r="1.8" fill="currentColor" />
+                </svg>
+              </div>
+              <h5 class="font-headline-md text-base sm:text-lg font-bold text-primary leading-snug">
+                Electron Touch Wrapper
+              </h5>
+            </div>
+            <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+              Mengunci aplikasi dalam mode fullscreen kiosk, menangani gesture sentuh, hitung mundur otomatis, dan reset sesi otomatis.
+            </p>
           </div>
-          <div>
-            <span class="font-bold text-primary block mb-1">🎨 HTML5 Canvas Photo Stitching</span>
-            <p class="text-outline">Menyatukan 4 foto dengan layout frame, QR code akses Google Drive, dan filter visual menjadi file siap cetak 300 DPI.</p>
+
+          <!-- Card 3: HTML5 -->
+          <div class="bg-surface-container-lowest hover:bg-surface-container rounded-3xl p-6 border border-primary/15 shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-md flex flex-col justify-between space-y-4">
+            <div class="space-y-3">
+              <div class="w-14 h-14 rounded-2xl bg-[#E34F26]/10 flex items-center justify-center p-2.5 border border-[#E34F26]/20 shadow-xs">
+                <svg class="w-full h-full" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M71.5 460L32 0h448l-39.5 460L256 512 71.5 460z" fill="#E34F26"/>
+                  <path d="M256 472l149-41.5 33.5-390.5H256v432z" fill="#EF652A"/>
+                  <path d="M256 208h-85.5l-6-68H256V76H100l18 200h138v-68zm0 152.5l-71-19-4.5-51.5h-68l9 101.5 134.5 37.5v-68.5z" fill="#EBEBEB"/>
+                  <path d="M256 360.5l71-19 9.5-107.5H256V170h149.5l-14 157.5L256 428.5V360.5zm0-220.5V76h156l-6 64H256z" fill="#FFFFFF"/>
+                </svg>
+              </div>
+              <h5 class="font-headline-md text-base sm:text-lg font-bold text-primary leading-snug">
+                HTML5 Canvas Photo Stitching
+              </h5>
+            </div>
+            <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+              Menyatukan 4 foto dengan layout frame, QR code akses Google Drive, dan filter visual menjadi file siap cetak 300 DPI.
+            </p>
           </div>
         </div>
       </div>
