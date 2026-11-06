@@ -775,10 +775,60 @@
           </div>
         </div>
 
-        <!-- Tech Notes for Customer Web -->
-        <div class="p-4 bg-surface-container rounded-2xl border border-primary/10 text-xs text-outline space-y-1">
-          <span class="font-bold text-primary block">✨ Customer Flow Highlights:</span>
-          <p>Sistem slot reservation real-time mencegah pemesanan ganda (*race condition*), proses checkout QRIS otomatis terhubung ke Webhook Midtrans, dan foto digital otomatis diunggah ke Google Drive dengan email notifikasi langsung ke pelanggan.</p>
+        <!-- Customer Flow Highlights (Grid Format) -->
+        <div class="space-y-3 pt-2">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-[24px] text-secondary">auto_awesome</span>
+            <h5 class="font-headline-md text-base sm:text-lg font-bold text-primary">
+              Customer Flow Highlights
+            </h5>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <!-- Card 1: Slot Reservation -->
+            <div class="bg-surface-container-lowest hover:bg-surface-container rounded-3xl p-5 border border-primary/15 shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-md flex flex-col justify-between space-y-3">
+              <div class="space-y-3">
+                <div class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center border border-primary/20 shadow-xs">
+                  <span class="material-symbols-outlined text-[26px]">event_available</span>
+                </div>
+                <h6 class="font-headline-md text-sm sm:text-base font-bold text-primary leading-snug">
+                  Real-Time Slot Reservation
+                </h6>
+              </div>
+              <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                Sistem slot reservation real-time mencegah pemesanan ganda (<span class="italic font-mono text-[11px] text-primary">race condition</span>) pada jam sesi yang sama.
+              </p>
+            </div>
+
+            <!-- Card 2: QRIS Midtrans Webhook -->
+            <div class="bg-surface-container-lowest hover:bg-surface-container rounded-3xl p-5 border border-primary/15 shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-md flex flex-col justify-between space-y-3">
+              <div class="space-y-3">
+                <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center border border-emerald-500/20 shadow-xs">
+                  <span class="material-symbols-outlined text-[26px]">qr_code_2</span>
+                </div>
+                <h6 class="font-headline-md text-sm sm:text-base font-bold text-primary leading-snug">
+                  Instant QRIS & Webhook Midtrans
+                </h6>
+              </div>
+              <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                Proses checkout QRIS otomatis terhubung ke Webhook Midtrans untuk verifikasi transaksi instan tanpa jeda atau konfirmasi manual.
+              </p>
+            </div>
+
+            <!-- Card 3: Cloud & Email Notification -->
+            <div class="bg-surface-container-lowest hover:bg-surface-container rounded-3xl p-5 border border-primary/15 shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-md flex flex-col justify-between space-y-3">
+              <div class="space-y-3">
+                <div class="w-12 h-12 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center border border-secondary/20 shadow-xs">
+                  <span class="material-symbols-outlined text-[26px]">cloud_upload</span>
+                </div>
+                <h6 class="font-headline-md text-sm sm:text-base font-bold text-primary leading-snug">
+                  Google Drive & Email Delivery
+                </h6>
+              </div>
+              <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                Foto digital otomatis diunggah ke Google Drive dengan email notifikasi dan link akses instan dikirim langsung ke pelanggan.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
