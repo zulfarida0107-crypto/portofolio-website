@@ -165,23 +165,15 @@
             </span>
           </div>
 
-          <!-- Key Metrics 4-Col Grid -->
-          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+          <!-- Key Metrics Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-center">
             <div class="p-3.5 rounded-2xl bg-surface-container border border-primary/10">
               <span class="text-xl sm:text-2xl font-bold text-primary block">23 Orang</span>
-              <span class="text-[11px] text-outline">Total Responden UAT</span>
+              <span class="text-[11px] text-outline">Total Responden Wawancara UAT</span>
             </div>
             <div class="p-3.5 rounded-2xl bg-surface-container border border-primary/10">
-              <span class="text-xl sm:text-2xl font-bold text-emerald-700 block">9.09 / 10</span>
-              <span class="text-[11px] text-outline">Rata-rata Skor NPS</span>
-            </div>
-            <div class="p-3.5 rounded-2xl bg-surface-container border border-primary/10">
-              <span class="text-xl sm:text-2xl font-bold text-secondary block">209 Poin</span>
-              <span class="text-[11px] text-outline">Akumulasi Nilai User</span>
-            </div>
-            <div class="p-3.5 rounded-2xl bg-surface-container border border-primary/10">
-              <span class="text-xl sm:text-2xl font-bold text-amber-700 block">Iteration</span>
-              <span class="text-[11px] text-outline">Status Kelayakan Rilis</span>
+              <span class="text-xl sm:text-2xl font-bold text-amber-700 block">Iteration Needed</span>
+              <span class="text-[11px] text-outline">Status Kelayakan Rilis Produk</span>
             </div>
           </div>
 
@@ -234,48 +226,6 @@
 
           </div>
 
-          <!-- NPS Breakdown (23 User List) -->
-          <div class="pt-2 space-y-3">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-              <h5 class="text-xs sm:text-sm font-bold text-primary flex items-center gap-2">
-                <span class="material-symbols-outlined text-[18px] text-secondary">star</span>
-                <span>Skor Rekomendasi (Net Promoter Score - NPS Sederhana)</span>
-              </h5>
-              <span class="text-xs font-mono font-bold text-secondary">
-                Hasil Rata-rata Skor Tim: 209 ÷ 23 = 9.09 / 10
-              </span>
-            </div>
-
-            <!-- Chips of 23 Users -->
-            <div class="p-4 rounded-2xl bg-surface-container border border-primary/10 space-y-2.5">
-              <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 text-xs">
-                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 1 (Astri)</span><span class="font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">10</span></div>
-                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 2 (Firas)</span><span class="font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">9</span></div>
-                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 3 (surahman)</span><span class="font-bold text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded">8</span></div>
-                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 4 (Adil)</span><span class="font-bold text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded">8</span></div>
-                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 5 (syarif)</span><span class="font-bold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded">7</span></div>
-                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 6 (juna)</span><span class="font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">9</span></div>
-                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 7 (Wiyan)</span><span class="font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">10</span></div>
-                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 8 (Josh)</span><span class="font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">10</span></div>
-                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 9 (Cyndie)</span><span class="font-bold text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded">8</span></div>
-                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 10 (Biyel)</span><span class="font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">10</span></div>
-                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 11 (java ganteng)</span><span class="font-bold text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded">8</span></div>
-                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 12 (Amela)</span><span class="font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">10</span></div>
-                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 13 (Firasya Alya)</span><span class="font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">10</span></div>
-                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 14 (farisa)</span><span class="font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">10</span></div>
-                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 15 (Christine)</span><span class="font-bold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded">7</span></div>
-                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 16 (Naufal)</span><span class="font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">10</span></div>
-                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 17 (Devita H.)</span><span class="font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">10</span></div>
-                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 18 (Octo Putra)</span><span class="font-bold text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded">8</span></div>
-                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 19 (Dewaruci)</span><span class="font-bold text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded">8</span></div>
-                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 20 (Ris)</span><span class="font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">10</span></div>
-                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 21 (Mahira Chan)</span><span class="font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">10</span></div>
-                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 22 (Zaskia A.)</span><span class="font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">10</span></div>
-                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 23 (Haitami)</span><span class="font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">9</span></div>
-              </div>
-            </div>
-          </div>
-
           <!-- Section IV: Kesimpulan Status Kelayakan Produk -->
           <div class="p-5 rounded-2xl bg-surface-container border border-primary/15 space-y-3.5">
             <h5 class="text-xs sm:text-sm font-bold text-primary flex items-center gap-2">
@@ -312,52 +262,6 @@
             </div>
           </div>
 
-        </div>
-
-        <!-- Technical Documents Grid -->
-        <div class="space-y-3">
-          <div class="flex items-center gap-2">
-            <span class="material-symbols-outlined text-[22px] text-secondary">folder</span>
-            <h4 class="font-headline-md text-base sm:text-lg font-bold text-primary">
-              Dokumen Spesifikasi Teknis Terlampir
-            </h4>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            
-            <!-- Doc 1: SRS & Architecture -->
-            <div class="bg-surface-container-lowest rounded-2xl p-5 border border-primary/15 shadow-xs flex items-start gap-4">
-              <div class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center shrink-0 border border-primary/20">
-                <span class="material-symbols-outlined text-[26px]">picture_as_pdf</span>
-              </div>
-              <div class="space-y-1.5 flex-1">
-                <h5 class="text-sm font-bold text-primary">Software Requirements Specification (SRS)</h5>
-                <p class="text-xs text-on-surface-variant">
-                  Dokumen rancangan ERD relational database, diagram alur UML, use case matrix, dan protokol telemetri mesin booth.
-                </p>
-                <div class="pt-2 flex items-center gap-2">
-                  <span class="text-[10px] text-outline font-mono">Format: PDF • 32 Halaman</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Doc 2: API & Webhook Specs -->
-            <div class="bg-surface-container-lowest rounded-2xl p-5 border border-primary/15 shadow-xs flex items-start gap-4">
-              <div class="w-12 h-12 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0 border border-secondary/20">
-                <span class="material-symbols-outlined text-[26px]">api</span>
-              </div>
-              <div class="space-y-1.5 flex-1">
-                <h5 class="text-sm font-bold text-primary">REST API & Webhook Midtrans Protocol</h5>
-                <p class="text-xs text-on-surface-variant">
-                  Spesifikasi endpoint sinkronisasi slot, skema validasi signature SHA512, dan integrasi OAuth Google Drive.
-                </p>
-                <div class="pt-2 flex items-center gap-2">
-                  <span class="text-[10px] text-outline font-mono">Format: Markdown / Postman Docs</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
         </div>
 
       </div>
