@@ -145,84 +145,173 @@
       <!-- ================= TAB 2: DOKUMEN & LAPORAN UAT ================= -->
       <div id="docs-tab-content-reports" class="cuitbox-docs-pane hidden space-y-6">
 
-        <!-- UAT Report Highlight Card -->
-        <div class="bg-surface-container-lowest rounded-3xl p-5 sm:p-6 border border-primary/15 shadow-sm space-y-4">
+        <!-- Top UAT Summary Card -->
+        <div class="bg-surface-container-lowest rounded-3xl p-5 sm:p-6 border border-primary/15 shadow-sm space-y-5">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-primary/10">
             <div class="flex items-center gap-2.5">
               <span class="material-symbols-outlined text-[24px] text-secondary">fact_check</span>
               <div>
                 <h4 class="font-headline-md text-base sm:text-lg font-bold text-primary">
-                  User Acceptance Testing (UAT) Execution Report
+                  III. Feedback & Brutal Insights (UAT Report)
                 </h4>
                 <p class="text-xs text-on-surface-variant">
-                  Validasi end-to-end dengan 23 responden terverifikasi saat pameran produk
+                  Wawancara singkat dan observasi mendalam saat responden mencoba produk CuitBox secara langsung
                 </p>
               </div>
             </div>
-            <span class="px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-700 text-xs font-bold self-start sm:self-auto border border-emerald-500/20">
-              Status: Validated & Accepted
+            <span class="px-3 py-1 rounded-full bg-amber-500/15 text-amber-800 text-xs font-bold self-start sm:self-auto border border-amber-500/30 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-amber-600 animate-pulse"></span>
+              Status: Iteration Needed
             </span>
           </div>
 
-          <!-- UAT Metrics Row -->
+          <!-- Key Metrics 4-Col Grid -->
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
             <div class="p-3.5 rounded-2xl bg-surface-container border border-primary/10">
-              <span class="text-xl sm:text-2xl font-bold text-primary block">23</span>
-              <span class="text-[11px] text-outline">Responden Terdaftar</span>
+              <span class="text-xl sm:text-2xl font-bold text-primary block">23 Orang</span>
+              <span class="text-[11px] text-outline">Total Responden UAT</span>
             </div>
             <div class="p-3.5 rounded-2xl bg-surface-container border border-primary/10">
-              <span class="text-xl sm:text-2xl font-bold text-emerald-700 block">100%</span>
-              <span class="text-[11px] text-outline">Session Completion</span>
+              <span class="text-xl sm:text-2xl font-bold text-emerald-700 block">9.09 / 10</span>
+              <span class="text-[11px] text-outline">Rata-rata Skor NPS</span>
             </div>
             <div class="p-3.5 rounded-2xl bg-surface-container border border-primary/10">
-              <span class="text-xl sm:text-2xl font-bold text-secondary block">4.85 / 5.0</span>
-              <span class="text-[11px] text-outline">Skor Kepuasan UI/UX</span>
+              <span class="text-xl sm:text-2xl font-bold text-secondary block">209 Poin</span>
+              <span class="text-[11px] text-outline">Akumulasi Nilai User</span>
             </div>
             <div class="p-3.5 rounded-2xl bg-surface-container border border-primary/10">
-              <span class="text-xl sm:text-2xl font-bold text-primary block">0 Bug</span>
-              <span class="text-[11px] text-outline">Critical Transaction Crash</span>
+              <span class="text-xl sm:text-2xl font-bold text-amber-700 block">Iteration</span>
+              <span class="text-[11px] text-outline">Status Kelayakan Rilis</span>
             </div>
           </div>
 
-          <!-- UAT Matrix Table Preview -->
-          <div class="overflow-x-auto rounded-2xl border border-primary/15">
-            <table class="w-full text-left text-xs">
-              <thead class="bg-surface-container text-primary font-bold border-b border-primary/15">
-                <tr>
-                  <th class="p-3">Modul Diuji</th>
-                  <th class="p-3">Skenario Pengujian</th>
-                  <th class="p-3">Kriteria Keberhasilan</th>
-                  <th class="p-3 text-center">Hasil</th>
-                </tr>
-              </thead>
-              <tbody class="divide-y divide-primary/10 text-on-surface">
-                <tr class="hover:bg-surface-container-high/50 transition-colors">
-                  <td class="p-3 font-semibold text-primary">Web Booking</td>
-                  <td class="p-3">Pemesanan slot jam sibuk dengan pembayaran QRIS Midtrans</td>
-                  <td class="p-3">Slot terkunci real-time, webhook memverifikasi transaksi &lt; 3 detik</td>
-                  <td class="p-3 text-center"><span class="px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-700 font-bold text-[10px]">PASS (100%)</span></td>
-                </tr>
-                <tr class="hover:bg-surface-container-high/50 transition-colors">
-                  <td class="p-3 font-semibold text-primary">Kiosk Program</td>
-                  <td class="p-3">Pengambilan 4 pose berturut-turut dengan resolusi RAW kamera</td>
-                  <td class="p-3">Zero UI freeze berkat multithreading buffer Python OpenCV</td>
-                  <td class="p-3 text-center"><span class="px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-700 font-bold text-[10px]">PASS (100%)</span></td>
-                </tr>
-                <tr class="hover:bg-surface-container-high/50 transition-colors">
-                  <td class="p-3 font-semibold text-primary">Canvas Engine</td>
-                  <td class="p-3">Stitching 4 foto dengan layout frame, QR code, dan filter warna</td>
-                  <td class="p-3">File kompilasi siap cetak 300 DPI dalam &lt; 2 detik</td>
-                  <td class="p-3 text-center"><span class="px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-700 font-bold text-[10px]">PASS (100%)</span></td>
-                </tr>
-                <tr class="hover:bg-surface-container-high/50 transition-colors">
-                  <td class="p-3 font-semibold text-primary">Cloud Sync</td>
-                  <td class="p-3">Upload otomatis arsip Google Drive dan pengiriman notifikasi email</td>
-                  <td class="p-3">Tautan akses terkirim ke email pelanggan dalam &lt; 15 detik</td>
-                  <td class="p-3 text-center"><span class="px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-700 font-bold text-[10px]">PASS (100%)</span></td>
-                </tr>
-              </tbody>
-            </table>
+          <!-- Two Columns: Disukai vs Dibenci/Membingungkan -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+            
+            <!-- Hal yang Paling Disukai -->
+            <div class="p-5 rounded-2xl bg-emerald-500/5 border border-emerald-500/20 space-y-3">
+              <div class="flex items-center gap-2 text-emerald-800 font-bold text-sm">
+                <span class="material-symbols-outlined text-[20px] text-emerald-600">thumb_up</span>
+                <span>3 Hal yang Paling Disukai Pengguna:</span>
+              </div>
+              <ul class="space-y-2.5 text-xs text-on-surface">
+                <li class="flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-700 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">1</span>
+                  <span><strong>Halaman pemilihan frame:</strong> Tempat pengguna memilih frame yang tersedia</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-700 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">2</span>
+                  <span><strong>Halaman kamera:</strong> Tempat pengguna mengambil atau menangkap foto</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-700 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">3</span>
+                  <span><strong>Halaman review gambar:</strong> Tempat pengguna meninjau kembali hasil foto yang telah diambil</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Hal yang Paling Dibenci / Membingungkan -->
+            <div class="p-5 rounded-2xl bg-rose-500/5 border border-rose-500/20 space-y-3">
+              <div class="flex items-center gap-2 text-rose-800 font-bold text-sm">
+                <span class="material-symbols-outlined text-[20px] text-rose-600">feedback</span>
+                <span>3 Hal yang Paling Dibenci / Membingungkan:</span>
+              </div>
+              <ul class="space-y-2.5 text-xs text-on-surface">
+                <li class="flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-full bg-rose-500/20 text-rose-700 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">1</span>
+                  <span><strong>Halaman memasukkan Kode Pemesanan (Booking Code)</strong></span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-full bg-rose-500/20 text-rose-700 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">2</span>
+                  <span><strong>Halaman memasukkan alamat email</strong> sebagai tujuan pengiriman hasil tangkapan gambar</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-full bg-rose-500/20 text-rose-700 flex items-center justify-center font-bold text-[10px] shrink-0 mt-0.5">3</span>
+                  <span><strong>Halaman kamera,</strong> tempat pengguna mengambil atau menangkap foto (kendala performa / lag)</span>
+                </li>
+              </ul>
+            </div>
+
           </div>
+
+          <!-- NPS Breakdown (23 User List) -->
+          <div class="pt-2 space-y-3">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+              <h5 class="text-xs sm:text-sm font-bold text-primary flex items-center gap-2">
+                <span class="material-symbols-outlined text-[18px] text-secondary">star</span>
+                <span>Skor Rekomendasi (Net Promoter Score - NPS Sederhana)</span>
+              </h5>
+              <span class="text-xs font-mono font-bold text-secondary">
+                Hasil Rata-rata Skor Tim: 209 ÷ 23 = 9.09 / 10
+              </span>
+            </div>
+
+            <!-- Chips of 23 Users -->
+            <div class="p-4 rounded-2xl bg-surface-container border border-primary/10 space-y-2.5">
+              <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 text-xs">
+                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 1 (Astri)</span><span class="font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">10</span></div>
+                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 2 (Firas)</span><span class="font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">9</span></div>
+                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 3 (surahman)</span><span class="font-bold text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded">8</span></div>
+                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 4 (Adil)</span><span class="font-bold text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded">8</span></div>
+                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 5 (syarif)</span><span class="font-bold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded">7</span></div>
+                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 6 (juna)</span><span class="font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">9</span></div>
+                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 7 (Wiyan)</span><span class="font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">10</span></div>
+                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 8 (Josh)</span><span class="font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">10</span></div>
+                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 9 (Cyndie)</span><span class="font-bold text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded">8</span></div>
+                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 10 (Biyel)</span><span class="font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">10</span></div>
+                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 11 (java ganteng)</span><span class="font-bold text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded">8</span></div>
+                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 12 (Amela)</span><span class="font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">10</span></div>
+                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 13 (Firasya Alya)</span><span class="font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">10</span></div>
+                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 14 (farisa)</span><span class="font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">10</span></div>
+                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 15 (Christine)</span><span class="font-bold text-amber-700 bg-amber-50 px-1.5 py-0.5 rounded">7</span></div>
+                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 16 (Naufal)</span><span class="font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">10</span></div>
+                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 17 (Devita H.)</span><span class="font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">10</span></div>
+                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 18 (Octo Putra)</span><span class="font-bold text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded">8</span></div>
+                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 19 (Dewaruci)</span><span class="font-bold text-blue-700 bg-blue-50 px-1.5 py-0.5 rounded">8</span></div>
+                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 20 (Ris)</span><span class="font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">10</span></div>
+                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 21 (Mahira Chan)</span><span class="font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">10</span></div>
+                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 22 (Zaskia A.)</span><span class="font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">10</span></div>
+                <div class="p-2 rounded-xl bg-surface-container-lowest border border-primary/10 flex justify-between items-center"><span class="truncate">User 23 (Haitami)</span><span class="font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">9</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section IV: Kesimpulan Status Kelayakan Produk -->
+          <div class="p-5 rounded-2xl bg-surface-container border border-primary/15 space-y-3.5">
+            <h5 class="text-xs sm:text-sm font-bold text-primary flex items-center gap-2">
+              <span class="material-symbols-outlined text-[18px] text-secondary">verified</span>
+              <span>IV. Kesimpulan Kelayakan Produk</span>
+            </h5>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs">
+              <!-- Option 1 -->
+              <div class="p-3 rounded-xl bg-surface-container-lowest border border-primary/10 opacity-50 flex items-center gap-2.5">
+                <span class="w-4 h-4 rounded border border-outline flex items-center justify-center text-[10px]"></span>
+                <span><strong>GO-LIVE:</strong> Siap digunakan massal</span>
+              </div>
+
+              <!-- Option 2 (Selected) -->
+              <div class="p-3 rounded-xl bg-amber-500/10 border-2 border-amber-500/50 text-amber-900 font-bold flex items-center gap-2.5 shadow-xs">
+                <span class="w-4 h-4 rounded bg-amber-600 text-white flex items-center justify-center text-[10px]">✓</span>
+                <span>ITERATION NEEDED: Perlu perbaikan bug/UX</span>
+              </div>
+
+              <!-- Option 3 -->
+              <div class="p-3 rounded-xl bg-surface-container-lowest border border-primary/10 opacity-50 flex items-center gap-2.5">
+                <span class="w-4 h-4 rounded border border-outline flex items-center justify-center text-[10px]"></span>
+                <span><strong>PIVOT / BLOCK:</strong> Rombak total fitur utama</span>
+              </div>
+            </div>
+
+            <!-- Alasan Box -->
+            <div class="p-3.5 rounded-xl bg-surface-container-lowest border border-primary/10 text-xs space-y-1">
+              <span class="font-bold text-secondary block">Alasan / Temuan Pengujian:</span>
+              <p class="text-on-surface leading-relaxed">
+                Beberapa responden mengeluhkan adanya kendala performa (lag/patah-patah) saat melakukan pengambilan gambar (<strong>User 9, 11, 12, 13</strong>) serta perlunya optimasi alur navigasi cropping foto (<strong>User 18</strong>).
+              </p>
+            </div>
+          </div>
+
         </div>
 
         <!-- Technical Documents Grid -->
