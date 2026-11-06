@@ -278,28 +278,20 @@
 
       <!-- ================= TAB 2: LAPTOP & HP ADMIN PANEL ================= -->
       <div id="tab-content-admin" class="cuitbox-tab-pane hidden space-y-6">
-        <!-- Sub-header & Device view toggler -->
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-2 border-b border-primary/10">
-          <div>
-            <h4 class="font-headline-md text-lg font-bold text-primary flex items-center gap-2">
-              <span class="material-symbols-outlined text-primary">admin_panel_settings</span>
-              <span>Admin Management Dashboard (Laptop & Smartphone View)</span>
-            </h4>
-            <p class="text-xs sm:text-sm text-outline">
-              Panel manajemen booth untuk owner mengontrol jadwal slot, memantau telemetri mesin, dan melihat rekapan omset penjualan secara real-time.
-            </p>
-          </div>
-
-          <!-- Device View Switcher -->
-          <div class="inline-flex p-1 rounded-full bg-surface-container border border-primary/10 self-start sm:self-auto text-xs font-semibold">
-            <button type="button" onclick="switchCuitboxDevice('admin', 'both')" id="admin-dev-both" class="cuitbox-dev-btn px-3 py-1 rounded-full bg-primary text-on-primary font-bold shadow-xs transition-all">
-              Berdampingan
+        <!-- Device View Switcher -->
+        <div class="flex justify-end pb-1">
+          <div class="inline-flex p-1 rounded-full bg-surface-container border border-primary/10 text-xs font-semibold">
+            <button type="button" onclick="switchCuitboxDevice('admin', 'both')" id="admin-dev-both" class="cuitbox-dev-btn inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary text-on-secondary font-bold shadow-xs transition-all cursor-pointer">
+              <span class="material-symbols-outlined text-[15px]">devices</span>
+              <span>Berdampingan</span>
             </button>
-            <button type="button" onclick="switchCuitboxDevice('admin', 'laptop')" id="admin-dev-laptop" class="cuitbox-dev-btn px-3 py-1 rounded-full text-primary hover:text-on-surface transition-all">
-              💻 Laptop
+            <button type="button" onclick="switchCuitboxDevice('admin', 'laptop')" id="admin-dev-laptop" class="cuitbox-dev-btn inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-primary hover:text-on-surface transition-all cursor-pointer">
+              <span class="material-symbols-outlined text-[15px]">laptop_mac</span>
+              <span>Laptop</span>
             </button>
-            <button type="button" onclick="switchCuitboxDevice('admin', 'phone')" id="admin-dev-phone" class="cuitbox-dev-btn px-3 py-1 rounded-full text-primary hover:text-on-surface transition-all">
-              📱 HP
+            <button type="button" onclick="switchCuitboxDevice('admin', 'phone')" id="admin-dev-phone" class="cuitbox-dev-btn inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-primary hover:text-on-surface transition-all cursor-pointer">
+              <span class="material-symbols-outlined text-[15px]">smartphone</span>
+              <span>HP</span>
             </button>
           </div>
         </div>
@@ -479,10 +471,75 @@
           </div>
         </div>
 
-        <!-- Tech Notes for Admin -->
-        <div class="p-4 bg-surface-container rounded-2xl border border-primary/10 text-xs text-outline space-y-1">
-          <span class="font-bold text-primary block">🛠️ Backend Admin Capabilities:</span>
-          <p>Mendukung Role-Based Access Control (RBAC), webhook otomatis QRIS Midtrans, dynamic slot scheduling agar tidak terjadi bentrok antrean, dan export otomatis laporan keuangan berformat Excel/PDF.</p>
+        <!-- Backend Admin Capabilities (Grid Format) -->
+        <div class="space-y-3 pt-2">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-[24px] text-secondary">admin_panel_settings</span>
+            <h5 class="font-headline-md text-base sm:text-lg font-bold text-primary">
+              Backend Admin Capabilities
+            </h5>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <!-- Card 1: RBAC -->
+            <div class="bg-surface-container-lowest hover:bg-surface-container rounded-3xl p-5 border border-primary/15 shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-md flex flex-col justify-between space-y-3">
+              <div class="space-y-3">
+                <div class="w-12 h-12 rounded-2xl bg-primary/10 text-primary flex items-center justify-center border border-primary/20 shadow-xs">
+                  <span class="material-symbols-outlined text-[26px]">security</span>
+                </div>
+                <h6 class="font-headline-md text-sm sm:text-base font-bold text-primary leading-snug">
+                  Role-Based Access Control (RBAC)
+                </h6>
+              </div>
+              <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                Manajemen hak akses terisolasi untuk Owner dan Operator Booth guna menjaga kerahasiaan dan integritas data.
+              </p>
+            </div>
+
+            <!-- Card 2: Webhook QRIS -->
+            <div class="bg-surface-container-lowest hover:bg-surface-container rounded-3xl p-5 border border-primary/15 shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-md flex flex-col justify-between space-y-3">
+              <div class="space-y-3">
+                <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center border border-emerald-500/20 shadow-xs">
+                  <span class="material-symbols-outlined text-[26px]">qr_code_scanner</span>
+                </div>
+                <h6 class="font-headline-md text-sm sm:text-base font-bold text-primary leading-snug">
+                  Webhook Otomatis QRIS Midtrans
+                </h6>
+              </div>
+              <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                Verifikasi pembayaran instan otomatis tanpa cek mutasi manual, langsung mengaktifkan sesi photobox secara real-time.
+              </p>
+            </div>
+
+            <!-- Card 3: Dynamic Scheduling -->
+            <div class="bg-surface-container-lowest hover:bg-surface-container rounded-3xl p-5 border border-primary/15 shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-md flex flex-col justify-between space-y-3">
+              <div class="space-y-3">
+                <div class="w-12 h-12 rounded-2xl bg-secondary/10 text-secondary flex items-center justify-center border border-secondary/20 shadow-xs">
+                  <span class="material-symbols-outlined text-[26px]">calendar_clock</span>
+                </div>
+                <h6 class="font-headline-md text-sm sm:text-base font-bold text-primary leading-snug">
+                  Dynamic Slot Scheduling
+                </h6>
+              </div>
+              <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                Alokasi waktu dinamis dan penanganan antrean real-time agar tidak terjadi bentrok jadwal atau pemesanan ganda.
+              </p>
+            </div>
+
+            <!-- Card 4: Reports -->
+            <div class="bg-surface-container-lowest hover:bg-surface-container rounded-3xl p-5 border border-primary/15 shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-md flex flex-col justify-between space-y-3">
+              <div class="space-y-3">
+                <div class="w-12 h-12 rounded-2xl bg-blue-500/10 text-blue-600 flex items-center justify-center border border-blue-500/20 shadow-xs">
+                  <span class="material-symbols-outlined text-[26px]">description</span>
+                </div>
+                <h6 class="font-headline-md text-sm sm:text-base font-bold text-primary leading-snug">
+                  Export Laporan Excel & PDF
+                </h6>
+              </div>
+              <p class="text-xs sm:text-sm text-on-surface-variant leading-relaxed">
+                Ekspor otomatis rekapitulasi finansial, durasi pemakaian, dan log telemetri ke dalam format Excel dan PDF.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -502,14 +559,17 @@
 
           <!-- Device View Switcher -->
           <div class="inline-flex p-1 rounded-full bg-surface-container border border-primary/10 self-start sm:self-auto text-xs font-semibold">
-            <button type="button" onclick="switchCuitboxDevice('cust', 'both')" id="cust-dev-both" class="cuitbox-dev-btn px-3 py-1 rounded-full bg-primary text-on-primary font-bold shadow-xs transition-all">
-              Berdampingan
+            <button type="button" onclick="switchCuitboxDevice('cust', 'both')" id="cust-dev-both" class="cuitbox-dev-btn inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary text-on-secondary font-bold shadow-xs transition-all cursor-pointer">
+              <span class="material-symbols-outlined text-[15px]">devices</span>
+              <span>Berdampingan</span>
             </button>
-            <button type="button" onclick="switchCuitboxDevice('cust', 'laptop')" id="cust-dev-laptop" class="cuitbox-dev-btn px-3 py-1 rounded-full text-primary hover:text-on-surface transition-all">
-              💻 Laptop
+            <button type="button" onclick="switchCuitboxDevice('cust', 'laptop')" id="cust-dev-laptop" class="cuitbox-dev-btn inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-primary hover:text-on-surface transition-all cursor-pointer">
+              <span class="material-symbols-outlined text-[15px]">laptop_mac</span>
+              <span>Laptop</span>
             </button>
-            <button type="button" onclick="switchCuitboxDevice('cust', 'phone')" id="cust-dev-phone" class="cuitbox-dev-btn px-3 py-1 rounded-full text-primary hover:text-on-surface transition-all">
-              📱 HP
+            <button type="button" onclick="switchCuitboxDevice('cust', 'phone')" id="cust-dev-phone" class="cuitbox-dev-btn inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-primary hover:text-on-surface transition-all cursor-pointer">
+              <span class="material-symbols-outlined text-[15px]">smartphone</span>
+              <span>HP</span>
             </button>
           </div>
         </div>
@@ -800,13 +860,16 @@ function switchCuitboxDevice(tabPrefix, mode) {
   // Reset button styles
   [btnBoth, btnLaptop, btnPhone].forEach(btn => {
     if (btn) {
-      btn.classList.remove('bg-primary', 'text-on-primary', 'font-bold', 'shadow-xs');
+      btn.classList.remove('bg-secondary', 'text-on-secondary', 'font-bold', 'shadow-xs');
       btn.classList.add('text-primary');
     }
   });
 
   if (mode === 'both') {
-    if (btnBoth) btnBoth.classList.add('bg-primary', 'text-on-primary', 'font-bold', 'shadow-xs');
+    if (btnBoth) {
+      btnBoth.classList.add('bg-secondary', 'text-on-secondary', 'font-bold', 'shadow-xs');
+      btnBoth.classList.remove('text-primary');
+    }
     if (laptop) {
       laptop.classList.remove('hidden', 'lg:col-span-12');
       laptop.classList.add('lg:col-span-8');
@@ -816,14 +879,20 @@ function switchCuitboxDevice(tabPrefix, mode) {
       phone.classList.add('lg:col-span-4');
     }
   } else if (mode === 'laptop') {
-    if (btnLaptop) btnLaptop.classList.add('bg-primary', 'text-on-primary', 'font-bold', 'shadow-xs');
+    if (btnLaptop) {
+      btnLaptop.classList.add('bg-secondary', 'text-on-secondary', 'font-bold', 'shadow-xs');
+      btnLaptop.classList.remove('text-primary');
+    }
     if (laptop) {
       laptop.classList.remove('hidden', 'lg:col-span-8');
       laptop.classList.add('lg:col-span-12');
     }
     if (phone) phone.classList.add('hidden');
   } else if (mode === 'phone') {
-    if (btnPhone) btnPhone.classList.add('bg-primary', 'text-on-primary', 'font-bold', 'shadow-xs');
+    if (btnPhone) {
+      btnPhone.classList.add('bg-secondary', 'text-on-secondary', 'font-bold', 'shadow-xs');
+      btnPhone.classList.remove('text-primary');
+    }
     if (laptop) laptop.classList.add('hidden');
     if (phone) {
       phone.classList.remove('hidden', 'lg:col-span-4');
