@@ -726,10 +726,10 @@ Real Event Deployment: CCIT CREATION (2-Day Live Booth Exhibition)
 </div>
 <!-- Documentation Action Button (Same Color as Preview Button) -->
 <div class="pt-4 border-t border-primary/20">
-<a class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-secondary text-on-secondary font-label-lg text-label-lg font-bold shadow-sm hover:opacity-90 active:scale-[0.98] transition-all" href="https://github.com/zulfarida0107-crypto" rel="noopener noreferrer" target="_blank">
+<button type="button" onclick="openCuitboxDocsModal()" class="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-secondary text-on-secondary font-label-lg text-label-lg font-bold shadow-sm hover:opacity-90 active:scale-[0.98] transition-all cursor-pointer">
 <span class="material-symbols-outlined text-[18px]">description</span>
 <span>Documentation</span>
-</a>
+</button>
 </div>
 </div>
 </div>
@@ -1549,5 +1549,6 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 
 @include('partials.cuitbox-modal')
+@include('partials.cuitbox-docs-modal')
 </body>
 </html>
