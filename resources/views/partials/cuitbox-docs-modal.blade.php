@@ -32,10 +32,6 @@
         <span class="material-symbols-outlined text-[18px]">assignment</span>
         <span>2. Dokumen & Matriks UAT</span>
       </button>
-      <button type="button" id="docs-tab-btn-award" onclick="switchCuitboxDocsTab('award')" class="cuitbox-docs-tab-btn inline-flex items-center gap-2 px-4 py-2 rounded-full font-label-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer bg-surface-container text-primary hover:bg-surface-container-high">
-        <span class="material-symbols-outlined text-[18px]">emoji_events</span>
-        <span>3. Penghargaan & Sertifikat</span>
-      </button>
     </div>
 
     <!-- Scrollable Modal Body -->
@@ -266,68 +262,6 @@
 
       </div>
 
-      <!-- ================= TAB 3: PENGHARGAAN & SERTIFIKAT ================= -->
-      <div id="docs-tab-content-award" class="cuitbox-docs-pane hidden space-y-6">
-
-        <!-- Certificate Grand Showcase -->
-        <div class="bg-surface-container-lowest rounded-3xl p-6 sm:p-8 border border-primary/15 shadow-sm text-center space-y-6 relative overflow-hidden">
-          
-          <!-- Decorative Top Badge -->
-          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-secondary text-on-secondary text-xs sm:text-sm font-bold shadow-sm">
-            <span>🏆</span>
-            <span>JUARA 1 CCIT VENTURE STUDIO BATCH #1 'MANGGALA'</span>
-          </div>
-
-          <!-- Main Certificate Card -->
-          <div class="max-w-2xl mx-auto p-6 sm:p-8 rounded-2xl bg-surface-container border-2 border-secondary/30 shadow-md space-y-4 relative">
-            <div class="space-y-1">
-              <span class="text-xs uppercase tracking-widest font-bold text-secondary">
-                Sertifikat Penghargaan Resmi
-              </span>
-              <h4 class="font-headline-lg text-xl sm:text-2xl font-bold text-primary">
-                Program Inkubasi Bisnis & Rekayasa Produk CuitBox
-              </h4>
-              <p class="text-xs sm:text-sm text-on-surface-variant">
-                Diberikan oleh Center for Computing and Information Technology (CCIT) Fakultas Teknik Universitas Indonesia (FTUI)
-              </p>
-            </div>
-
-            <div class="my-4 py-4 border-y border-primary/15 space-y-2 text-xs sm:text-sm text-on-surface">
-              <p class="font-bold text-primary">
-                Atas dedikasi dan keunggulan teknologi dalam menciptakan platform:
-              </p>
-              <p class="text-base sm:text-lg font-bold text-secondary">
-                "CuitBox — Self-Service Smart Photobox Platform"
-              </p>
-              <p class="text-xs text-outline max-w-lg mx-auto">
-                Dinilai berdasarkan orisinalitas solusi hardware-software terintegrasi, arsitektur backend anti race-condition, dan validasi traksi nyata pada acara pameran publik.
-              </p>
-            </div>
-
-            <!-- Role & Verification Stamp -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs pt-2">
-              <div class="p-3 rounded-xl bg-surface-container-lowest border border-primary/10 text-left">
-                <span class="text-[10px] text-outline block">Penerima & Peran:</span>
-                <span class="font-bold text-primary block">Zulfa Ridwan</span>
-                <span class="text-[11px] text-secondary">Co-Founder & Lead Engineer (Core Backend Architect)</span>
-              </div>
-              <div class="p-3 rounded-xl bg-surface-container-lowest border border-primary/10 text-left">
-                <span class="text-[10px] text-outline block">Status Verifikasi:</span>
-                <span class="font-bold text-emerald-700 block">Terverifikasi Resmi</span>
-                <span class="text-[11px] text-outline font-mono">Tahun: 2025 - 2026</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="max-w-xl mx-auto text-xs text-on-surface-variant">
-            <p>
-              Dokumentasi fisik piagam dan piala dapat ditunjukkan dalam bentuk berkas asli saat wawancara teknis atau presentasi portofolio langsung.
-            </p>
-          </div>
-        </div>
-
-      </div>
-
     </div>
 
     <!-- Modal Footer -->
@@ -367,8 +301,8 @@ function closeCuitboxDocsModal() {
 }
 
 function switchCuitboxDocsTab(tabName) {
-  // Tabs: media, reports, award
-  const tabs = ['media', 'reports', 'award'];
+  // Tabs: media, reports
+  const tabs = ['media', 'reports'];
   tabs.forEach(tab => {
     const btn = document.getElementById('docs-tab-btn-' + tab);
     const content = document.getElementById('docs-tab-content-' + tab);
