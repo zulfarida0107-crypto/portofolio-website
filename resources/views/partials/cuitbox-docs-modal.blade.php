@@ -4,22 +4,21 @@
     
     <!-- Modal Header -->
     <div class="px-5 sm:px-8 py-4 sm:py-5 bg-surface-container border-b border-primary/10 flex items-center justify-between gap-4 shrink-0">
-      <div class="space-y-1">
+      <div>
         <div class="flex items-center gap-2">
           <span class="material-symbols-outlined text-[24px] sm:text-[28px] text-secondary">description</span>
           <h3 class="font-headline-md text-xl sm:text-2xl font-bold text-primary">
             CuitBox Documentation & Artifacts
           </h3>
         </div>
-        <p class="text-xs sm:text-sm text-on-surface-variant">
-          Dokumentasi pameran booth fisik di CCIT CREATION, laporan pengujian UAT, dan sertifikat Juara 1 Venture Studio.
-        </p>
       </div>
 
-      <!-- Close Button -->
-      <button type="button" onclick="closeCuitboxDocsModal()" class="w-10 h-10 rounded-full bg-surface-container-high hover:bg-surface-variant text-primary flex items-center justify-center transition-colors cursor-pointer shadow-xs shrink-0" title="Tutup Modal (ESC)">
-        <span class="material-symbols-outlined text-[22px]">close</span>
-      </button>
+      <div class="flex items-center gap-2 shrink-0">
+        <!-- Close Button -->
+        <button type="button" onclick="closeCuitboxDocsModal()" class="w-10 h-10 rounded-full bg-surface-container-high hover:bg-surface-variant text-primary flex items-center justify-center transition-colors cursor-pointer shadow-xs" title="Tutup Modal (ESC)">
+          <span class="material-symbols-outlined text-[22px]">close</span>
+        </button>
+      </div>
     </div>
 
     <!-- Navigation Tabs -->
@@ -56,43 +55,12 @@
             </span>
           </div>
 
-          <!-- Video Player Mockup Frame -->
-          <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 shadow-inner flex flex-col justify-between p-4 sm:p-6">
-            <!-- Top Video Bar -->
-            <div class="flex justify-between items-center z-10">
-              <span class="px-2.5 py-1 rounded-lg bg-black/60 backdrop-blur-md text-[11px] text-white font-mono flex items-center gap-1.5 border border-white/10">
-                <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-                <span>REC • CCIT CREATION BOOTH #01</span>
-              </span>
-              <span class="px-2.5 py-1 rounded-lg bg-black/60 backdrop-blur-md text-[11px] text-slate-300 font-mono border border-white/10">
-                Full HD 1080p
-              </span>
-            </div>
-
-            <!-- Center Play Button & Graphic -->
-            <div class="my-auto text-center space-y-3 z-10">
-              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer" class="inline-flex w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-secondary hover:bg-[#8c5e63] text-white items-center justify-center shadow-lg transition-transform hover:scale-110 active:scale-95 group cursor-pointer">
-                <span class="material-symbols-outlined text-[36px] sm:text-[44px] ml-1 group-hover:scale-105 transition-transform">play_arrow</span>
-              </a>
-              <div>
-                <p class="text-sm font-bold text-white">Tonton Demo Video Booth</p>
-                <p class="text-xs text-slate-400">Klik untuk memutar rekaman interaksi kiosk, touch screen, dan printer</p>
-              </div>
-            </div>
-
-            <!-- Bottom Video Timeline Simulation -->
-            <div class="space-y-1.5 z-10">
-              <div class="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
-                <div class="w-2/5 h-full bg-secondary rounded-full"></div>
-              </div>
-              <div class="flex justify-between text-[10px] text-slate-400 font-mono">
-                <span>00:42</span>
-                <span>01:45</span>
-              </div>
-            </div>
-
-            <!-- Background Atmosphere Grid -->
-            <div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(#6ee7b7 1px, transparent 1px); background-size: 24px 24px;"></div>
+          <!-- Video Player Frame -->
+          <div class="relative w-full aspect-video rounded-2xl overflow-hidden bg-black border border-primary/20 shadow-inner flex items-center justify-center">
+            <video id="cuitbox-demo-video" controls playsinline preload="metadata" class="w-full h-full object-contain">
+              <source src="/images/activities/CuitBox/VID-20260821-WA0094(1) - Devita Hepinaria.mp4" type="video/mp4">
+              Browser Anda tidak mendukung pemutar video HTML5.
+            </video>
           </div>
 
           <div class="p-3.5 rounded-xl bg-surface-container border border-primary/10 text-xs text-on-surface-variant flex items-start gap-2.5">
@@ -112,25 +80,44 @@
             </h4>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <!-- Photo Slot 1 -->
-            <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-primary/15 bg-surface-container shadow-xs flex items-center justify-center group hover:border-primary/30 transition-all">
-              <div class="w-full h-full bg-slate-900/60 flex items-center justify-center">
-                <span class="material-symbols-outlined text-[44px] text-primary/40 group-hover:scale-105 transition-transform">add_photo_alternate</span>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <!-- Photo Slot 1: capture_10.jpg -->
+            <div class="rounded-2xl overflow-hidden border border-primary/15 bg-surface-container shadow-xs group hover:border-primary/30 transition-all flex flex-col">
+              <div class="aspect-[4/3] w-full overflow-hidden bg-black flex items-center justify-center">
+                <img src="/images/activities/CuitBox/capture_10.jpg" alt="DSLR Live Capture Test" class="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+              </div>
+              <div class="p-2.5 bg-surface-container-low text-[11px] font-bold text-primary truncate">
+                DSLR Live Capture
               </div>
             </div>
 
-            <!-- Photo Slot 2 -->
-            <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-primary/15 bg-surface-container shadow-xs flex items-center justify-center group hover:border-primary/30 transition-all">
-              <div class="w-full h-full bg-slate-900/60 flex items-center justify-center">
-                <span class="material-symbols-outlined text-[44px] text-primary/40 group-hover:scale-105 transition-transform">add_photo_alternate</span>
+            <!-- Photo Slot 2: final.png -->
+            <div class="rounded-2xl overflow-hidden border border-primary/15 bg-surface-container shadow-xs group hover:border-primary/30 transition-all flex flex-col">
+              <div class="aspect-[4/3] w-full overflow-hidden bg-white flex items-center justify-center p-2">
+                <img src="/images/activities/CuitBox/final.png" alt="Stitched Photostrip 300 DPI" class="w-full h-full object-contain group-hover:scale-105 transition-transform" />
+              </div>
+              <div class="p-2.5 bg-surface-container-low text-[11px] font-bold text-primary truncate">
+                Stitched Photostrip (300 DPI)
               </div>
             </div>
 
-            <!-- Photo Slot 3 -->
-            <div class="aspect-[4/3] rounded-2xl overflow-hidden border border-primary/15 bg-surface-container shadow-xs flex items-center justify-center group hover:border-primary/30 transition-all">
-              <div class="w-full h-full bg-slate-900/60 flex items-center justify-center">
-                <span class="material-symbols-outlined text-[44px] text-primary/40 group-hover:scale-105 transition-transform">add_photo_alternate</span>
+            <!-- Photo Slot 3: Live Booth Session -->
+            <div class="rounded-2xl overflow-hidden border border-primary/15 bg-surface-container shadow-xs group hover:border-primary/30 transition-all flex flex-col">
+              <div class="aspect-[4/3] w-full overflow-hidden bg-black flex items-center justify-center">
+                <img src="/images/activities/CuitBox/WhatsApp_Image_2026-11-07_at_22.41.48.jpeg" alt="Photobox Booth Session" class="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+              </div>
+              <div class="p-2.5 bg-surface-container-low text-[11px] font-bold text-primary truncate">
+                Sesi UAT Pengguna Booth
+              </div>
+            </div>
+
+            <!-- Photo Slot 4: Exhibition Showcase -->
+            <div class="rounded-2xl overflow-hidden border border-primary/15 bg-surface-container shadow-xs group hover:border-primary/30 transition-all flex flex-col">
+              <div class="aspect-[4/3] w-full overflow-hidden bg-black flex items-center justify-center">
+                <img src="/images/activities/CuitBox/WhatsApp_Image_2026-11-07_at_22.56.01.jpeg" alt="CuitBox Showcase & Pitching" class="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+              </div>
+              <div class="p-2.5 bg-surface-container-low text-[11px] font-bold text-primary truncate">
+                Exhibition &amp; Showcase
               </div>
             </div>
           </div>
@@ -258,6 +245,33 @@
             </div>
           </div>
 
+          <!-- Download Soft File Section -->
+          <div class="p-5 rounded-2xl bg-surface-container border border-primary/15 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-xs">
+            <div class="space-y-1 text-center sm:text-left">
+              <div class="flex items-center justify-center sm:justify-start gap-2 text-primary font-bold text-sm">
+                <span class="material-symbols-outlined text-[20px] text-secondary">download</span>
+                <span>Unduh Soft File Dokumen UAT</span>
+              </div>
+              <p class="text-xs text-on-surface-variant">
+                Tersedia berkas soft file dokumen laporan pengujian & matriks UAT dalam format PDF dan Word (.docx).
+              </p>
+            </div>
+            
+            <div class="flex flex-wrap items-center justify-center gap-2.5 shrink-0">
+              <!-- Download PDF Button -->
+              <a href="/images/docs/CuitBox/Venture Studio CCIT-FTUI.pdf" download="Venture Studio CCIT-FTUI.pdf" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-secondary text-on-secondary font-label-lg text-xs font-bold shadow-sm hover:opacity-90 active:scale-95 transition-all cursor-pointer">
+                <span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+                <span>Unduh PDF</span>
+              </a>
+
+              <!-- Download Word Button -->
+              <a href="/images/docs/CuitBox/Venture Studio CCIT-FTUI.docx" download="Venture Studio CCIT-FTUI.docx" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container-lowest text-primary border border-primary/20 font-label-lg text-xs font-bold shadow-xs hover:bg-surface-variant active:scale-95 transition-all cursor-pointer">
+                <span class="material-symbols-outlined text-[18px] text-blue-600">description</span>
+                <span>Unduh Word (.docx)</span>
+              </a>
+            </div>
+          </div>
+
         </div>
 
       </div>
@@ -292,6 +306,10 @@ function closeCuitboxDocsModal() {
   const modal = document.getElementById('cuitbox-docs-modal');
   if (modal) {
     modal.classList.add('hidden');
+    const demoVideo = document.getElementById('cuitbox-demo-video');
+    if (demoVideo) {
+      demoVideo.pause();
+    }
     // If the other modal isn't open, restore scroll
     const previewModal = document.getElementById('cuitbox-preview-modal');
     if (!previewModal || previewModal.classList.contains('hidden')) {
